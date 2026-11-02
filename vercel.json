@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "api.py": {
+      "includeFiles": "data/**",
+      "maxDuration": 60
+    }
+  }
+}

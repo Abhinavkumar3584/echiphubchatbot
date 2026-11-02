@@ -1,8 +1,8 @@
 .venv/
 .env
 data/logs/
-data/models/
 data/qdrant/.lock
+data/models/.locks/
 output/
 __pycache__/
 *.pyc

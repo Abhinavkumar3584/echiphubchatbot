@@ -49,6 +49,17 @@ MODEL_DIR = _env(
     else os.path.join(ROOT, "data", "models")
 )
 
+# On serverless (Vercel / Lambda), copy pre-bundled models from repo to /tmp/models so no runtime download is needed
+if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+    import shutil
+    _tmp_m = os.path.join("/tmp", "models")
+    _src_m = os.path.join(ROOT, "data", "models")
+    if not os.path.exists(_tmp_m) and os.path.exists(_src_m):
+        try:
+            shutil.copytree(_src_m, _tmp_m, dirs_exist_ok=True)
+        except Exception:
+            pass
+
 # ---------------------------------------------------------------- vector database: Qdrant
 QDRANT_URL = _env("QDRANT_URL", "")            # empty = built-in local database in data/qdrant (no server)
 QDRANT_PATH = _env("QDRANT_PATH", os.path.join(ROOT, "data", "qdrant"))

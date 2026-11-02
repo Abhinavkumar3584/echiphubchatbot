@@ -136,16 +136,19 @@ def cited_sources(answer, srcs):
 
 
 def check_ready():
-    """Not ready at start (e.g. empty database)? Look again every 30 s, so a later 'python ingest.py'
-    against a Qdrant server is picked up without a restart."""
-    if not READY.get("ok") and time.time() - READY.get("checked", 0) > 30:
-        READY["checked"] = time.time()
+    """Raises 503 if the database is empty or not reachable. Automatically initializes
+    on serverless platforms (like Vercel) where ASGI lifespan may not run."""
+    global READY
+    if not READY.get("ok"):
         try:
+            embeddings.warm_up()
             n = vs.count()
-            if n:
+            if n > 0:
                 READY.update(ok=True, chunks=n, detail="ready")
+            else:
+                READY.update(ok=False, chunks=0, detail="knowledge base is empty - run: python ingest.py")
         except Exception as e:
-            READY["detail"] = f"{type(e).__name__}: {e}"
+            READY.update(ok=False, detail=f"{type(e).__name__}: {e}")
     if not READY.get("ok"):
         raise HTTPException(503, f"The assistant is not ready: {READY.get('detail')}")
 

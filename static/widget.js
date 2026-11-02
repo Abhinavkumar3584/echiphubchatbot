@@ -308,7 +308,7 @@
 
   function errorText(status, detail) {
     if (status === 429) return detail || "Too many questions in a minute. Please wait a moment and try again.";
-    if (status === 503) return "The assistant is being updated. Please try again in a few minutes.";
+    if (status === 503) return detail || "The assistant is being updated. Please try again in a few minutes.";
     if (status === 0) return "Could not reach the assistant. Check your internet connection and try again.";
     return detail || "Something went wrong. Please try again.";
   }
