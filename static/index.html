@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eChipHub Assistant – test page</title>
+<style>
+  :root { --die:#0E5C46; --pad:#C9A227; --ink:#18231F; --muted:#56655F; --paper:#F7FAF8; --line:#D5E0DB; color-scheme: light dark; }
+  @media (prefers-color-scheme: dark) { :root { --ink:#E3EDE9; --muted:#9DB0A8; --paper:#0F1A17; --line:#2A3F38; } }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+         font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 24px 120px; }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 10px; }
+  .bar { width: 64px; height: 6px; background: repeating-linear-gradient(90deg, var(--pad) 0 8px, transparent 8px 14px); margin-bottom: 22px; }
+  p { color: var(--muted); max-width: 62ch; }
+  code { background: rgba(14,92,70,.1); padding: 2px 6px; border-radius: 5px; font-size: 14px; }
+  pre { background: rgba(14,92,70,.08); border: 1px solid var(--line); border-radius: 10px; padding: 14px; overflow-x: auto; font-size: 13.5px; }
+  a { color: var(--die); }
+  @media (prefers-color-scheme: dark) { a { color: #7FD1B3; } }
+  #status { font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <div class="bar"></div>
+  <h1>eChipHub Assistant</h1>
+  <p>This page is for testing. Click the green chip at the bottom right and ask a question about eChipHub.</p>
+  <p>Server status: <span id="status">checking…</span></p>
+  <p>To add the assistant to a website, put this line before <code>&lt;/body&gt;</code>:</p>
+  <pre id="snippet"></pre>
+</main>
+<script>
+  var origin = location.origin;
+  document.getElementById("snippet").textContent = '<script src="' + origin + '/static/widget.js" defer><\/script>';
+  fetch("/health").then(function (r) { return r.json(); }).then(function (h) {
+    document.getElementById("status").textContent = h.ok ? "ready (" + h.chunks + " pieces of website text loaded)" : "not ready: " + h.detail;
+  }).catch(function () { document.getElementById("status").textContent = "not reachable"; });
+</script>
+<script src="/static/widget.js" defer></script>
+</body>
+</html>
