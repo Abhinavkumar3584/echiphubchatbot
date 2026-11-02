@@ -53,11 +53,11 @@ else:
     except Exception as e:
         say(BAD, f"cannot reach Groq ({type(e).__name__})", "check the internet connection / proxy (HTTPS_PROXY)")
 
-pages = glob.glob(os.path.join(config.PAGES_DIR, "**", "*.json"), recursive=True)
-if pages:
-    say(OK, f"{len(pages)} clean pages in {config.PAGES_DIR}")
+data_files = glob.glob(os.path.join(config.DATA_DIR, "**", "*.json"), recursive=True)
+if data_files:
+    say(OK, f"{len(data_files)} data file(s) in {config.DATA_DIR}")
 else:
-    say(BAD, f"no pages in {config.PAGES_DIR}", "run the extractor:  python extractor/extract.py run")
+    say(BAD, f"no JSON data files in {config.DATA_DIR}", "run scraper:  python scraper_master.py")
 
 try:
     import embeddings

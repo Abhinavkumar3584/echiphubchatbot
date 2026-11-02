@@ -1,16 +1,39 @@
-"""Load the clean pages from the extractor into the Qdrant vector database.
+"""Load the clean pages from echiphub JSON files into the Qdrant vector database.
 
     python ingest.py            add new/changed pages, remove pages that are gone (fast: unchanged pages are skipped)
-    python ingest.py --rebuild  start the database from zero (needed after changing EMBED_MODEL)
+    python ingest.py --rebuild  start the database from zero (needed after changing EMBED_MODEL or data source)
     python ingest.py --dry      only show what would happen
 
-Input:  output/pages/<site>/*.json   (written by:  python extractor/extract.py run   or   ... build)
+Input:  echiphub/*.json   (written by:  python scraper_master.py)
 Each page is cut into pieces of about CHUNK_WORDS words along its headings. Each piece starts with
 "Page title > Heading > Sub-heading" so the bot knows where the text comes from.
 """
 import glob, hashlib, json, os, re, sys, time
 
 import config
+
+BOILERPLATE = {
+    "skip to content", "skip to main content", "go to the indico home page",
+    "toggle navigation", "close menu", "open menu"
+}
+
+
+def clean_lines(items):
+    out = []
+    for line in items or []:
+        s = line.strip().replace("\u200b", "")
+        if not s or s.lower() in BOILERPLATE:
+            continue
+        out.append(s)
+    return out
+
+
+def clean_title(title, url):
+    t = (title or url).strip()
+    for suff in [" - EdTech", " · NIELIT (Indico)", " - eChipHub Community", " - Community"]:
+        if t.endswith(suff):
+            t = t[:-len(suff)].strip()
+    return t or url
 
 
 def strip_links(md):
@@ -27,8 +50,11 @@ def sections_flat(sections, path=()):
     out = []
     for s in sections or []:
         h = (s.get("heading") or "").strip()
+        if h == "Overview / Header Info":
+            h = ""
         here = path + ((h,) if h and h != "(introduction)" else ())
-        text = (s.get("content") or "").strip()
+        items = clean_lines(s.get("items", []))
+        text = "\n".join(items) if items else (s.get("content") or "").strip()
         if text:
             out.append((here, text))
         out += sections_flat(s.get("children"), here)
@@ -45,9 +71,11 @@ def split_words(text, size, overlap):
 
 def chunk_page(doc):
     """Pieces of about CHUNK_WORDS words. Small neighbouring sections are packed together."""
-    title = (doc.get("title") or doc["url"]).replace(" - EdTech", "").strip()
+    title = clean_title(doc.get("title"), doc["url"])
+    site = doc.get("site", "")
     parts = []
-    for path, text in sections_flat(doc.get("sections")) or [((), doc.get("full_markdown", ""))]:
+    flat = sections_flat(doc.get("sections")) or [((), doc.get("full_markdown", ""))]
+    for path, text in flat:
         label = " > ".join(strip_links(p) for p in path)[:300]
         room = max(60, config.CHUNK_WORDS - len(label.split()))
         for piece in split_words(text, room, config.CHUNK_OVERLAP):
@@ -67,22 +95,52 @@ def chunk_page(doc):
         if len(plain.split()) < config.MIN_CHUNK_WORDS:
             continue
         headings = [l for l, _ in group if l]
-        out.append({"url": doc["url"], "title": title, "site": doc.get("site", ""),
+        out.append({"url": doc["url"], "title": title, "site": site,
                     "headings": headings[:6], "chunk": len(out),
                     "text": md,                                       # shown to the model (keeps links)
                     "embed_text": f"{title}\n{plain}"})               # used for the embeddings
     return out
 
 
+def collect_nodes(node, site, docs):
+    if isinstance(node, list):
+        for item in node:
+            collect_nodes(item, site, docs)
+        return
+    if not isinstance(node, dict) or not node.get("url"):
+        return
+    url = node["url"]
+    sections = node.get("sections") or []
+    if url not in docs:
+        docs[url] = {
+            "url": url,
+            "title": node.get("title", ""),
+            "link_text": node.get("link_text", ""),
+            "sections": sections,
+            "site": site,
+        }
+    else:
+        existing_items = sum(len(s.get("items", [])) for s in docs[url].get("sections", []))
+        new_items = sum(len(s.get("items", [])) for s in sections)
+        if new_items > existing_items:
+            docs[url]["sections"] = sections
+            if node.get("title"):
+                docs[url]["title"] = node.get("title")
+    for child in node.get("children", []):
+        collect_nodes(child, site, docs)
+
+
 def load_pages():
     docs = {}
-    for path in sorted(glob.glob(os.path.join(config.PAGES_DIR, "**", "*.json"), recursive=True)):
+    json_files = sorted(glob.glob(os.path.join(config.DATA_DIR, "**", "*.json"), recursive=True))
+    for path in json_files:
+        site = os.path.splitext(os.path.basename(path))[0]
         try:
             d = json.load(open(path, encoding="utf-8"))
         except Exception as e:
-            print(f"  skipped {path}: {e}"); continue
-        if d.get("approved", True) and d.get("url"):
-            docs[d["url"]] = d
+            print(f"  skipped {path}: {e}")
+            continue
+        collect_nodes(d, site, docs)
     return docs
 
 
@@ -94,8 +152,8 @@ def main(rebuild=False, dry=False):
     t0 = time.time()
     docs = load_pages()
     if not docs:
-        sys.exit(f"No pages found in {config.PAGES_DIR}.\nRun the extractor first:  python extractor/extract.py run")
-    print(f"{len(docs)} clean pages found in {config.PAGES_DIR}")
+        sys.exit(f"No pages found in {config.DATA_DIR}.\nRun scraper first:  python scraper_master.py")
+    print(f"{len(docs)} clean pages found in {config.DATA_DIR}")
 
     meta = json.load(open(META)) if os.path.exists(META) else {}
     want_meta = {"embed_model": config.EMBED_MODEL, "sparse_model": config.SPARSE_MODEL,

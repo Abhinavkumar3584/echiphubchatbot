@@ -14,11 +14,14 @@ def ip_hash(ip):
 
 
 def write(record):
-    os.makedirs(config.LOG_DIR, exist_ok=True)
-    record = {"ts": datetime.now(timezone.utc).isoformat(timespec="seconds"), **record}
-    path = os.path.join(config.LOG_DIR, f"chat-{datetime.now():%Y-%m-%d}.jsonl")
-    with _lock, open(path, "a", encoding="utf-8") as f:
-        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    try:
+        os.makedirs(config.LOG_DIR, exist_ok=True)
+        record = {"ts": datetime.now(timezone.utc).isoformat(timespec="seconds"), **record}
+        path = os.path.join(config.LOG_DIR, f"chat-{datetime.now():%Y-%m-%d}.jsonl")
+        with _lock, open(path, "a", encoding="utf-8") as f:
+            f.write(json.dumps(record, ensure_ascii=False) + "\n")
+    except Exception:
+        pass
 
 
 def cleanup():

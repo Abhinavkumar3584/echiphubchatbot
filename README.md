@@ -5,14 +5,14 @@ A chatbot for the eChipHub websites that answers only from the websites' own tex
 ```
  eChipHub websites                                                         visitor
         |                                                                     ^
-  1. extractor/   reads + cleans the pages     -> output/pages/*.json         |
-  2. ingest.py    BGE + BM25 embeddings        -> Qdrant vector database      |
-  3. api.py       question -> search Qdrant -> Groq writes the answer -> chat bubble (static/widget.js)
+  1. scraper_master.py  reads + cleans the pages     -> echiphub/*.json       |
+  2. ingest.py          BGE + BM25 embeddings        -> Qdrant vector database|
+  3. api.py             question -> search Qdrant -> Groq writes the answer -> chat bubble (static/widget.js)
 ```
 
 | Part | Tool | Cost |
 |---|---|---|
-| Reading the websites | Crawl4AI + the cleaning rules in `extractor/rules.py` | free |
+| Reading the websites | Playwright + BeautifulSoup in `scraper_master.py` | free |
 | Embeddings | `BAAI/bge-small-en-v1.5` (meaning) + `Qdrant/bm25` (exact words), on your CPU | free |
 | Vector database | Qdrant (built-in local database in data/qdrant) | free |
 | Answers | Groq `openai/gpt-oss-20b`, falls back to `openai/gpt-oss-120b` | about $0.075 / $0.30 per million tokens in / out |
@@ -31,19 +31,14 @@ A chatbot for the eChipHub websites that answers only from the websites' own tex
 
 | Double-click | What happens | Time |
 |---|---|---|
-| **`1-extract.bat`** | Asks your Keycloak ID + password, reads all 5 websites, keeps only real pages | 10-20 min |
-| **`2-load.bat`** | Turns the pages into embeddings and stores them in Qdrant. The first time it downloads the BGE model (~70 MB) | 1-2 min |
+| **`1-extract.bat`** | Runs `scraper_master.py` (Playwright) to scrape all 8 websites into `echiphub/*.json` | 10-20 min |
+| **`2-load.bat`** | Turns `echiphub/*.json` into embeddings and stores them in Qdrant | 1-2 min |
 | **`check.bat`** | Checks Python, packages, Groq key, models, pages and database. Every line should say `OK` | 1 min |
 | **`3-start.bat`** | Starts the bot and opens http://localhost:8000. Click the green chip at the bottom right | - |
 
-**Already extracted with the earlier `echiphub-extractor`?** Copy its `output` folder into this folder,
-then run `1-extract.bat build` (cleans again, no internet) and continue with `2-load.bat`.
-
-After extracting, **delete `output\session.json`**. It works like your password.
-
 ## 3. Check the answer quality
 
-Double-click **`test.bat`**. It asks the 23 questions in `golden.csv` and shows:
+Double-click **`test.bat`**. It asks the questions in `golden.csv` and shows:
 - whether the right page was found (`OK`, `LOW` or `MISS`) and its rank;
 - whether the 3 off-topic questions are refused;
 - a suggested value for `MIN_SCORE`.
@@ -55,15 +50,12 @@ Add your own real questions to `golden.csv`, especially ones visitors actually a
 - Too high: real questions get "not found".
 - Too low: off-topic questions reach Groq. The model still refuses them, so this mainly costs money.
 
-Start with 0.50 and use the value `test.bat` suggests.
+Start with 0.30 to 0.50 and use the value `test.bat` suggests.
 
 ## 4. Updating the knowledge
 
-When the websites change: `1-extract.bat` (reads only new pages), then `2-load.bat` (updates only changed pages
+When the websites change: run `1-extract.bat` (or `python scraper_master.py`), then `2-load.bat` (updates only changed pages
 and removes deleted ones). Stop `3-start.bat` before `2-load.bat`: the built-in database allows one program at a time.
-
-To change what is kept or removed from the websites, edit `extractor/rules.py` and run `1-extract.bat build`.
-Every page and the reason for its group is listed in `output/report/filter_report.csv`.
 
 ## 5. Add the chat bubble to websites or test locally
 
@@ -84,7 +76,7 @@ Every website or local host using the bubble must be listed in `ALLOWED_ORIGINS`
 | `REASONING_EFFORT` | low | low = fastest; medium/high = slower, sometimes better |
 | `QDRANT_URL` | empty | empty = built-in database in `data/qdrant` (local) |
 | `EMBED_MODEL` | BAAI/bge-small-en-v1.5 | `BAAI/bge-base-en-v1.5` is a bit better and 3x slower; `2-load.bat` rebuilds by itself after a change |
-| `MIN_SCORE` | 0.50 | see section 3 |
+| `MIN_SCORE` | 0.30 | see section 3 |
 | `TOP_K` | 6 | pieces of website text given to the model per question |
 | `ALLOWED_ORIGINS` | eChipHub sites + localhost | websites allowed to use the bubble |
 | `RATE_LIMIT_PER_MINUTE` | 12 | questions per visitor per minute |
@@ -110,7 +102,8 @@ All settings with comments: `config.py`.
 
 | File | Job |
 |---|---|
-| `extractor/extract.py`, `cleaner.py`, `rules.py` | read and clean the websites |
+| `scraper_master.py` | scrapes and cleans the eChipHub websites into `echiphub/*.json` |
+| `echiphub/*.json` | structured website JSON data for all 8 target platforms |
 | `ingest.py` | pages -> pieces of ~220 words along the headings -> embeddings -> Qdrant |
 | `embeddings.py` | BGE + BM25 with FastEmbed (ONNX, CPU) |
 | `vector_store.py` | Qdrant: storage + hybrid search (meaning + exact words, merged) |
@@ -131,5 +124,5 @@ All settings with comments: `config.py`.
 | `2-load.bat`: database is in use | close `3-start.bat` first |
 | Embedding model download fails | the first run needs access to huggingface.co |
 | The bubble doesn't appear on a website | the website is missing from `ALLOWED_ORIGINS`, or its security policy blocks the script (see section 6) |
-| Real questions get "not found" | run `test.bat`, lower `MIN_SCORE`, check the page is in `output/report/filter_report.csv` as Real / useful |
+| Real questions get "not found" | run `test.bat`, lower `MIN_SCORE` |
 | Answer is wrong or old | the website text is old: update the page, then `1-extract.bat` + `2-load.bat` |

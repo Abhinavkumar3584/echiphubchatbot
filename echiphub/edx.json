@@ -1,0 +1,54 @@
+{
+  "link_text": "EdX Home",
+  "url": "https://apps.edx.echiphub.in/authn/login?next=%2F",
+  "title": "Login | Edtech",
+  "depth": 0,
+  "scraped_at": "2026-11-02 09:25:41",
+  "time_taken": "9.7s",
+  "headings": {
+    "h1": [
+      "Start learningwith Edtech"
+    ],
+    "h2": [],
+    "h3": [],
+    "h4": []
+  },
+  "sections": [
+    {
+      "heading": "General Content",
+      "level": "body",
+      "items": [
+        "Start learning",
+        "with Edtech",
+        "Register",
+        "Sign in",
+        "More...",
+        "Username or email",
+        "Password",
+        "Sign in",
+        "Forgot password",
+        "Or sign in with:",
+        "Keycloak",
+        "Sign in with Keycloak"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "link_text": "Forgot password",
+      "url": "https://apps.edx.echiphub.in/authn/login?next=%2Fauthn%2Freset",
+      "title": "Authentication",
+      "depth": 1,
+      "scraped_at": "2026-11-02 09:25:50",
+      "time_taken": "9.0s",
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": [],
+        "h4": []
+      },
+      "sections": [],
+      "children": []
+    }
+  ]
+}

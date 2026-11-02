@@ -1,0 +1,6 @@
+{
+  "embed_model": "BAAI/bge-small-en-v1.5",
+  "sparse_model": "Qdrant/bm25",
+  "chunk_words": 220,
+  "chunk_overlap": 40
+}

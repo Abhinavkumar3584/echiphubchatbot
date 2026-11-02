@@ -1,9 +1,8 @@
 @echo off
-rem Reads the eChipHub websites and writes the clean pages to output\pages (asks your Keycloak login).
-rem Add --fresh to start over. Already extracted? "1-extract.bat build" only cleans again (no internet).
+rem Scrapes all eChipHub websites using Playwright into the echiphub folder.
 cd /d "%~dp0"
 call .venv\Scripts\activate || (echo Run setup.bat first. & pause & exit /b 1)
-if "%~1"=="" (python extractor\extract.py run) else (python extractor\extract.py %*)
+python scraper_master.py %*
 echo.
-echo Next: 2-load.bat.   Remember to delete output\session.json when you are finished extracting.
+echo Next: 2-load.bat to load the scraped data into the vector database.
 pause

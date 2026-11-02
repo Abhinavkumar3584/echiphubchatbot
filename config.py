@@ -43,7 +43,11 @@ GROQ_TIMEOUT = _env("GROQ_TIMEOUT", 40.0)
 EMBED_MODEL = _env("EMBED_MODEL", "BAAI/bge-small-en-v1.5")           # 384 numbers per text, fast on CPU
 SPARSE_MODEL = _env("SPARSE_MODEL", "Qdrant/bm25")                    # keyword search (names, codes, dates)
 QUERY_PREFIX = _env("QUERY_PREFIX", "Represent this sentence for searching relevant passages: ")
-MODEL_DIR = _env("MODEL_DIR", os.path.join(ROOT, "data", "models"))
+MODEL_DIR = _env(
+    "MODEL_DIR",
+    os.path.join("/tmp", "models") if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
+    else os.path.join(ROOT, "data", "models")
+)
 
 # ---------------------------------------------------------------- vector database: Qdrant
 QDRANT_URL = _env("QDRANT_URL", "")            # empty = built-in local database in data/qdrant (no server)
@@ -51,8 +55,9 @@ QDRANT_PATH = _env("QDRANT_PATH", os.path.join(ROOT, "data", "qdrant"))
 QDRANT_API_KEY = _env("QDRANT_API_KEY", "")
 COLLECTION = _env("COLLECTION", "echiphub")
 
-# ---------------------------------------------------------------- knowledge (from the extractor)
-PAGES_DIR = _env("PAGES_DIR", os.path.join(ROOT, "output", "pages"))
+# ---------------------------------------------------------------- knowledge (from echiphub JSONs)
+DATA_DIR = _env("DATA_DIR", _env("PAGES_DIR", os.path.join(ROOT, "echiphub")))
+PAGES_DIR = DATA_DIR                            # backward compatibility
 CHUNK_WORDS = _env("CHUNK_WORDS", 220)          # size of one piece of text
 CHUNK_OVERLAP = _env("CHUNK_OVERLAP", 40)       # words repeated between two pieces of a long section
 MIN_CHUNK_WORDS = _env("MIN_CHUNK_WORDS", 6)
@@ -78,5 +83,9 @@ CACHE_MINUTES = _env("CACHE_MINUTES", 60)                    # same first questi
 ADMIN_TOKEN = _env("ADMIN_TOKEN", "")                        # for /admin/stats; empty = disabled
 
 # ---------------------------------------------------------------- logs
-LOG_DIR = _env("LOG_DIR", os.path.join(ROOT, "data", "logs"))
+LOG_DIR = _env(
+    "LOG_DIR",
+    os.path.join("/tmp", "logs") if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
+    else os.path.join(ROOT, "data", "logs")
+)
 LOG_DAYS = _env("LOG_DAYS", 30)                              # older log files are deleted

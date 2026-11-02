@@ -1,2 +1,0 @@
-# Add any page that nothing links to (one full URL per line). Lines starting with # are ignored.
-# https://echiphub.in/some-hidden-page/

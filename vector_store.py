@@ -26,8 +26,20 @@ def client():
         if config.QDRANT_URL:
             _client = QdrantClient(url=config.QDRANT_URL, api_key=config.QDRANT_API_KEY or None, timeout=30)
         else:
+            qpath = config.QDRANT_PATH
+            # On serverless (Vercel / AWS Lambda), the deployment directory is read-only.
+            if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
+                import shutil
+                tmp_qpath = os.path.join("/tmp", "qdrant")
+                if not os.path.exists(tmp_qpath) and os.path.exists(qpath):
+                    try:
+                        shutil.copytree(qpath, tmp_qpath, ignore=shutil.ignore_patterns("*.lock"))
+                    except Exception:
+                        pass
+                if os.path.exists(tmp_qpath):
+                    qpath = tmp_qpath
             try:
-                _client = QdrantClient(path=config.QDRANT_PATH)
+                _client = QdrantClient(path=qpath)
             except Exception as e:                       # local mode: only one program at a time
                 if "already accessed" in str(e) or "lock" in str(e).lower():
                     raise LockedError(

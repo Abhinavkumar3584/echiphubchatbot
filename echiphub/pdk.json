@@ -1,0 +1,1018 @@
+{
+  "link_text": "PDK Home",
+  "url": "https://verify.echiphub.in",
+  "title": "Verification Portal",
+  "depth": 0,
+  "scraped_at": "2026-11-02 02:29:56",
+  "headings": {
+    "h1": [
+      "Welcome back, Test"
+    ],
+    "h2": [
+      "Location permission required"
+    ],
+    "h3": [
+      "Chrome, Edge or Brave",
+      "Firefox",
+      "Safari on macOS",
+      "Mobile browser"
+    ],
+    "h4": []
+  },
+  "sections": [
+    {
+      "heading": "Overview / Header Info",
+      "level": "intro",
+      "items": [
+        "T7",
+        "Test 78",
+        "Logout",
+        "Help & Support"
+      ]
+    },
+    {
+      "heading": "Welcome back, Test",
+      "level": "h1",
+      "items": [
+        "Registration and identity verification are complete. Choose",
+        "the service you want to continue with.",
+        "PDK access",
+        "Download PDK",
+        "Download the SCL 1.2 µm or 0.8 µm PDK.",
+        "Choose PDK",
+        "Virtual machine",
+        "Download Virtual Machine",
+        "Choose a ready-to-use EDA environment with the required PDK package.",
+        "Choose package",
+        "Video learning",
+        "Example Videos",
+        "Watch the Analog and Digital IC Design flows.",
+        "Watch examples",
+        "Design workflow",
+        "Continue to Design Submission for Tape-Out",
+        "Open reference documents, silicon requisition and tape-out services.",
+        "Open workspace",
+        "⌖"
+      ]
+    },
+    {
+      "heading": "Location permission required",
+      "level": "h2",
+      "items": [
+        "You must allow current-location access to apply for and download",
+        "the SCL 1.2 µm and 0.8 µm PDKs.",
+        "Waiting for location permission…",
+        "Share current location",
+        "How to enable location permission"
+      ]
+    },
+    {
+      "heading": "Chrome, Edge or Brave",
+      "level": "h3",
+      "items": [
+        "Click the site-settings icon beside the website address.",
+        "Open",
+        "Site settings",
+        ".",
+        "Change",
+        "Location",
+        "to",
+        "Allow",
+        ".",
+        "Return to this page and refresh it."
+      ]
+    },
+    {
+      "heading": "Firefox",
+      "level": "h3",
+      "items": [
+        "Click the permission or lock icon beside the address.",
+        "Remove the blocked location permission.",
+        "Refresh the page and select",
+        "Allow",
+        "."
+      ]
+    },
+    {
+      "heading": "Safari on macOS",
+      "level": "h3",
+      "items": [
+        "Open Safari → Settings → Websites.",
+        "Select",
+        "Location",
+        ".",
+        "Set this website to",
+        "Allow",
+        ".",
+        "Refresh this page."
+      ]
+    },
+    {
+      "heading": "Mobile browser",
+      "level": "h3",
+      "items": [
+        "Open the browser or device site-permission settings.",
+        "Enable location for the browser and this website.",
+        "Return to the portal and refresh it.",
+        "Logout"
+      ]
+    }
+  ],
+  "children": [
+    {
+      "link_text": "Help & Support",
+      "url": "https://helpdesk.echiphub.in/helpdesk/my-tickets",
+      "title": "Tickets",
+      "depth": 1,
+      "scraped_at": "2026-11-02 02:30:05",
+      "headings": {
+        "h1": [],
+        "h2": [],
+        "h3": [],
+        "h4": []
+      },
+      "sections": [
+        {
+          "heading": "General Content",
+          "level": "body",
+          "items": [
+            "Helpdesk",
+            "Test 78",
+            "Tickets",
+            "Knowledge Base",
+            "Collapse",
+            "Tickets",
+            "/",
+            "List",
+            "Create",
+            "Incoming call...",
+            "Accept",
+            "Reject",
+            "·",
+            "0:00",
+            "Filter",
+            "Last Modified",
+            "Last Modified",
+            "Add Sort",
+            "Clear Sort",
+            "Columns",
+            "ID",
+            "Subject",
+            "Status",
+            "Priority",
+            "First response",
+            "Resolution",
+            "Team",
+            "Created",
+            "Add Column",
+            "Reset to Default",
+            "No Tickets Found",
+            "Create"
+          ]
+        }
+      ],
+      "children": [
+        {
+          "link_text": "Create",
+          "url": "https://helpdesk.echiphub.in/helpdesk/my-tickets/new",
+          "title": "New Ticket",
+          "depth": 2,
+          "scraped_at": "2026-11-02 02:30:12",
+          "headings": {
+            "h1": [],
+            "h2": [],
+            "h3": [],
+            "h4": [
+              "Please enter a subject to continue"
+            ]
+          },
+          "sections": [
+            {
+              "heading": "Overview / Header Info",
+              "level": "intro",
+              "items": [
+                "Helpdesk",
+                "Test 78",
+                "Tickets",
+                "Knowledge Base",
+                "Collapse",
+                "Tickets",
+                "/",
+                "New Ticket",
+                "Incoming call...",
+                "Accept",
+                "Reject",
+                "·",
+                "0:00",
+                "Ticket Type",
+                "*",
+                "Select category",
+                "Priority",
+                "*",
+                "Select priority",
+                "Mobile",
+                "*",
+                "WhatsApp Number",
+                "Subject",
+                "*"
+              ]
+            },
+            {
+              "heading": "Please enter a subject to continue",
+              "level": "h4",
+              "items": [
+                "T",
+                "Test 78",
+                "Discard",
+                "Submit"
+              ]
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "link_text": "PDK accessDownload PDKDownload the SCL 1.2 µm or 0.8 µm PDK.Choose PDK",
+      "url": "https://verify.echiphub.in/?view=downloads",
+      "title": "Verification Portal",
+      "depth": 1,
+      "scraped_at": "2026-11-02 02:30:19",
+      "headings": {
+        "h1": [
+          "Download SCL Open-Source PDKs"
+        ],
+        "h2": [
+          "Your PDK access is active",
+          "Location permission required"
+        ],
+        "h3": [
+          "Chrome, Edge or Brave",
+          "Firefox",
+          "Safari on macOS",
+          "Mobile browser"
+        ],
+        "h4": []
+      },
+      "sections": [
+        {
+          "heading": "Overview / Header Info",
+          "level": "intro",
+          "items": [
+            "T7",
+            "Test 78",
+            "Logout",
+            "Help & Support",
+            "← Back to services"
+          ]
+        },
+        {
+          "heading": "Download SCL Open-Source PDKs",
+          "level": "h1",
+          "items": [
+            "Choose the technology node you want to download.",
+            "✓"
+          ]
+        },
+        {
+          "heading": "Your PDK access is active",
+          "level": "h2",
+          "items": [
+            "Access granted for both technology nodes",
+            "· Last download 1 Nov 2026",
+            "Technology node",
+            "SCL 1.2 µm PDK",
+            "Download PDK →",
+            "Technology node",
+            "SCL 0.8 µm PDK",
+            "Download PDK →",
+            "⌖"
+          ]
+        },
+        {
+          "heading": "Location permission required",
+          "level": "h2",
+          "items": [
+            "You must allow current-location access to apply for and download",
+            "the SCL 1.2 µm and 0.8 µm PDKs.",
+            "Waiting for location permission…",
+            "Share current location",
+            "How to enable location permission"
+          ]
+        },
+        {
+          "heading": "Chrome, Edge or Brave",
+          "level": "h3",
+          "items": [
+            "Click the site-settings icon beside the website address.",
+            "Open",
+            "Site settings",
+            ".",
+            "Change",
+            "Location",
+            "to",
+            "Allow",
+            ".",
+            "Return to this page and refresh it."
+          ]
+        },
+        {
+          "heading": "Firefox",
+          "level": "h3",
+          "items": [
+            "Click the permission or lock icon beside the address.",
+            "Remove the blocked location permission.",
+            "Refresh the page and select",
+            "Allow",
+            "."
+          ]
+        },
+        {
+          "heading": "Safari on macOS",
+          "level": "h3",
+          "items": [
+            "Open Safari → Settings → Websites.",
+            "Select",
+            "Location",
+            ".",
+            "Set this website to",
+            "Allow",
+            ".",
+            "Refresh this page."
+          ]
+        },
+        {
+          "heading": "Mobile browser",
+          "level": "h3",
+          "items": [
+            "Open the browser or device site-permission settings.",
+            "Enable location for the browser and this website.",
+            "Return to the portal and refresh it.",
+            "Logout"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "link_text": "Virtual machineDownload Virtual MachineChoose a ready-to-use EDA environment with the required PDK package.Choose package",
+      "url": "https://verify.echiphub.in/?view=virtual-machine",
+      "title": "Verification Portal",
+      "depth": 1,
+      "scraped_at": "2026-11-02 02:30:33",
+      "headings": {
+        "h1": [
+          "Choose Your PDK Package"
+        ],
+        "h2": [
+          "SCL 1.2 µm PDK",
+          "SCL 1.2 µm + 0.8 µm PDKs",
+          "Installation Guide",
+          "Location permission required"
+        ],
+        "h3": [
+          "Chrome, Edge or Brave",
+          "Firefox",
+          "Safari on macOS",
+          "Mobile browser"
+        ],
+        "h4": []
+      },
+      "sections": [
+        {
+          "heading": "Overview / Header Info",
+          "level": "intro",
+          "items": [
+            "T7",
+            "Test 78",
+            "Logout",
+            "Help & Support",
+            "← Back to services"
+          ]
+        },
+        {
+          "heading": "Choose Your PDK Package",
+          "level": "h1",
+          "items": [
+            "Select the virtual machine with the required SCL",
+            "open-source PDK package.",
+            "Recommended"
+          ]
+        },
+        {
+          "heading": "SCL 1.2 µm PDK",
+          "level": "h2",
+          "items": [
+            "Download the complete open-source EDA environment with",
+            "the SCL 1.2 µm process design kit.",
+            "◇",
+            "Virtual Machine",
+            "Pre-configured",
+            "⚙",
+            "PDK Included",
+            "SCL 1.2 µm",
+            "▤",
+            "Ready to Use",
+            "EDA toolchain",
+            "Download VM with SCL 1.2 µm PDK",
+            "Complete package"
+          ]
+        },
+        {
+          "heading": "SCL 1.2 µm + 0.8 µm PDKs",
+          "level": "h2",
+          "items": [
+            "Download the complete open-source EDA environment with",
+            "both SCL 1.2 µm and 0.8 µm process design kits.",
+            "◇",
+            "Virtual Machine",
+            "Pre-configured",
+            "⚙",
+            "PDKs Included",
+            "SCL 1.2 µm & 0.8 µm",
+            "▤",
+            "Ready to Use",
+            "EDA toolchain",
+            "Download VM with SCL 1.2 µm & 0.8 µm PDKs",
+            "Setup support"
+          ]
+        },
+        {
+          "heading": "Installation Guide",
+          "level": "h2",
+          "items": [
+            "Step-by-step instructions, system requirements and",
+            "troubleshooting for setting up the virtual machine.",
+            "System requirements",
+            "Installation steps",
+            "First-time setup",
+            "View Installation Guide",
+            "↗",
+            "⌖"
+          ]
+        },
+        {
+          "heading": "Location permission required",
+          "level": "h2",
+          "items": [
+            "You must allow current-location access to apply for and download",
+            "the SCL 1.2 µm and 0.8 µm PDKs.",
+            "Waiting for location permission…",
+            "Share current location",
+            "How to enable location permission"
+          ]
+        },
+        {
+          "heading": "Chrome, Edge or Brave",
+          "level": "h3",
+          "items": [
+            "Click the site-settings icon beside the website address.",
+            "Open",
+            "Site settings",
+            ".",
+            "Change",
+            "Location",
+            "to",
+            "Allow",
+            ".",
+            "Return to this page and refresh it."
+          ]
+        },
+        {
+          "heading": "Firefox",
+          "level": "h3",
+          "items": [
+            "Click the permission or lock icon beside the address.",
+            "Remove the blocked location permission.",
+            "Refresh the page and select",
+            "Allow",
+            "."
+          ]
+        },
+        {
+          "heading": "Safari on macOS",
+          "level": "h3",
+          "items": [
+            "Open Safari → Settings → Websites.",
+            "Select",
+            "Location",
+            ".",
+            "Set this website to",
+            "Allow",
+            ".",
+            "Refresh this page."
+          ]
+        },
+        {
+          "heading": "Mobile browser",
+          "level": "h3",
+          "items": [
+            "Open the browser or device site-permission settings.",
+            "Enable location for the browser and this website.",
+            "Return to the portal and refresh it.",
+            "Logout"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "link_text": "Video learningExample VideosWatch the Analog and Digital IC Design flows.Watch examples",
+      "url": "https://verify.echiphub.in/?view=examples",
+      "title": "Verification Portal",
+      "depth": 1,
+      "scraped_at": "2026-11-02 02:30:41",
+      "headings": {
+        "h1": [
+          "Example Videos"
+        ],
+        "h2": [
+          "Example Videos",
+          "Location permission required"
+        ],
+        "h3": [
+          "Chrome, Edge or Brave",
+          "Firefox",
+          "Safari on macOS",
+          "Mobile browser"
+        ],
+        "h4": []
+      },
+      "sections": [
+        {
+          "heading": "Overview / Header Info",
+          "level": "intro",
+          "items": [
+            "T7",
+            "Test 78",
+            "Logout",
+            "Help & Support",
+            "← Back to services"
+          ]
+        },
+        {
+          "heading": "Example Videos",
+          "level": "h1",
+          "items": [
+            "Watch the Analog and Digital design examples before",
+            "continuing to the tape-out workflow.",
+            "Available",
+            "Example Videos",
+            "Choose an Analog or Digital worked example covering the design flow from",
+            "implementation through layout, verification and tape-out.",
+            "Analog Design",
+            "Schematic to tape-out",
+            "Digital Design",
+            "Digital implementation flow",
+            "Analog worked example",
+            "Follow the analog design flow through schematic, layout, DRC and",
+            "tape-out.",
+            "Your browser cannot play this video.",
+            "Open the Analog Design video",
+            "Digital worked example",
+            "Follow the digital implementation and verification flow using the SCL",
+            "open-source PDK.",
+            "Your browser cannot play this video.",
+            "Open the Digital Design video",
+            "Select a design type above. Use the full-screen control in the video player",
+            "for a larger view.",
+            "⌖"
+          ]
+        },
+        {
+          "heading": "Location permission required",
+          "level": "h2",
+          "items": [
+            "You must allow current-location access to apply for and download",
+            "the SCL 1.2 µm and 0.8 µm PDKs.",
+            "Waiting for location permission…",
+            "Share current location",
+            "How to enable location permission"
+          ]
+        },
+        {
+          "heading": "Chrome, Edge or Brave",
+          "level": "h3",
+          "items": [
+            "Click the site-settings icon beside the website address.",
+            "Open",
+            "Site settings",
+            ".",
+            "Change",
+            "Location",
+            "to",
+            "Allow",
+            ".",
+            "Return to this page and refresh it."
+          ]
+        },
+        {
+          "heading": "Firefox",
+          "level": "h3",
+          "items": [
+            "Click the permission or lock icon beside the address.",
+            "Remove the blocked location permission.",
+            "Refresh the page and select",
+            "Allow",
+            "."
+          ]
+        },
+        {
+          "heading": "Safari on macOS",
+          "level": "h3",
+          "items": [
+            "Open Safari → Settings → Websites.",
+            "Select",
+            "Location",
+            ".",
+            "Set this website to",
+            "Allow",
+            ".",
+            "Refresh this page."
+          ]
+        },
+        {
+          "heading": "Mobile browser",
+          "level": "h3",
+          "items": [
+            "Open the browser or device site-permission settings.",
+            "Enable location for the browser and this website.",
+            "Return to the portal and refresh it.",
+            "Logout"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "link_text": "Design workflowContinue to Design Submission for Tape-OutOpen reference documents, silicon requisition and tape-out services.Open workspace",
+      "url": "https://verify.echiphub.in/?view=design",
+      "title": "Verification Portal",
+      "depth": 1,
+      "scraped_at": "2026-11-02 02:30:48",
+      "headings": {
+        "h1": [
+          "Design Submission and Tape-Out"
+        ],
+        "h2": [
+          "Reference Documents",
+          "Example Videos",
+          "Silicon Number Requisition",
+          "Tape-Out Submission",
+          "Submit Final Design",
+          "Location permission required"
+        ],
+        "h3": [
+          "Comprehensive procedure document 1.2 µm/0.8µm",
+          "Tape-out submission form",
+          "Chrome, Edge or Brave",
+          "Firefox",
+          "Safari on macOS",
+          "Mobile browser"
+        ],
+        "h4": []
+      },
+      "sections": [
+        {
+          "heading": "Overview / Header Info",
+          "level": "intro",
+          "items": [
+            "T7",
+            "Test 78",
+            "Logout",
+            "Help & Support",
+            "← Back to services"
+          ]
+        },
+        {
+          "heading": "Design Submission and Tape-Out",
+          "level": "h1",
+          "items": []
+        },
+        {
+          "heading": "Reference Documents",
+          "level": "h2",
+          "items": []
+        },
+        {
+          "heading": "Tape-Out Submission",
+          "level": "h2",
+          "items": [
+            "Reference Documents",
+            "Example Design",
+            "Silicon No. Requisition",
+            "Tape-Out Submission"
+          ]
+        },
+        {
+          "heading": "Submit Final Design",
+          "level": "h2",
+          "items": [
+            "Available",
+            "Reference Documents",
+            "Read these before starting layout. The tape-out",
+            "procedure and the PDK documents define the rules your",
+            "submission is checked against.",
+            "DOCX"
+          ]
+        },
+        {
+          "heading": "Comprehensive procedure document 1.2 µm/0.8µm",
+          "level": "h3",
+          "items": [
+            "Microsoft Word document",
+            "Download",
+            "Available"
+          ]
+        },
+        {
+          "heading": "Example Videos",
+          "level": "h2",
+          "items": [
+            "Choose an Analog or Digital worked example covering the design flow from",
+            "implementation through layout, verification and tape-out.",
+            "Analog Design",
+            "Schematic to tape-out",
+            "Digital Design",
+            "Digital implementation flow",
+            "Analog worked example",
+            "Follow the analog design flow through schematic, layout, DRC and",
+            "tape-out.",
+            "Your browser cannot play this video.",
+            "Open the Analog Design video",
+            "Digital worked example",
+            "Follow the digital implementation and verification flow using the SCL",
+            "open-source PDK.",
+            "Your browser cannot play this video.",
+            "Open the Digital Design video",
+            "Select a design type above. Use the full-screen control in the video player",
+            "for a larger view.",
+            "Available"
+          ]
+        },
+        {
+          "heading": "Silicon Number Requisition",
+          "level": "h2",
+          "items": [
+            "Request a silicon number, download the generated",
+            "requisition form and obtain its matching marker-block",
+            "GDS file.",
+            "Open requisition form",
+            "My silicon numbers",
+            "Available",
+            "Tape-Out Submission",
+            "Once your design is complete and DRC clean, submit the",
+            "tape-out form with your GDSII, die information, PDK",
+            "details and checklist.",
+            "FORM"
+          ]
+        },
+        {
+          "heading": "Tape-out submission form",
+          "level": "h3",
+          "items": [
+            "Nine sections, then download the completed form",
+            "as a Word document.",
+            "Open form",
+            "Transfer four items to NIELIT along with the signed",
+            "form: the GDSII, the DRC reports, the tape-out",
+            "submission form and the GDS MD5 checksum report.",
+            "Available",
+            "Submit Final Design",
+            "Upload the completed GDSII, signed tape-out form, DRC",
+            "report and GDS MD5 checksum report for one of your",
+            "silicon-number designs.",
+            "Open final design submission",
+            "⌖"
+          ]
+        },
+        {
+          "heading": "Location permission required",
+          "level": "h2",
+          "items": [
+            "You must allow current-location access to apply for and download",
+            "the SCL 1.2 µm and 0.8 µm PDKs.",
+            "Waiting for location permission…",
+            "Share current location",
+            "How to enable location permission"
+          ]
+        },
+        {
+          "heading": "Chrome, Edge or Brave",
+          "level": "h3",
+          "items": [
+            "Click the site-settings icon beside the website address.",
+            "Open",
+            "Site settings",
+            ".",
+            "Change",
+            "Location",
+            "to",
+            "Allow",
+            ".",
+            "Return to this page and refresh it."
+          ]
+        },
+        {
+          "heading": "Firefox",
+          "level": "h3",
+          "items": [
+            "Click the permission or lock icon beside the address.",
+            "Remove the blocked location permission.",
+            "Refresh the page and select",
+            "Allow",
+            "."
+          ]
+        },
+        {
+          "heading": "Safari on macOS",
+          "level": "h3",
+          "items": [
+            "Open Safari → Settings → Websites.",
+            "Select",
+            "Location",
+            ".",
+            "Set this website to",
+            "Allow",
+            ".",
+            "Refresh this page."
+          ]
+        },
+        {
+          "heading": "Mobile browser",
+          "level": "h3",
+          "items": [
+            "Open the browser or device site-permission settings.",
+            "Enable location for the browser and this website.",
+            "Return to the portal and refresh it.",
+            "Logout"
+          ]
+        }
+      ],
+      "children": [
+        {
+          "link_text": "My silicon numbers",
+          "url": "https://verify.echiphub.in/silicon?view=assignments",
+          "title": "Silicon Number Requisition — SCL PDK",
+          "depth": 2,
+          "scraped_at": "2026-11-02 02:31:36",
+          "headings": {
+            "h1": [
+              "My silicon numbers"
+            ],
+            "h2": [
+              "My silicon numbers"
+            ],
+            "h3": [],
+            "h4": []
+          },
+          "sections": [
+            {
+              "heading": "Overview / Header Info",
+              "level": "intro",
+              "items": [
+                "T7",
+                "Test 78",
+                "Logout",
+                "Help & Support",
+                "← Back to PDK services",
+                "Silicon number service"
+              ]
+            },
+            {
+              "heading": "My silicon numbers",
+              "level": "h1",
+              "items": [
+                "Review and download all silicon numbers assigned to your account.",
+                "Your allocations",
+                "My silicon numbers",
+                "0",
+                "No silicon number yet.",
+                "Request silicon number"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "link_text": "Open form",
+          "url": "https://verify.echiphub.in/tapeout",
+          "title": "Tape-Out Submission — SCL PDK",
+          "depth": 2,
+          "scraped_at": "2026-11-02 02:31:43",
+          "headings": {
+            "h1": [
+              "Tape-Out Submission Form"
+            ],
+            "h2": [
+              "No silicon number is assigned to this account"
+            ],
+            "h3": [],
+            "h4": []
+          },
+          "sections": [
+            {
+              "heading": "Overview / Header Info",
+              "level": "intro",
+              "items": [
+                "T7",
+                "Test 78",
+                "Logout",
+                "Help & Support",
+                "← Back to PDK services",
+                "Open-source designs through NIELIT"
+              ]
+            },
+            {
+              "heading": "Tape-Out Submission Form",
+              "level": "h1",
+              "items": [
+                "Complete all nine sections to submit the tape-out form and GDSII file.",
+                "Refer to the “Procedure for MPW Tapeout” before filling it in.",
+                "Fields marked * are required."
+              ]
+            },
+            {
+              "heading": "No silicon number is assigned to this account",
+              "level": "h2",
+              "items": [
+                "Request a silicon number before starting a tape-out submission.",
+                "Request silicon number"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "link_text": "Open final design submission",
+          "url": "https://verify.echiphub.in/final-design",
+          "title": "Submit Final Design — SCL PDK",
+          "depth": 2,
+          "scraped_at": "2026-11-02 02:31:50",
+          "headings": {
+            "h1": [
+              "Submit Final Design"
+            ],
+            "h2": [
+              "Upload final-design package",
+              "My submitted designs"
+            ],
+            "h3": [
+              "No design is ready for final submission"
+            ],
+            "h4": []
+          },
+          "sections": [
+            {
+              "heading": "Overview / Header Info",
+              "level": "intro",
+              "items": [
+                "T7",
+                "Test 78",
+                "Logout",
+                "Help & Support",
+                "← Back to PDK services",
+                "FINAL DELIVERY"
+              ]
+            },
+            {
+              "heading": "Submit Final Design",
+              "level": "h1",
+              "items": [
+                "Select the design by its silicon number and upload all four required",
+                "deliverables. Each later submission for the same design is preserved",
+                "as a new revision."
+              ]
+            },
+            {
+              "heading": "Upload final-design package",
+              "level": "h2",
+              "items": [
+                "All four files are mandatory.",
+                "Private S3 storage"
+              ]
+            },
+            {
+              "heading": "No design is ready for final submission",
+              "level": "h3",
+              "items": [
+                "Request a silicon number and complete its Tape-Out Submission form",
+                "first. The design will then become available here.",
+                "Open Tape-Out Submission"
+              ]
+            },
+            {
+              "heading": "My submitted designs",
+              "level": "h2",
+              "items": [
+                "Every design and revision remains separate.",
+                "You have not submitted a final-design package yet."
+              ]
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  ]
+}
