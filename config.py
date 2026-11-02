@@ -1,6 +1,7 @@
 """All chatbot settings. Change them in the .env file (see .env.example), not here.
 Every value below is the default used when .env does not set it."""
 import os
+import tempfile
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -45,14 +46,14 @@ SPARSE_MODEL = _env("SPARSE_MODEL", "Qdrant/bm25")                    # keyword 
 QUERY_PREFIX = _env("QUERY_PREFIX", "Represent this sentence for searching relevant passages: ")
 MODEL_DIR = _env(
     "MODEL_DIR",
-    os.path.join("/tmp", "models") if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
+    os.path.join(tempfile.gettempdir(), "echiphub_models") if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
     else os.path.join(ROOT, "data", "models")
 )
 
-# On serverless (Vercel / Lambda), copy pre-bundled models from repo to /tmp/models so no runtime download is needed
+# On serverless (Vercel / Lambda), copy pre-bundled models from repo to temp folder so no runtime download is needed
 if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
     import shutil
-    _tmp_m = os.path.join("/tmp", "models")
+    _tmp_m = os.path.join(tempfile.gettempdir(), "echiphub_models")
     _src_m = os.path.join(ROOT, "data", "models")
     if not os.path.exists(_tmp_m) and os.path.exists(_src_m):
         try:
@@ -96,7 +97,7 @@ ADMIN_TOKEN = _env("ADMIN_TOKEN", "")                        # for /admin/stats;
 # ---------------------------------------------------------------- logs
 LOG_DIR = _env(
     "LOG_DIR",
-    os.path.join("/tmp", "logs") if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
+    os.path.join(tempfile.gettempdir(), "echiphub_logs") if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME")
     else os.path.join(ROOT, "data", "logs")
 )
 LOG_DAYS = _env("LOG_DAYS", 30)                              # older log files are deleted

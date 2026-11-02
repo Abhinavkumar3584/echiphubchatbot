@@ -5,6 +5,9 @@ QDRANT_URL set   -> connects to an external Qdrant server.
 Each piece of text is stored with two vectors: "dense" (meaning, BGE) and "bm25" (exact words).
 Search runs both and merges the two result lists (Reciprocal Rank Fusion).
 """
+import os
+import shutil
+import tempfile
 import uuid
 
 import numpy as np
@@ -29,11 +32,10 @@ def client():
             qpath = config.QDRANT_PATH
             # On serverless (Vercel / AWS Lambda), the deployment directory is read-only.
             if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
-                import shutil
-                tmp_qpath = os.path.join("/tmp", "qdrant")
+                tmp_qpath = os.path.join(tempfile.gettempdir(), "echiphub_qdrant")
                 if not os.path.exists(tmp_qpath) and os.path.exists(qpath):
                     try:
-                        shutil.copytree(qpath, tmp_qpath, ignore=shutil.ignore_patterns("*.lock"))
+                        shutil.copytree(qpath, tmp_qpath, dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.lock"))
                     except Exception:
                         pass
                 if os.path.exists(tmp_qpath):
