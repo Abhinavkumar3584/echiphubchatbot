@@ -1,5 +1,6 @@
 .venv/
 .env
+*.pem
 data/logs/
 data/qdrant/.lock
 data/models/.locks/
