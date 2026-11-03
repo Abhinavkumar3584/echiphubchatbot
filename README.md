@@ -23,7 +23,7 @@ A chatbot for the eChipHub websites that answers only from the websites' own tex
 
 1. Install Python 3.12 if you don't have it: `winget install Python.Python.3.12`
 2. Unzip this folder, for example to `F:\echiphub-assistant`.
-3. Double-click **`setup.bat`**. It installs everything and creates the `.env` file.
+3. Double-click **`bat/setup.bat`**. It installs everything and creates the `.env` file.
 4. Open `.env` in Notepad and paste your Groq key: `GROQ_API_KEY=gsk_...`
    (create one at https://console.groq.com/keys).
 
@@ -31,14 +31,14 @@ A chatbot for the eChipHub websites that answers only from the websites' own tex
 
 | Double-click | What happens | Time |
 |---|---|---|
-| **`1-extract.bat`** | Runs `scraper_master.py` (Playwright) to scrape all 8 websites into `echiphub/*.json` | 10-20 min |
-| **`2-load.bat`** | Turns `echiphub/*.json` into embeddings and stores them in Qdrant | 1-2 min |
-| **`check.bat`** | Checks Python, packages, Groq key, models, pages and database. Every line should say `OK` | 1 min |
-| **`3-start.bat`** | Starts the bot and opens http://localhost:8000. Click the green chip at the bottom right | - |
+| **`bat/1-extract.bat`** | Runs `scraper_master.py` (Playwright) to scrape all 8 websites into `echiphub/*.json` | 10-20 min |
+| **`bat/2-load.bat`** | Turns `echiphub/*.json` into embeddings and stores them in Qdrant | 1-2 min |
+| **`bat/check.bat`** | Checks Python, packages, Groq key, models, pages and database. Every line should say `OK` | 1 min |
+| **`bat/3-start.bat`** | Starts the bot and opens http://localhost:8000. Click the green chip at the bottom right | - |
 
 ## 3. Check the answer quality
 
-Double-click **`test.bat`**. It asks the questions in `golden.csv` and shows:
+Double-click **`bat/test.bat`**. It asks the questions in `golden.csv` and shows:
 - whether the right page was found (`OK`, `LOW` or `MISS`) and its rank;
 - whether the 3 off-topic questions are refused;
 - a suggested value for `MIN_SCORE`.
@@ -54,8 +54,8 @@ Start with 0.30 to 0.50 and use the value `test.bat` suggests.
 
 ## 4. Updating the knowledge
 
-When the websites change: run `1-extract.bat` (or `python scraper_master.py`), then `2-load.bat` (updates only changed pages
-and removes deleted ones). Stop `3-start.bat` before `2-load.bat`: the built-in database allows one program at a time.
+When the websites change: run `bat/1-extract.bat` (or `python scraper_master.py`), then `bat/2-load.bat` (updates only changed pages
+and removes deleted ones). Stop `bat/3-start.bat` before `bat/2-load.bat`: the built-in database allows one program at a time.
 
 ## 5. Add the chat bubble to websites or test locally
 
@@ -112,17 +112,16 @@ All settings with comments: `config.py`.
 | `api.py` | web server: `/api/chat`, `/api/chat/stream`, `/api/feedback`, `/health`, `/admin/stats` |
 | `chatlog.py` | question logs and stats |
 | `static/widget.js`, `static/index.html` | the chat bubble and the test page |
-| `evaluate.py`, `golden.csv` | quality test |
 | `check_setup.py` | setup check |
 
 ## 9. Problems
 
 | You see | Do this |
 |---|---|
-| `pip` fails with `getaddrinfo failed` | no internet or a proxy: `set HTTPS_PROXY=http://proxy:port`, then run `setup.bat` again |
-| `check.bat`: Groq model not available | put one of the models it lists into `GROQ_MODEL` |
-| `2-load.bat`: database is in use | close `3-start.bat` first |
+| `bat/pip` fails with `getaddrinfo failed` | no internet or a proxy: `set HTTPS_PROXY=http://proxy:port`, then run `bat/setup.bat` again |
+| `bat/check.bat`: Groq model not available | put one of the models it lists into `GROQ_MODEL` |
+| `bat/2-load.bat`: database is in use | close `bat/3-start.bat` first |
 | Embedding model download fails | the first run needs access to huggingface.co |
 | The bubble doesn't appear on a website | the website is missing from `ALLOWED_ORIGINS`, or its security policy blocks the script (see section 6) |
-| Real questions get "not found" | run `test.bat`, lower `MIN_SCORE` |
-| Answer is wrong or old | the website text is old: update the page, then `1-extract.bat` + `2-load.bat` |
+| `Real questions get "not found"` | lower `MIN_SCORE` in `.env` |
+| Answer is wrong or old | the website text is old: update the page, then `bat/1-extract.bat` + `bat/2-load.bat` |

@@ -1,5 +1,5 @@
 @echo off
-cd /d "%~dp0"
+cd /d "%~dp0.."
 echo === eChipHub Assistant setup (needs Python 3.12) ===
 if not exist .venv (py -3.12 -m venv .venv || goto error)
 call .venv\Scripts\activate || goto error
