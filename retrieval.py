@@ -22,6 +22,8 @@ def search(question):
     raw = vs.search(qd, qs, limit=config.TOP_K * 3, candidates=config.CANDIDATES)
     hits, per_page = [], {}
     for payload, rank, sim in raw:
+        if sim < config.MIN_SCORE:
+            continue
         url = payload["url"]
         if per_page.get(url, 0) >= config.MAX_PER_PAGE:
             continue

@@ -1,0 +1,384 @@
+{
+  "project": "eChipHub Master Web Scraping Pipeline",
+  "pipeline_name": "PDK Verification & Tape-Out Pipeline",
+  "description": "Structured data extracted from SCL Open-Source PDK Verification Portal, VM downloads, worked examples, tape-out workflow and MPW shuttle FAQs",
+  "exported_at": "2026-11-10 10:01:01",
+  "destination_file": "echiphubdata\\pdk.json",
+  "authenticated_user": "user-testing78@example.com",
+  "total_pages": 6,
+  "pages": [
+    {
+      "id": "pdk-portal-home",
+      "name": "PDK Verification Portal",
+      "url": "https://verify.echiphub.in/",
+      "page_title": "Verification Portal",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Portal Identity & Verification Status",
+          "type": "verification_status_banner",
+          "portal_name": "eChipHub SCL Verification Portal",
+          "authenticated_user": "Test",
+          "authenticated_email": "user-testing78@example.com",
+          "verification_status": "Complete",
+          "status_message": "Registration and identity verification are complete. Choose the service you want to continue with."
+        },
+        {
+          "section_name": "Available PDK Services & Workflows",
+          "type": "service_cards_grid",
+          "heading": "Choose a Service",
+          "total_services": 4,
+          "services": [
+            {
+              "service_category": "PDK access",
+              "title": "Download PDK",
+              "description": "Download the SCL 1.2 µm or 0.8 µm PDK.",
+              "action_label": "Choose PDK",
+              "url": "https://verify.echiphub.in/?view=downloads"
+            },
+            {
+              "service_category": "Virtual machine",
+              "title": "Download Virtual Machine",
+              "description": "Choose a ready-to-use EDA environment with the required PDK package.",
+              "action_label": "Choose package",
+              "url": "https://verify.echiphub.in/?view=virtual-machine"
+            },
+            {
+              "service_category": "Video learning",
+              "title": "Example Videos",
+              "description": "Watch the Analog and Digital IC Design flows.",
+              "action_label": "Watch examples",
+              "url": "https://verify.echiphub.in/?view=examples"
+            },
+            {
+              "service_category": "Design workflow",
+              "title": "Continue to Design Submission for Tape-Out",
+              "description": "Open reference documents, silicon requisition and tape-out services.",
+              "action_label": "Open workspace",
+              "url": "https://verify.echiphub.in/?view=design"
+            }
+          ]
+        },
+        {
+          "section_name": "Portal Quick Links",
+          "type": "portal_links",
+          "links": [
+            {
+              "label": "FAQs",
+              "url": "https://verify.echiphub.in/faq"
+            },
+            {
+              "label": "Help & Support",
+              "url": "https://helpdesk.echiphub.in/"
+            },
+            {
+              "label": "SCL Mohali Official",
+              "url": "https://www.scl.gov.in/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pdk-downloads",
+      "name": "PDK Downloads",
+      "url": "https://verify.echiphub.in/?view=downloads",
+      "page_title": "Verification Portal",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "PDK Access Status",
+          "type": "access_status_badge",
+          "heading": "Your PDK access is active",
+          "status": "Active",
+          "access_scope": "Access granted for both technology nodes",
+          "last_download": "3 Nov 2026"
+        },
+        {
+          "section_name": "Available PDK Technology Nodes",
+          "type": "technology_nodes_list",
+          "heading": "Download SCL Open-Source PDKs",
+          "description": "Choose the technology node you want to download.",
+          "nodes": [
+            {
+              "technology_node": "SCL 1.2 µm PDK",
+              "description": "Standard CMOS fabrication node 1.2 µm open-source process design kit.",
+              "download_url": "https://verify.echiphub.in/download?node=1.2_um",
+              "action_label": "Download PDK →"
+            },
+            {
+              "technology_node": "SCL 0.8 µm PDK",
+              "description": "Standard CMOS fabrication node 0.8 µm open-source process design kit.",
+              "download_url": "https://verify.echiphub.in/download?node=0.8_um",
+              "action_label": "Download PDK →"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pdk-virtual-machine",
+      "name": "PDK EDA Virtual Machine",
+      "url": "https://verify.echiphub.in/?view=virtual-machine",
+      "page_title": "Verification Portal",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Virtual Machine Overview",
+          "type": "vm_overview",
+          "heading": "Choose Your PDK Package",
+          "description": "Select the virtual machine with the required SCL open-source PDK package."
+        },
+        {
+          "section_name": "Pre-configured EDA Virtual Machine Packages",
+          "type": "vm_packages_list",
+          "heading": "Available VM Packages",
+          "total_packages": 2,
+          "packages": [
+            {
+              "package_name": "SCL 1.2 µm PDK (Recommended)",
+              "is_recommended": true,
+              "description": "Download the complete open-source EDA environment with the SCL 1.2 µm process design kit.",
+              "environment_features": [
+                "Pre-configured Virtual Machine",
+                "PDK Included: SCL 1.2 µm",
+                "Ready to Use EDA toolchain"
+              ],
+              "download_url": "https://d2hin4uaa1z4am.cloudfront.net/chipcraft_v2.ova",
+              "action_label": "Download VM with SCL 1.2 µm PDK"
+            },
+            {
+              "package_name": "SCL 1.2 µm + 0.8 µm PDKs",
+              "is_recommended": false,
+              "description": "Download the complete open-source EDA environment with both SCL 1.2 µm and 0.8 µm process design kits.",
+              "environment_features": [
+                "Pre-configured Virtual Machine",
+                "PDKs Included: SCL 1.2 µm & 0.8 µm",
+                "Ready to Use EDA toolchain"
+              ],
+              "download_url": "https://d2hin4uaa1z4am.cloudfront.net/chipcraft_0.8_v2.ova",
+              "action_label": "Download VM with SCL 1.2 µm & 0.8 µm PDKs"
+            }
+          ]
+        },
+        {
+          "section_name": "Virtual Machine Installation Guide",
+          "type": "installation_guide_card",
+          "heading": "Installation Guide",
+          "description": "Step-by-step instructions, system requirements and troubleshooting for setting up the ChipCraft virtual machine.",
+          "topics": [
+            "System requirements",
+            "Installation steps",
+            "First-time setup"
+          ],
+          "manual_url": "https://d2hin4uaa1z4am.cloudfront.net/Installation+mannual+for+Virtual+box+and+importing+chipcraft.ova+image_v2.pdf",
+          "action_label": "View Installation Guide↗"
+        }
+      ]
+    },
+    {
+      "id": "pdk-examples",
+      "name": "PDK Video Tutorials & Worked Examples",
+      "url": "https://verify.echiphub.in/?view=examples",
+      "page_title": "Verification Portal",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Example Videos Overview",
+          "type": "examples_header",
+          "heading": "Example Videos",
+          "description": "Watch the Analog and Digital design examples before continuing to the tape-out workflow. Choose an Analog or Digital worked example covering the design flow from implementation through layout, verification and tape-out."
+        },
+        {
+          "section_name": "IC Design Flow Video Tutorials",
+          "type": "video_tutorials_grid",
+          "heading": "Worked Examples",
+          "total_tutorials": 2,
+          "tutorials": [
+            {
+              "track": "Analog Design",
+              "subtitle": "Schematic to tape-out",
+              "title": "Analog worked example",
+              "description": "Follow the analog design flow through schematic, layout, DRC and tape-out.",
+              "video_url": "https://d2hin4uaa1z4am.cloudfront.net/pdk-introduction/SCL1.2um_h264_compat.mp4",
+              "action_label": "Open the Analog Design video"
+            },
+            {
+              "track": "Digital Design",
+              "subtitle": "Digital implementation flow",
+              "title": "Digital worked example",
+              "description": "Follow the digital implementation and verification flow using the SCL open-source PDK.",
+              "video_url": "https://d2hin4uaa1z4am.cloudfront.net/pdk-introduction/PFA_demonstration_video.mp4",
+              "action_label": "Open the Digital Design video"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pdk-design-tapeout",
+      "name": "PDK Design Submission & Tape-Out",
+      "url": "https://verify.echiphub.in/?view=design",
+      "page_title": "Verification Portal",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Tape-Out Workflow Overview",
+          "type": "workflow_overview",
+          "heading": "Design Submission and Tape-Out",
+          "description": "Continue with reference documents, example designs, silicon requisition and tape-out submission.",
+          "workflow_stages": [
+            "Reference Documents",
+            "Example Design",
+            "Silicon No. Requisition",
+            "Tape-Out Submission",
+            "Submit Final Design"
+          ]
+        },
+        {
+          "section_name": "Stage 1: Reference Documents",
+          "type": "workflow_stage_card",
+          "heading": "Reference Documents",
+          "description": "Read these before starting layout. The tape-out procedure and the PDK documents define the rules your submission is checked against.",
+          "document_type": "DOCX Microsoft Word document",
+          "title": "Comprehensive procedure document 1.2 µm/0.8µm",
+          "download_url": "https://verify.echiphub.in/reference-documents/comprehensive-procedure-12um",
+          "action_label": "Download"
+        },
+        {
+          "section_name": "Stage 2: Example Design",
+          "type": "workflow_stage_card",
+          "heading": "Example Videos",
+          "description": "Choose an Analog or Digital worked example covering the design flow from implementation through layout, verification and tape-out.",
+          "examples": [
+            {
+              "track": "Analog Design",
+              "title": "Analog worked example (Schematic to tape-out)",
+              "video_url": "https://d2hin4uaa1z4am.cloudfront.net/pdk-introduction/SCL1.2um_h264_compat.mp4"
+            },
+            {
+              "track": "Digital Design",
+              "title": "Digital worked example (Digital implementation flow)",
+              "video_url": "https://d2hin4uaa1z4am.cloudfront.net/pdk-introduction/PFA_demonstration_video.mp4"
+            }
+          ]
+        },
+        {
+          "section_name": "Stage 3: Silicon Number Requisition",
+          "type": "workflow_stage_card",
+          "heading": "Silicon Number Requisition",
+          "description": "Request a silicon number, download the generated requisition form and obtain approval before submission.",
+          "actions": [
+            {
+              "label": "Open requisition form",
+              "url": "https://verify.echiphub.in/silicon"
+            },
+            {
+              "label": "My silicon numbers",
+              "url": "https://verify.echiphub.in/silicon?view=assignments#my-silicon-numbers"
+            }
+          ]
+        },
+        {
+          "section_name": "Stage 4: Tape-Out Submission Form",
+          "type": "workflow_stage_card",
+          "heading": "Tape-Out Submission",
+          "description": "Once your design is complete and DRC clean, submit the tape-out form with your project details.",
+          "form_info": "Nine sections, then download the completed form.",
+          "deliverables_required": [
+            "Completed and signed tape-out submission form",
+            "GDSII layout file",
+            "DRC Clean log / report",
+            "GDS MD5 checksum verification file"
+          ],
+          "action": {
+            "label": "Open form",
+            "url": "https://verify.echiphub.in/tapeout"
+          }
+        },
+        {
+          "section_name": "Stage 5: Final Design Upload",
+          "type": "workflow_stage_card",
+          "heading": "Submit Final Design",
+          "description": "Upload the completed GDSII, signed tape-out form, DRC report and GDS MD5 checksum.",
+          "action": {
+            "label": "Open final design submission",
+            "url": "https://verify.echiphub.in/final-design"
+          }
+        }
+      ]
+    },
+    {
+      "id": "pdk-faqs",
+      "name": "MPW Shuttle Programme FAQs",
+      "url": "https://verify.echiphub.in/faq",
+      "page_title": "MPW Shuttle Programme FAQs",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "MPW Shuttle Programme FAQs",
+          "type": "faqs_list",
+          "heading": "eChipHub–SCL MPW Shuttle Programme: General FAQs",
+          "total_faqs": 11,
+          "faqs": [
+            {
+              "number": 1,
+              "question": "What is the eChipHub–SCL MPW Shuttle Programme?",
+              "answer": "The programme provides an opportunity to submit eligible chip designs for fabrication at SCL Mohali using the 1.2 µm and 0.8 µm technology nodes."
+            },
+            {
+              "number": 2,
+              "question": "Who can participate?",
+              "answer": "Students, individual innovators, working professionals, researchers, startups, MSMEs, colleges and universities can participate. Students and individuals may submit designs independently."
+            },
+            {
+              "number": 3,
+              "question": "What types of designs can be submitted?",
+              "answer": "Both digital and analog IC designs can be submitted."
+            },
+            {
+              "number": 4,
+              "question": "Is there a fee to participate or fabricate a design?",
+              "answer": "There are currently no charges for design submission or fabrication under the shuttle programme."
+            },
+            {
+              "number": 5,
+              "question": "Are packaging and delivery included?",
+              "answer": "Yes. Packaging and delivery are included for the current shuttle."
+            },
+            {
+              "number": 6,
+              "question": "Which PDKs are supported?",
+              "answer": "The programme currently supports fabrication of designs based on the SCL 1.2 µm and 0.8 µm open-source PDKs."
+            },
+            {
+              "number": 7,
+              "question": "Where can I download the PDKs and access design resources?",
+              "answer": "Visit the SCL Open-Source PDK Access Portal to access the PDKs, reference documents, pre-configured VM images and example videos. https://verify.echiphub.in/"
+            },
+            {
+              "number": 8,
+              "question": "Are design tools and example flows available?",
+              "answer": "Yes. The portal provides VM images with open-source EDA tools and the supported PDKs integrated, along with example videos for analog and digital design flows based on the 1.2 µm PDK."
+            },
+            {
+              "number": 9,
+              "question": "Where can I find the design submission form and guidelines?",
+              "answer": "Access the Design Tapeout Submission Form and review the relevant PDK documentation and design constraints in the SCL Open-Source PDK Access Portal. https://verify.echiphub.in/"
+            },
+            {
+              "number": 10,
+              "question": "Can designs be submitted for commercial purposes?",
+              "answer": "Startups and MSMEs may submit test chips for fabrication to implement a proof of concept. If mass production is required for commercialization after tape-out, further discussions can be taken up with SCL."
+            },
+            {
+              "number": 11,
+              "question": "Where can I get help or ask questions?",
+              "answer": "Raise a ticket through the eChipHub Helpdesk and the support team will assist you. https://helpdesk.echiphub.in/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

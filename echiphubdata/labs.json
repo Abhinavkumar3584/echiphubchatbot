@@ -1,0 +1,178 @@
+{
+  "project": "eChipHub Master Web Scraping Pipeline",
+  "pipeline_name": "Labs Environment Pipeline",
+  "description": "Structured data extracted from eChipHub Labs portal and authenticated JupyterHub environment",
+  "exported_at": "2026-11-10 10:01:01",
+  "destination_file": "echiphubdata\\labs.json",
+  "authenticated_user": "user-testing78@example.com",
+  "total_pages": 2,
+  "pages": [
+    {
+      "id": "labs-portal",
+      "name": "eChipHub Labs Portal",
+      "url": "https://echiphub.in/labs/",
+      "page_title": "Labs - EdTech",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Lab Categories & Tabs",
+          "type": "tabs_filter",
+          "heading": "Labs Directory",
+          "tabs": [
+            "Upcoming Labs",
+            "Live Labs",
+            "Completed Labs",
+            "Hub Labs"
+          ]
+        },
+        {
+          "section_name": "Institutional Virtual Labs Schedule",
+          "type": "labs_schedule_table",
+          "heading": "Scheduled Institutional Labs",
+          "columns": [
+            "Date",
+            "Lab Links",
+            "Conducted By"
+          ],
+          "total_scheduled_institutions": 3,
+          "labs": [
+            {
+              "dates": "05 May – 09 May 2026",
+              "conducted_by": "Galgotias University",
+              "lab_endpoints": [
+                "https://chipcraft-local-01.echiphub.in/guacamole",
+                "https://chipcraft-local-02.echiphub.in/guacamole",
+                "https://chipcraft-local-03.echiphub.in/guacamole",
+                "https://chipcraft-local-04.echiphub.in/guacamole"
+              ]
+            },
+            {
+              "dates": "05 May – 09 May 2026",
+              "conducted_by": "Manipal University",
+              "lab_endpoints": [
+                "https://chipcraft-local-08.echiphub.in/guacamole",
+                "https://chipcraft-local-09.echiphub.in/guacamole",
+                "https://chipcraft-local-10.echiphub.in/guacamole"
+              ]
+            },
+            {
+              "dates": "05 May – 09 May 2026",
+              "conducted_by": "NDU University",
+              "lab_endpoints": [
+                "https://lab-chipcraft-local-05.echiphub.in/guacamole",
+                "https://lab-chipcraft-local-06.echiphub.in/guacamole",
+                "https://lab-chipcraft-local-07.echiphub.in/guacamole"
+              ]
+            }
+          ]
+        },
+        {
+          "section_name": "Central Cloud Lab Access",
+          "type": "central_hub_cta",
+          "heading": "Central Cloud JupyterHub Environment",
+          "hub_url": "https://labs.echiphub.in",
+          "hub_login_url": "https://labs.echiphub.in/hub/login?next=%2Fhub%2F"
+        }
+      ]
+    },
+    {
+      "id": "labs-hub-home",
+      "name": "JupyterHub Lab Dashboard",
+      "url": "https://labs.echiphub.in/hub/home",
+      "page_title": "JupyterHub",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Lab Hub Header & Server Launcher",
+          "type": "hub_hero",
+          "title": "eChipHub Labs",
+          "headline": "Your labs. On demand.",
+          "description": "Start a lab, do the work, stop it when you leave. Gold hours are full power. Bronze hours are shared and slower.",
+          "authenticated_user": "user-testing78@example.com",
+          "server_action": {
+            "button_label": "Start My Server",
+            "spawn_endpoint": "/hub/spawn/user-testing78@example.com"
+          }
+        },
+        {
+          "section_name": "Service Tiers (Gold vs Bronze)",
+          "type": "service_tiers",
+          "heading": "Gold vs Bronze",
+          "tiers": [
+            {
+              "tier_name": "Gold",
+              "operating_hours": "9:00 AM – 6:00 PM IST",
+              "description": "Full efficiency. Fastest starts. Use this window for simulation, layout, and heavy CAD."
+            },
+            {
+              "tier_name": "Bronze",
+              "operating_hours": "After 6:00 PM IST",
+              "description": "Limited efficiency. Fewer machines, slower jobs, possible wait to start."
+            }
+          ]
+        },
+        {
+          "section_name": "Help Desk Support",
+          "type": "support_card",
+          "heading": "Help desk",
+          "description": "Login, spawn, or tool issues? Send email, time, and a screenshot.",
+          "helpdesk_url": "https://helpdesk.echiphub.in/"
+        },
+        {
+          "section_name": "Lab Usage Guidelines",
+          "type": "step_by_step_guide",
+          "heading": "Use the lab",
+          "steps": [
+            {
+              "step_number": "01",
+              "step_title": "Start",
+              "instruction": "Click Start My Server once, then wait. Do not click it repeatedly."
+            },
+            {
+              "step_number": "02",
+              "step_title": "Restart",
+              "instruction": "To restart, Stop My Server, wait until it has stopped, then Start. Refreshing the page is not a restart."
+            },
+            {
+              "step_number": "03",
+              "step_title": "Stop",
+              "instruction": "Click Stop My Server when you finish. Closing the tab does not shut the lab down."
+            }
+          ]
+        },
+        {
+          "section_name": "What to Expect",
+          "type": "information_points",
+          "heading": "What to expect",
+          "points": [
+            "Day: full CPU/RAM, quicker desktops.",
+            "Night: reduced capacity. Heavy tools may lag.",
+            "Saved files stay. The live desktop does not."
+          ]
+        },
+        {
+          "section_name": "Troubleshooting (If it breaks)",
+          "type": "troubleshooting_guide",
+          "heading": "If it breaks",
+          "rules": [
+            "Spawn > 3 min: refresh once, then start again if needed.",
+            "Unresponsive desktop: Stop My Server, wait 30 seconds, then Start.",
+            "Slow connection: after the desktop opens, use the semicircular control on the right edge (mid-screen) and lower video bitrate, resolution, and frame rate.",
+            "Still stuck: help desk with email, time, and a screenshot."
+          ]
+        },
+        {
+          "section_name": "Best Practices",
+          "type": "best_practices_list",
+          "heading": "Best practices",
+          "practices": [
+            "Use Google Chrome for the most reliable desktop stream.",
+            "Stop the lab when you leave. Do not leave it running overnight.",
+            "Run long or heavy jobs during Gold hours (9:00 AM – 6:00 PM IST).",
+            "One lab per user. Save your work often."
+          ]
+        }
+      ]
+    }
+  ]
+}

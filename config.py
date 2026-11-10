@@ -37,7 +37,7 @@ GROQ_MODEL = _env("GROQ_MODEL", "openai/gpt-oss-20b")                  # fast + 
 GROQ_FALLBACK_MODEL = _env("GROQ_FALLBACK_MODEL", "openai/gpt-oss-120b")  # used if the main one fails
 REASONING_EFFORT = _env("REASONING_EFFORT", "low")                    # low | medium | high
 TEMPERATURE = _env("TEMPERATURE", 0.2)
-MAX_ANSWER_TOKENS = _env("MAX_ANSWER_TOKENS", 1200)                   # includes the model's hidden reasoning
+MAX_ANSWER_TOKENS = _env("MAX_ANSWER_TOKENS", 1500)                   # includes the model's hidden reasoning
 GROQ_TIMEOUT = _env("GROQ_TIMEOUT", 40.0)
 
 # ---------------------------------------------------------------- embeddings (run locally, free)
@@ -68,7 +68,8 @@ QDRANT_API_KEY = _env("QDRANT_API_KEY", "")
 COLLECTION = _env("COLLECTION", "echiphub")
 
 # ---------------------------------------------------------------- knowledge (from echiphub JSONs)
-DATA_DIR = _env("DATA_DIR", _env("PAGES_DIR", os.path.join(ROOT, "echiphub")))
+_default_data = os.path.join(ROOT, "echiphubdata") if os.path.exists(os.path.join(ROOT, "echiphubdata")) else os.path.join(ROOT, "echiphub")
+DATA_DIR = _env("DATA_DIR", _env("PAGES_DIR", _default_data))
 PAGES_DIR = DATA_DIR                            # backward compatibility
 CHUNK_WORDS = _env("CHUNK_WORDS", 220)          # size of one piece of text
 CHUNK_OVERLAP = _env("CHUNK_OVERLAP", 40)       # words repeated between two pieces of a long section
@@ -77,8 +78,8 @@ MIN_CHUNK_WORDS = _env("MIN_CHUNK_WORDS", 6)
 # ---------------------------------------------------------------- search
 TOP_K = _env("TOP_K", 6)                        # pieces of text given to the model
 CANDIDATES = _env("CANDIDATES", 30)             # pieces looked at by each search before merging
-MAX_PER_PAGE = _env("MAX_PER_PAGE", 3)          # at most this many pieces from one page
-MIN_SCORE = _env("MIN_SCORE", 0.50)             # below this similarity: "I don't know" (tune with evaluate.py)
+MAX_PER_PAGE = _env("MAX_PER_PAGE", 4)          # at most this many pieces from one page
+MIN_SCORE = _env("MIN_SCORE", 0.40)             # below this similarity: "I don't know" (tune with evaluate.py)
 MAX_CONTEXT_CHARS = _env("MAX_CONTEXT_CHARS", 9000)
 
 # ---------------------------------------------------------------- web server

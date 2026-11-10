@@ -1,0 +1,2705 @@
+{
+  "project": "eChipHub Master Web Scraping Pipeline",
+  "pipeline_name": "Home & Connected Pages Pipeline",
+  "description": "Comprehensive structured text data extracted from eChipHub platform and connected pages",
+  "exported_at": "2026-11-10 10:01:00",
+  "destination_file": "echiphubdata\\home.json",
+  "total_pages": 10,
+  "pages": [
+    {
+      "id": "home",
+      "name": "eChipHub Home",
+      "url": "https://echiphub.in/",
+      "page_title": "Home - EdTech",
+      "extracted_at": "2026-11-10 10:00:53",
+      "sections": [
+        {
+          "section_name": "Active Announcement",
+          "type": "banner",
+          "content": "Announcement of eChiphub-SCL MPW Shuttle Program",
+          "url": "https://echiphub.in/wp-content/uploads/2026/10/MPW_shuttle1_poster.png"
+        },
+        {
+          "section_name": "Outreach Numbers",
+          "type": "cards_grid",
+          "heading": "One Year of Outreach Numbers",
+          "cards": [
+            {
+              "metric_label": "Total No. of Beneficiaries",
+              "metric_value": "11768"
+            },
+            {
+              "metric_label": "No. of Trained Candidates",
+              "metric_value": "6528"
+            },
+            {
+              "metric_label": "Total Workshops",
+              "metric_value": "98"
+            },
+            {
+              "metric_label": "Upcoming Workshops",
+              "metric_value": "2"
+            },
+            {
+              "metric_label": "Live Workshops",
+              "metric_value": "6"
+            },
+            {
+              "metric_label": "Completed Workshops",
+              "metric_value": "90"
+            }
+          ]
+        },
+        {
+          "section_name": "Key Highlights",
+          "type": "feature_cards",
+          "heading": "Key Highlights",
+          "cards": [
+            {
+              "card_number": "01",
+              "card_title": "Digital Smart Courses",
+              "card_description": "Begin your learning journey with structured courses designed to build strong fundamentals and practical skills aligned with industry needs.",
+              "tags_or_centers": [
+                "Self-paced",
+                "Project-based",
+                "Certified"
+              ]
+            },
+            {
+              "card_number": "02",
+              "card_title": "Industry Experts",
+              "card_description": "Learn from experienced industry professionals and certified trainers who guide you with real-world insights and hands-on expertise.",
+              "tags_or_centers": [
+                "Live sessions",
+                "Mentorship",
+                "Industry-vetted"
+              ]
+            },
+            {
+              "card_number": "03",
+              "card_title": "Multiple Centers",
+              "card_description": "Benefit from our strong institutional network, industry collaborations, and access to training opportunities across key technology hubs.",
+              "tags_or_centers": [
+                "Ropar",
+                "Noida",
+                "Imphal",
+                "Patna",
+                "Daman"
+              ]
+            }
+          ]
+        },
+        {
+          "section_name": "Platform Overview",
+          "type": "text_block",
+          "heading": "Open-Source First EdTech Platform",
+          "paragraphs": [
+            "“eChipHub is a premier EdTech platform developed jointly by NIELIT and SoCTeamup Semiconductors through a strategic collaboration under the aegis of the Ministry of Electronics and Information Technology (MeitY), aiming to enhance chip design and development skills nationwide. By leveraging open-source EDA tools, the platform delivers industry-aligned training and virtual labs, complemented by expert-led programs that equip students, researchers, and innovators with hands-on expertise. By covering the complete chip design lifecycle—from RTL to GDSII—eChipHub bridges the gap between theoretical knowledge and practical application, directly supporting India’s mission for innovation and technological self-reliance”"
+          ],
+          "action_links": [
+            {
+              "label": "Know More",
+              "url": "https://www.echiphub.in/about/"
+            },
+            {
+              "label": "Why Choose Us",
+              "url": "https://www.echiphub.in/?p=3931"
+            }
+          ]
+        },
+        {
+          "section_name": "Our Collaborations",
+          "type": "partner_cards",
+          "heading": "Our Collaborations",
+          "partners": [
+            {
+              "partner_name": "Ministry of Electronics and Information Technology (MeitY)",
+              "website_url": "https://www.meity.gov.in/"
+            },
+            {
+              "partner_name": "National Institute of Electronics & Information Technology (NIELIT)",
+              "website_url": "https://www.nielit.gov.in/"
+            },
+            {
+              "partner_name": "SoCTeamup Semiconductors",
+              "website_url": "https://www.socteamup.com/"
+            },
+            {
+              "partner_name": "Semi-Conductor Laboratory (SCL)",
+              "website_url": "https://www.scl.gov.in/"
+            }
+          ]
+        },
+        {
+          "section_name": "Explore Offerings",
+          "type": "offering_cards",
+          "heading": "Explore More Courses & Workshops",
+          "cards": [
+            {
+              "title": "Workshops",
+              "description": "Hands-on technical training, bootcamps and live sessions across multiple centers.",
+              "url": "https://echiphub.in/workshops/"
+            },
+            {
+              "title": "Courses",
+              "description": "Comprehensive self-paced & project-based certified smart courses.",
+              "url": "https://echiphub.in/all-courses/"
+            },
+            {
+              "title": "Labs",
+              "description": "Cloud-based EDA tools and virtual chip design environment.",
+              "url": "https://echiphub.in/labs/"
+            }
+          ]
+        },
+        {
+          "section_name": "Site Analytics",
+          "type": "analytics_tables",
+          "heading": "Site Analytics",
+          "country_wise_visitors": [
+            {
+              "rank": 1,
+              "country": "India",
+              "visitors_count": "76,405",
+              "percentage_share": "100%"
+            },
+            {
+              "rank": 2,
+              "country": "TW",
+              "visitors_count": "12",
+              "percentage_share": "0%"
+            },
+            {
+              "rank": 3,
+              "country": "United States",
+              "visitors_count": "8",
+              "percentage_share": "0%"
+            },
+            {
+              "rank": 4,
+              "country": "Netherlands",
+              "visitors_count": "6",
+              "percentage_share": "0%"
+            },
+            {
+              "rank": 5,
+              "country": "Brazil",
+              "visitors_count": "3",
+              "percentage_share": "0%"
+            }
+          ],
+          "india_state_wise_visitors": [
+            {
+              "rank": 1,
+              "state_or_region": "Karnataka",
+              "visitors_count": "17,994",
+              "percentage_share": "26.9%"
+            },
+            {
+              "rank": 2,
+              "state_or_region": "Maharashtra",
+              "visitors_count": "12,017",
+              "percentage_share": "18%"
+            },
+            {
+              "rank": 3,
+              "state_or_region": "Telangana",
+              "visitors_count": "9,024",
+              "percentage_share": "13.5%"
+            },
+            {
+              "rank": 4,
+              "state_or_region": "Tamil Nadu",
+              "visitors_count": "4,604",
+              "percentage_share": "6.9%"
+            },
+            {
+              "rank": 5,
+              "state_or_region": "Andhra Pradesh",
+              "visitors_count": "4,018",
+              "percentage_share": "6%"
+            },
+            {
+              "rank": 6,
+              "state_or_region": "West Bengal",
+              "visitors_count": "2,817",
+              "percentage_share": "4.2%"
+            },
+            {
+              "rank": 7,
+              "state_or_region": "National Capital Territory of Delhi",
+              "visitors_count": "2,642",
+              "percentage_share": "3.9%"
+            },
+            {
+              "rank": 8,
+              "state_or_region": "Uttar Pradesh",
+              "visitors_count": "2,329",
+              "percentage_share": "3.5%"
+            },
+            {
+              "rank": 9,
+              "state_or_region": "Odisha",
+              "visitors_count": "1,597",
+              "percentage_share": "2.4%"
+            },
+            {
+              "rank": 10,
+              "state_or_region": "Kerala",
+              "visitors_count": "1,535",
+              "percentage_share": "2.3%"
+            },
+            {
+              "rank": 11,
+              "state_or_region": "Bihar",
+              "visitors_count": "1,332",
+              "percentage_share": "2%"
+            },
+            {
+              "rank": 12,
+              "state_or_region": "Gujarat",
+              "visitors_count": "1,067",
+              "percentage_share": "1.6%"
+            },
+            {
+              "rank": 13,
+              "state_or_region": "Rajasthan",
+              "visitors_count": "798",
+              "percentage_share": "1.2%"
+            },
+            {
+              "rank": 14,
+              "state_or_region": "Assam",
+              "visitors_count": "703",
+              "percentage_share": "1.1%"
+            },
+            {
+              "rank": 15,
+              "state_or_region": "Punjab",
+              "visitors_count": "665",
+              "percentage_share": "1%"
+            },
+            {
+              "rank": 16,
+              "state_or_region": "Manipur",
+              "visitors_count": "651",
+              "percentage_share": "1%"
+            },
+            {
+              "rank": 17,
+              "state_or_region": "Madhya Pradesh",
+              "visitors_count": "615",
+              "percentage_share": "0.9%"
+            },
+            {
+              "rank": 18,
+              "state_or_region": "Jharkhand",
+              "visitors_count": "594",
+              "percentage_share": "0.9%"
+            },
+            {
+              "rank": 19,
+              "state_or_region": "Haryana",
+              "visitors_count": "564",
+              "percentage_share": "0.8%"
+            },
+            {
+              "rank": 20,
+              "state_or_region": "Jammu and Kashmir",
+              "visitors_count": "282",
+              "percentage_share": "0.4%"
+            },
+            {
+              "rank": 21,
+              "state_or_region": "Uttarakhand",
+              "visitors_count": "180",
+              "percentage_share": "0.3%"
+            },
+            {
+              "rank": 22,
+              "state_or_region": "Chandigarh",
+              "visitors_count": "178",
+              "percentage_share": "0.3%"
+            },
+            {
+              "rank": 23,
+              "state_or_region": "Tripura",
+              "visitors_count": "158",
+              "percentage_share": "0.2%"
+            },
+            {
+              "rank": 24,
+              "state_or_region": "Meghalaya",
+              "visitors_count": "127",
+              "percentage_share": "0.2%"
+            },
+            {
+              "rank": 25,
+              "state_or_region": "Nagaland",
+              "visitors_count": "100",
+              "percentage_share": "0.1%"
+            },
+            {
+              "rank": 26,
+              "state_or_region": "Himachal Pradesh",
+              "visitors_count": "97",
+              "percentage_share": "0.1%"
+            },
+            {
+              "rank": 27,
+              "state_or_region": "Chhattisgarh",
+              "visitors_count": "76",
+              "percentage_share": "0.1%"
+            },
+            {
+              "rank": 28,
+              "state_or_region": "Goa",
+              "visitors_count": "57",
+              "percentage_share": "0.1%"
+            },
+            {
+              "rank": 29,
+              "state_or_region": "Sikkim",
+              "visitors_count": "46",
+              "percentage_share": "0.1%"
+            },
+            {
+              "rank": 30,
+              "state_or_region": "Union Territory of Puducherry",
+              "visitors_count": "34",
+              "percentage_share": "0.1%"
+            }
+          ]
+        },
+        {
+          "section_name": "Navigation Menu",
+          "type": "navigation",
+          "links": [
+            {
+              "label": "Home",
+              "url": "https://echiphub.in/"
+            },
+            {
+              "label": "All Courses (Catalog)",
+              "url": "https://echiphub.in/all-courses/"
+            },
+            {
+              "label": "My Courses",
+              "url": "https://echiphub.in/my-purchased-courses/"
+            },
+            {
+              "label": "Workshops",
+              "url": "https://echiphub.in/workshops/"
+            },
+            {
+              "label": "HelpDesk",
+              "url": "https://helpdesk.echiphub.in/keycloaksso"
+            },
+            {
+              "label": "PDK",
+              "url": "https://verify.echiphub.in/"
+            },
+            {
+              "label": "Community",
+              "url": "https://community.echiphub.in/auth/oidc?origin=https%3A%2F%2Fcommunity.echiphub.in%2Fg"
+            },
+            {
+              "label": "Alliances",
+              "url": "https://echiphub.in/academic-alliances/"
+            },
+            {
+              "label": "News",
+              "url": "https://echiphub.in/news-2/"
+            },
+            {
+              "label": "Labs",
+              "url": "https://echiphub.in/labs/"
+            },
+            {
+              "label": "About",
+              "url": "https://echiphub.in/about/"
+            },
+            {
+              "label": "Contact",
+              "url": "https://echiphub.in/contact/"
+            },
+            {
+              "label": "Login",
+              "url": "https://echiphub.in/wp-login.php"
+            }
+          ]
+        },
+        {
+          "section_name": "Footer Information",
+          "type": "footer",
+          "address": "Block-3, Block A, East Kidwai Nagar, Kidwai Nagar, New Delhi, Delhi 110023",
+          "copyright": "© NIELIT 2026, All Rights Reserved.",
+          "quick_links": [
+            {
+              "label": "Home",
+              "url": "https://echiphub.in/"
+            },
+            {
+              "label": "All Courses",
+              "url": "https://echiphub.in/all-courses/"
+            },
+            {
+              "label": "Workshops",
+              "url": "https://echiphub.in/workshops/"
+            },
+            {
+              "label": "Labs",
+              "url": "https://echiphub.in/labs/"
+            },
+            {
+              "label": "Academic Alliances",
+              "url": "https://echiphub.in/academic-alliances/"
+            },
+            {
+              "label": "Discuss",
+              "url": "https://community.echiphub.in/"
+            },
+            {
+              "label": "HelpDesk",
+              "url": "https://helpdesk.echiphub.in/keycloaksso"
+            },
+            {
+              "label": "About",
+              "url": "https://echiphub.in/about/"
+            },
+            {
+              "label": "Contact",
+              "url": "https://echiphub.in/contact/"
+            }
+          ],
+          "social_media": {
+            "LinkedIn": "http://www.linkedin.com/in/echiphub-in-0b5958428",
+            "Twitter": "https://x.com/eChipHub_India",
+            "Instagram": "https://www.instagram.com/echiphub/"
+          }
+        },
+        {
+          "section_name": "Important Disclaimer",
+          "type": "legal_disclaimer",
+          "heading": "Important Disclaimer",
+          "paragraphs": [
+            "The ChipCraft Virtual Lab Environment is developed as part of an educational initiative under a MeitY-supported project, jointly implemented by NIELIT and SoCTeamup Semiconductors Pvt. Ltd.",
+            "This platform hosts various open-source Electronic Design Automation (EDA) tools and workflows, including but not limited to Verilator, Yosys, OpenLane, Qflow, and Magic, Netgen, Klayout, OpenSTA etc. and other community-developed software. All such tools remain the intellectual property of their respective authors and contributors and are used in accordance with their applicable open-source licenses.",
+            "The virtual lab environment is provided strictly for educational, research, and skill development purposes. While reasonable efforts are made to ensure stability, correctness, and availability, the platform and associated tools are provided on an \"as-is\" and \"as-available\" basis without warranties of any kind, express or implied.",
+            "Users are responsible for ensuring compliance with applicable open-source licenses when exporting, modifying, or redistributing any tool outputs or derived works.",
+            "The hosting institutions shall not be liable for any direct or indirect losses arising from use of the platform, including but not limited to design errors, data loss, service interruptions, or misuse.",
+            "Access to the platform may be modified, restricted, or withdrawn at any time in accordance with project policies and governance requirements."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "all-courses",
+      "name": "All Courses",
+      "url": "https://echiphub.in/all-courses/",
+      "page_title": "All Courses - EdTech",
+      "extracted_at": "2026-11-10 10:00:54",
+      "sections": [
+        {
+          "section_name": "Page Header",
+          "type": "hero",
+          "title": "All Courses",
+          "headline": "Specialized Industry-Relevant Courses",
+          "subtitle": "Master chip design from RTL to GDSII using complete open-source flows. Designed to meet global semiconductor workforce demands."
+        },
+        {
+          "section_name": "Course Categories",
+          "type": "categories_filter",
+          "categories": [
+            "All",
+            "Semiconductor"
+          ]
+        },
+        {
+          "section_name": "Level 1: Foundation Courses",
+          "type": "course_cards",
+          "heading": "Level 1: Foundation Courses",
+          "subheading": "Comprehensive programs designed to build your semiconductor design foundation",
+          "courses": [
+            {
+              "course_title": "Bootcamp:- RTL, IP Integration, and SoC Signoff (30 Hours) (old decommissioned)",
+              "description": "A comprehensive introduction to chip design fundamentals and open-source EDA tools.",
+              "enroll_link": "https://echiphub.in/wp-login.php?redirect_to=https%3A%2F%2Fechiphub.in%2Fproduct%2Fopenedx-course%2F",
+              "thumbnail": "https://echiphub.in/wp-content/uploads/2026/02/tile2-1024x683.jpeg"
+            },
+            {
+              "course_title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "description": "This course covers entire RTL-GDSII flow based on open source EDA tools.",
+              "enroll_link": "https://echiphub.in/wp-login.php?redirect_to=https%3A%2F%2Fechiphub.in%2Fproduct%2Fchipcraft-rtl-ip-integration-and-soc-signoff%2F",
+              "thumbnail": "https://echiphub.in/wp-content/uploads/2026/02/tile1-1024x683.jpeg"
+            },
+            {
+              "course_title": "Bootcamp 2.0 :- RTL, IP Integration, and SoC Signoff (30 Hours)",
+              "description": "A comprehensive introduction to chip design fundamentals and open-source EDA tools.",
+              "enroll_link": "https://echiphub.in/wp-login.php?redirect_to=https%3A%2F%2Fechiphub.in%2Fproduct%2Fbootcamp-2-0-rtl-ip-integration-and-soc-signoff%2F",
+              "thumbnail": "https://echiphub.in/wp-content/uploads/2026/06/chipcraft.avif"
+            }
+          ]
+        },
+        {
+          "section_name": "Level 2: Specialized Courses",
+          "type": "upcoming_course_cards",
+          "heading": "Level 2: Specialized Courses",
+          "subheading": "Advanced courses designed to meet global semiconductor workforce demands",
+          "courses": [
+            {
+              "course_title": "RTL Design & Verification",
+              "description": "Master Verilog, SystemVerilog, and verification flows for SoC IP development.",
+              "status": "Coming Soon"
+            },
+            {
+              "course_title": "Design for Test",
+              "description": "Design for testability, scan chains, and built-in self-test techniques.",
+              "status": "Coming Soon"
+            },
+            {
+              "course_title": "Physical Design",
+              "description": "Learn floorplanning, placement, routing, and timing closure for ASIC design.",
+              "status": "Coming Soon"
+            },
+            {
+              "course_title": "Analog & Mixed Signal Design",
+              "description": "System-on-chip design, IP integration, and verification methodologies.",
+              "status": "Coming Soon"
+            }
+          ]
+        },
+        {
+          "section_name": "Learner Testimonials",
+          "type": "testimonials",
+          "heading": "What our learners say",
+          "testimonials": [
+            {
+              "student_name": "Rahul Sharma",
+              "role": "Engineering Student",
+              "rating": "★★★★★",
+              "review": "Great learning experience. The courses are structured and very easy to follow."
+            },
+            {
+              "student_name": "Ananya Verma",
+              "role": "Graduate Trainee",
+              "rating": "★★★★★",
+              "review": "This platform helped me build confidence and industry-ready skills."
+            },
+            {
+              "student_name": "Mohit Jain",
+              "role": "VLSI Learner",
+              "rating": "★★★★☆",
+              "review": "The semiconductor courses are excellent and practical."
+            },
+            {
+              "student_name": "Sneha Patel",
+              "role": "Final Year Student",
+              "rating": "★★★★★",
+              "review": "Very useful content with clear explanations and examples."
+            },
+            {
+              "student_name": "Amit Kumar",
+              "role": "Working Professional",
+              "rating": "★★★★★",
+              "review": "One of the best learning platforms I’ve used so far."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "workshops",
+      "name": "Workshops",
+      "url": "https://echiphub.in/workshops/",
+      "page_title": "Workshop - EdTech",
+      "extracted_at": "2026-11-10 10:00:55",
+      "sections": [
+        {
+          "section_name": "Page Header & Filters",
+          "type": "header_and_filters",
+          "title": "Our Workshops",
+          "filter_tabs": [
+            "All",
+            "Upcoming",
+            "Live",
+            "Completed"
+          ],
+          "search_capabilities": [
+            "Search workshop name...",
+            "Search NIELIT centre..."
+          ]
+        },
+        {
+          "section_name": "Upcoming Workshops",
+          "type": "workshop_cards_grid",
+          "count": 2,
+          "workshops": [
+            {
+              "title": "Bootcamp:- RTL, IP, Integration and SoC Signoff",
+              "centre": "NIELIT Ahmedabad",
+              "dates": "2026-11-30 – 2026-12-04",
+              "start_date": "2026-11-30",
+              "end_date": "2026-12-04",
+              "status": "Upcoming",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F206%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft Course : “RTL, IP Integration and SoC Signoff”",
+              "centre": "NIELIT Bhubaneswar",
+              "dates": "2026-11-16 – 2027-12-07",
+              "start_date": "2026-11-16",
+              "end_date": "2027-12-07",
+              "status": "Upcoming",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F216%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            }
+          ]
+        },
+        {
+          "section_name": "Live Workshops",
+          "type": "workshop_cards_grid",
+          "count": 6,
+          "workshops": [
+            {
+              "title": "Chipcraft-RTL, IP Integration and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-10-26 – 2026-11-11",
+              "start_date": "2026-10-26",
+              "end_date": "2026-11-11",
+              "status": "Live",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F209%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft-RTL, IP Integration and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Jammu",
+              "dates": "2026-10-08 – 2026-11-20",
+              "start_date": "2026-10-08",
+              "end_date": "2026-11-20",
+              "status": "Live",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F196%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-10-14 – 2026-11-11",
+              "start_date": "2026-10-14",
+              "end_date": "2026-11-11",
+              "status": "Live",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F199%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft-RTL, IP Integration and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-10-28 – 2026-11-13",
+              "start_date": "2026-10-28",
+              "end_date": "2026-11-13",
+              "status": "Live",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F200%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft-RTL,IP Integration and Soc Signoff (90 Hours)",
+              "centre": "NIELIT Ranchi",
+              "dates": "2026-11-02 – 2026-11-23",
+              "start_date": "2026-11-02",
+              "end_date": "2026-11-23",
+              "status": "Live",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F215%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft-RTL,IP Integration and Soc Signoff (90 Hours)",
+              "centre": "NIELIT Ranchi",
+              "dates": "2026-11-04 – 2026-11-25",
+              "start_date": "2026-11-04",
+              "end_date": "2026-11-25",
+              "status": "Live",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F217%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            }
+          ]
+        },
+        {
+          "section_name": "Completed Workshops",
+          "type": "workshop_cards_grid",
+          "count": 92,
+          "workshops": [
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-06-29 – 2026-07-03",
+              "start_date": "2026-06-29",
+              "end_date": "2026-07-03",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F139%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-06-22 – 2026-06-26",
+              "start_date": "2026-06-22",
+              "end_date": "2026-06-26",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F136%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-07-27 – 2026-07-31",
+              "start_date": "2026-07-27",
+              "end_date": "2026-07-31",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F146%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-09-22 – 2026-09-26",
+              "start_date": "2026-09-22",
+              "end_date": "2026-09-26",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F160%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-05-25 – 2026-05-29",
+              "start_date": "2026-05-25",
+              "end_date": "2026-05-29",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F126%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-08-10 – 2026-08-14",
+              "start_date": "2026-08-10",
+              "end_date": "2026-08-14",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F151%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-02-04 – 2026-02-08",
+              "start_date": "2026-02-04",
+              "end_date": "2026-02-08",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F53%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-02-10 – 2026-02-14",
+              "start_date": "2026-02-10",
+              "end_date": "2026-02-14",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F77%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Calicut",
+              "dates": "2026-07-13 – 2026-07-17",
+              "start_date": "2026-07-13",
+              "end_date": "2026-07-17",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F141%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Kurukshetra",
+              "dates": "2026-02-23 – 2026-02-27",
+              "start_date": "2026-02-23",
+              "end_date": "2026-02-27",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F99%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Kurukshetra",
+              "dates": "2026-02-16 – 2026-02-20",
+              "start_date": "2026-02-16",
+              "end_date": "2026-02-20",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F75%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Kurukshetra",
+              "dates": "2026-02-16 – 2026-02-20",
+              "start_date": "2026-02-16",
+              "end_date": "2026-02-20",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F55%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-08-17 – 2026-08-21",
+              "start_date": "2026-08-17",
+              "end_date": "2026-08-21",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F155%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Patna",
+              "dates": "2026-10-12 – 2026-11-05",
+              "start_date": "2026-10-12",
+              "end_date": "2026-11-05",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F181%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Faculty development training program on ChipCraft:- RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-10-06 – 2026-10-10",
+              "start_date": "2026-10-06",
+              "end_date": "2026-10-10",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F182%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-09-01 – 2026-09-08",
+              "start_date": "2026-09-01",
+              "end_date": "2026-09-08",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F165%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-02-09 – 2026-02-13",
+              "start_date": "2026-02-09",
+              "end_date": "2026-02-13",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F83%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Agartala",
+              "dates": "2026-06-10 – 2026-07-10",
+              "start_date": "2026-06-10",
+              "end_date": "2026-07-10",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F132%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Agartala",
+              "dates": "2026-02-10 – 2026-02-14",
+              "start_date": "2026-02-10",
+              "end_date": "2026-02-14",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F93%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Jammu",
+              "dates": "2026-02-04 – 2026-02-10",
+              "start_date": "2026-02-04",
+              "end_date": "2026-02-10",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F80%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Aurangabad",
+              "dates": "2026-02-05 – 2026-02-09",
+              "start_date": "2026-02-05",
+              "end_date": "2026-02-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F73%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Aurangabad",
+              "dates": "2026-10-05 – 2026-10-09",
+              "start_date": "2026-10-05",
+              "end_date": "2026-10-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F186%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Aurangabad",
+              "dates": "2026-09-28 – 2026-10-02",
+              "start_date": "2026-09-28",
+              "end_date": "2026-10-02",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F178%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Aurangabad",
+              "dates": "2026-02-16 – 2026-02-21",
+              "start_date": "2026-02-16",
+              "end_date": "2026-02-21",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F96%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Aurangabad",
+              "dates": "2026-08-10 – 2026-08-14",
+              "start_date": "2026-08-10",
+              "end_date": "2026-08-14",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F148%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RLT, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-02-03 – 2026-02-07",
+              "start_date": "2026-02-03",
+              "end_date": "2026-02-07",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F78%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration and SoC signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-01-27 – 2026-01-31",
+              "start_date": "2026-01-27",
+              "end_date": "2026-01-31",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F71%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "ChipCraft: \"RTL, IP Integration, and SoC Signoff\"",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-08-24 – 2026-09-14",
+              "start_date": "2026-08-24",
+              "end_date": "2026-09-14",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F159%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-10-13 – 2026-10-17",
+              "start_date": "2026-10-13",
+              "end_date": "2026-10-17",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F197%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-10-08 – 2026-11-05",
+              "start_date": "2026-10-08",
+              "end_date": "2026-11-05",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F191%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-08-17 – 2026-08-21",
+              "start_date": "2026-08-17",
+              "end_date": "2026-08-21",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F154%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Patna",
+              "dates": "2026-10-06 – 2026-11-03",
+              "start_date": "2026-10-06",
+              "end_date": "2026-11-03",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F188%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, & SoC Signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-10-07 – 2026-10-12",
+              "start_date": "2026-10-07",
+              "end_date": "2026-10-12",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F194%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-10-05 – 2026-10-09",
+              "start_date": "2026-10-05",
+              "end_date": "2026-10-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F185%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Chennai",
+              "dates": "2026-02-16 – 2026-02-20",
+              "start_date": "2026-02-16",
+              "end_date": "2026-02-20",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F97%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft Course: “RTL, IP Integration and SoC Signoff”",
+              "centre": "NIELIT Chitradurga",
+              "dates": "2026-07-27 – 2026-08-14",
+              "start_date": "2026-07-27",
+              "end_date": "2026-08-14",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F143%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "BOOT CAMP: “RTL, IP Integration and SoC Signoff”",
+              "centre": "NIELIT Chitradurga",
+              "dates": "2026-08-17 – 2026-08-21",
+              "start_date": "2026-08-17",
+              "end_date": "2026-08-21",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F152%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Chitradurga",
+              "dates": "2026-02-02 – 2026-02-06",
+              "start_date": "2026-02-02",
+              "end_date": "2026-02-06",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F67%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Chitradurga",
+              "dates": "2026-02-09 – 2026-02-13",
+              "start_date": "2026-02-09",
+              "end_date": "2026-02-13",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F82%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-02-06 – 2026-02-10",
+              "start_date": "2026-02-06",
+              "end_date": "2026-02-10",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F92%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-09-28 – 2026-10-05",
+              "start_date": "2026-09-28",
+              "end_date": "2026-10-05",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F179%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft Course: “RTL, IP Integration and SoC Signoff”",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-08-10 – 2026-08-28",
+              "start_date": "2026-08-10",
+              "end_date": "2026-08-28",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F150%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-02-04 – 2026-02-08",
+              "start_date": "2026-02-04",
+              "end_date": "2026-02-08",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F84%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-10-08 – 2026-10-29",
+              "start_date": "2026-10-08",
+              "end_date": "2026-10-29",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F192%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-01-19 – 2026-01-23",
+              "start_date": "2026-01-19",
+              "end_date": "2026-01-23",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F64%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Tirupati",
+              "dates": "2026-02-02 – 2026-02-06",
+              "start_date": "2026-02-02",
+              "end_date": "2026-02-06",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F79%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration, and SoC Signoff",
+              "centre": "NIELIT Daman",
+              "dates": "2026-02-11 – 2026-02-15",
+              "start_date": "2026-02-11",
+              "end_date": "2026-02-15",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F94%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "BootCamp: RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Daman",
+              "dates": "2026-10-05 – 2026-10-09",
+              "start_date": "2026-10-05",
+              "end_date": "2026-10-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F189%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration, and SoC Signoff",
+              "centre": "NIELIT Daman",
+              "dates": "2026-02-05 – 2026-02-09",
+              "start_date": "2026-02-05",
+              "end_date": "2026-02-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F81%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "BootCamp: RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Daman",
+              "dates": "2026-01-22 – 2026-01-29",
+              "start_date": "2026-01-22",
+              "end_date": "2026-01-29",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F69%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Guwahati",
+              "dates": "2026-02-02 – 2026-02-06",
+              "start_date": "2026-02-02",
+              "end_date": "2026-02-06",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F66%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Guwahati",
+              "dates": "2026-02-09 – 2026-02-13",
+              "start_date": "2026-02-09",
+              "end_date": "2026-02-13",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F89%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Guwahati",
+              "dates": "2026-06-22 – 2026-06-26",
+              "start_date": "2026-06-22",
+              "end_date": "2026-06-26",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F135%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "centre": "NIELIT Kolkata",
+              "dates": "2026-01-27 – 2026-01-31",
+              "start_date": "2026-01-27",
+              "end_date": "2026-01-31",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F68%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Hyderabad",
+              "dates": "2026-02-17 – 2026-02-24",
+              "start_date": "2026-02-17",
+              "end_date": "2026-02-24",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F98%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Hyderabad",
+              "dates": "2026-07-29 – 2026-08-03",
+              "start_date": "2026-07-29",
+              "end_date": "2026-08-03",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F147%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Hyderabad",
+              "dates": "2026-10-07 – 2026-10-13",
+              "start_date": "2026-10-07",
+              "end_date": "2026-10-13",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F195%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Hyderabad",
+              "dates": "2026-07-27 – 2026-07-31",
+              "start_date": "2026-07-27",
+              "end_date": "2026-07-31",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F145%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Hyderabad",
+              "dates": "2026-08-18 – 2026-08-22",
+              "start_date": "2026-08-18",
+              "end_date": "2026-08-22",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F156%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Shillong",
+              "dates": "2026-02-23 – 2026-02-27",
+              "start_date": "2026-02-23",
+              "end_date": "2026-02-27",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F86%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Shillong",
+              "dates": "2026-06-22 – 2026-06-27",
+              "start_date": "2026-06-22",
+              "end_date": "2026-06-27",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F128%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Shillong",
+              "dates": "2026-02-02 – 2026-02-06",
+              "start_date": "2026-02-02",
+              "end_date": "2026-02-06",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F61%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: “RTL, IP Integration and SoC Signoff”",
+              "centre": "NIELIT Shillong",
+              "dates": "2026-08-31 – 2026-09-04",
+              "start_date": "2026-08-31",
+              "end_date": "2026-09-04",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F157%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp:RTL IP Integration and SOC Signoff",
+              "centre": "NIELIT Balasore",
+              "dates": "2026-01-27 – 2026-01-31",
+              "start_date": "2026-01-27",
+              "end_date": "2026-01-31",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F74%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "CEERI Analog Workshop",
+              "centre": "NIELIT Centre",
+              "dates": "2026-08-10 – 2026-08-22",
+              "start_date": "2026-08-10",
+              "end_date": "2026-08-22",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F153%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Noida",
+              "dates": "2026-09-28 – 2026-10-09",
+              "start_date": "2026-09-28",
+              "end_date": "2026-10-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F180%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Lucknow",
+              "dates": "2026-01-28 – 2026-02-01",
+              "start_date": "2026-01-28",
+              "end_date": "2026-02-01",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F76%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC signoff",
+              "centre": "NIELIT Lucknow",
+              "dates": "2026-02-17 – 2026-02-24",
+              "start_date": "2026-02-17",
+              "end_date": "2026-02-24",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F85%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp RTL, IP integration and SoC Signoff",
+              "centre": "NIELIT Lucknow",
+              "dates": "2026-09-07 – 2026-09-11",
+              "start_date": "2026-09-07",
+              "end_date": "2026-09-11",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F166%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp:RTL IP Integration and SOC Signoff",
+              "centre": "NIELIT Ranchi",
+              "dates": "2026-02-02 – 2026-02-06",
+              "start_date": "2026-02-02",
+              "end_date": "2026-02-06",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F63%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Ranchi",
+              "dates": "2026-09-28 – 2026-10-02",
+              "start_date": "2026-09-28",
+              "end_date": "2026-10-02",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F176%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration,and Soc Signoff.",
+              "centre": "NIELIT Ranchi",
+              "dates": "2026-11-02 – 2026-11-06",
+              "start_date": "2026-11-02",
+              "end_date": "2026-11-06",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F213%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Faculty development training program on ChipCraft:- RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Noida",
+              "dates": "2026-09-21 – 2026-09-25",
+              "start_date": "2026-09-21",
+              "end_date": "2026-09-25",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F168%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Noida",
+              "dates": "2026-02-16 – 2026-02-20",
+              "start_date": "2026-02-16",
+              "end_date": "2026-02-20",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F95%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Noida",
+              "dates": "2026-10-12 – 2026-10-16",
+              "start_date": "2026-10-12",
+              "end_date": "2026-10-16",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F170%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Noida",
+              "dates": "2026-09-11 – 2026-09-13",
+              "start_date": "2026-09-11",
+              "end_date": "2026-09-13",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F169%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Noida",
+              "dates": "2026-05-05 – 2026-05-09",
+              "start_date": "2026-05-05",
+              "end_date": "2026-05-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F100%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "centre": "NIELIT Noida",
+              "dates": "2026-05-05 – 2026-05-09",
+              "start_date": "2026-05-05",
+              "end_date": "2026-05-09",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F110%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "eChipHub Internship Program (Summer 2026) | 8 Weeks",
+              "centre": "NIELIT Centre",
+              "dates": "2026-06-05 – 2026-07-31",
+              "start_date": "2026-06-05",
+              "end_date": "2026-07-31",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F127%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "centre": "NIELIT Imphal",
+              "dates": "2026-08-24 – 2026-09-18",
+              "start_date": "2026-08-24",
+              "end_date": "2026-09-18",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F167%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Imphal",
+              "dates": "2026-07-01 – 2026-07-07",
+              "start_date": "2026-07-01",
+              "end_date": "2026-07-07",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F138%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Imphal",
+              "dates": "2026-06-15 – 2026-06-19",
+              "start_date": "2026-06-15",
+              "end_date": "2026-06-19",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F133%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Imphal",
+              "dates": "2026-06-08 – 2026-06-12",
+              "start_date": "2026-06-08",
+              "end_date": "2026-06-12",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F130%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Imphal",
+              "dates": "2026-09-28 – 2026-10-02",
+              "start_date": "2026-09-28",
+              "end_date": "2026-10-02",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F184%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Itanagar",
+              "dates": "2026-09-02 – 2026-09-07",
+              "start_date": "2026-09-02",
+              "end_date": "2026-09-07",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F164%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Itanagar",
+              "dates": "2026-09-01 – 2026-09-05",
+              "start_date": "2026-09-01",
+              "end_date": "2026-09-05",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F163%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Kolkata",
+              "dates": "2026-07-06 – 2026-07-10",
+              "start_date": "2026-07-06",
+              "end_date": "2026-07-10",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F125%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Chipcraft Course: “RTL, IP Integration and SoC Signoff”",
+              "centre": "NIELIT Kolkata",
+              "dates": "2026-08-24 – 2026-09-04",
+              "start_date": "2026-08-24",
+              "end_date": "2026-09-04",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F142%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Kolkata",
+              "dates": "2026-08-17 – 2026-08-21",
+              "start_date": "2026-08-17",
+              "end_date": "2026-08-21",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F131%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "centre": "NIELIT Kolkata",
+              "dates": "2026-06-22 – 2026-06-26",
+              "start_date": "2026-06-22",
+              "end_date": "2026-06-26",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F129%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Bhubaneswar",
+              "dates": "2026-09-07 – 2026-09-11",
+              "start_date": "2026-09-07",
+              "end_date": "2026-09-11",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F162%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            },
+            {
+              "title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "centre": "NIELIT Bhubaneswar",
+              "dates": "2026-07-20 – 2026-07-24",
+              "start_date": "2026-07-20",
+              "end_date": "2026-07-24",
+              "status": "Completed",
+              "category": "Bootcamp",
+              "update_info": "Updated 2026",
+              "features": [
+                "Industry oriented training",
+                "Hands-on practical sessions"
+              ],
+              "registration_link": "https://events.echiphub.in/login/keycloak/?next=%2Fevent%2F140%2Fregistrations%2F",
+              "action_label": "Register Now",
+              "thumbnail": "https://www.echiphub.in/wp-content/uploads/2026/02/workshop.png"
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "total_workshops": 100,
+        "sections_breakdown": {
+          "Upcoming Workshops": 2,
+          "Live Workshops": 6,
+          "Completed Workshops": 92
+        }
+      }
+    },
+    {
+      "id": "academic-alliances",
+      "name": "Academic Alliances",
+      "url": "https://echiphub.in/academic-alliances/",
+      "page_title": "Academic Alliances - EdTech",
+      "extracted_at": "2026-11-10 10:00:56",
+      "sections": [
+        {
+          "section_name": "Page Header",
+          "type": "hero",
+          "title": "Academic Alliances",
+          "headline": "Welcome to the community of eChipHub Institutions",
+          "cta_button": {
+            "label": "Register as Faculty Coordinator",
+            "url": "https://www.echiphub.in/faculty-signup-form/"
+          }
+        },
+        {
+          "section_name": "Member Institutions",
+          "type": "institutions_list",
+          "heading": "Member Institutions​",
+          "status": "No institutions yet.",
+          "institutions": []
+        }
+      ]
+    },
+    {
+      "id": "news-2",
+      "name": "News",
+      "url": "https://echiphub.in/news-2/",
+      "page_title": "News - EdTech",
+      "extracted_at": "2026-11-10 10:00:57",
+      "sections": [
+        {
+          "section_name": "Featured News",
+          "type": "featured_article",
+          "topic": "Indigenous 1.2 µm PDK",
+          "headline": "NIELIT & SCL Mohali Collaborate to Make Indigenous 1.2 µm PDK Available on eChipHub",
+          "published_date": "23 July 2026",
+          "summary": "NIELIT and SCL Mohali have collaborated to make the indigenous 1.2 µm Process Design Kit (PDK) available on eChipHub, enabling students, researchers and industry professionals to gain practical experience in semiconductor design and prototyping using indigenous technology.",
+          "read_more_cta": "Read More →"
+        },
+        {
+          "section_name": "Related Posts & Announcements",
+          "type": "news_cards_list",
+          "heading": "Related posts",
+          "count": 5,
+          "articles": [
+            {
+              "title": "India’s Semiconductor Journey",
+              "published_date": "July 2026"
+            },
+            {
+              "title": "Semiconductor Training & PDK",
+              "published_date": "24 July 2026"
+            },
+            {
+              "title": "Indigenous 1.2 µm Process Design Kit Available on eChipHub",
+              "published_date": "30 July 2026"
+            },
+            {
+              "title": "0.8-micron Open-Source PDK Launch",
+              "published_date": "24 September 2026"
+            },
+            {
+              "title": "NIELIT & SCL Sign MoU for 0.8-micron PDK",
+              "published_date": "September 2026"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "url": "https://echiphub.in/about/",
+      "page_title": "About - EdTech",
+      "extracted_at": "2026-11-10 10:00:58",
+      "sections": [
+        {
+          "section_name": "Page Header",
+          "type": "hero",
+          "title": "About Us",
+          "tagline": "A trusted national institution delivering skill development, training, and certification in electronics and information technology."
+        },
+        {
+          "section_name": "Platform Overview & Mission",
+          "type": "text_block",
+          "heading": "An Open-Source First EdTech Platform for Chip Design",
+          "paragraphs": [
+            "eChipHub is a jointly developed digital initiative by NIELIT, under the aegis of the Ministry of Electronics and Information Technology (MeitY), Government of India, in collaboration with SoCTeamup Semiconductors Pvt. Ltd. as the industry partner.",
+            "The platform is envisioned to strengthen India’s capabilities in chip design, SoC development, full-stack IP creation, and open-source EDA tool adoption, contributing to long-term semiconductor self-reliance and digital sovereignty.",
+            "In an era where semiconductors underpin strategic independence and technological competitiveness, eChipHub aims to make industry-grade chip design skills accessible, scalable, and affordable for students, researchers, faculty, startups, and MSMEs across the country.",
+            "Through industry led structured training programs, cloud-based virtual labs, open source design flows, and mentorship from academia and industry, eChipHub seeks to enable participants to take their designs from RTL to GDSII using complete open and hybrid design flows.",
+            "By combining public institutional support with industry expertise, eChipHub represents a collaborative model to democratize semiconductor knowledge and build a sustainable national ecosystem for innovation."
+          ]
+        },
+        {
+          "section_name": "Core Purpose Statement",
+          "type": "purpose_statement",
+          "heading": "Our Purpose",
+          "statement": "To strengthen India’s digital ecosystem by developing a future-ready workforce equipped with practical skills, industry exposure, and nationally recognized certifications through quality education and training."
+        },
+        {
+          "section_name": "Strategic Pillars",
+          "type": "feature_cards",
+          "heading": "Core Pillars & Capabilities",
+          "cards": [
+            {
+              "card_title": "Our Purpose",
+              "description": "Our purpose is to empower students, professionals, and institutions with relevant technical skills that align with industry demands. Through structured learning and hands-on training, we aim to support national digital growth and innovation."
+            },
+            {
+              "card_title": "What Makes Us Different",
+              "bullet_points": [
+                "Industry-aligned training programs",
+                "Practical, and hands-on learning approach",
+                "Experienced faculty and mentors",
+                "Trusted and recognized certifications"
+              ]
+            },
+            {
+              "card_title": "What We Do",
+              "bullet_points": [
+                "Skill Development Programs",
+                "Workshops & Bootcamps",
+                "Certification Courses",
+                "Emerging Technology Training",
+                "Academic & Industry Collaboration",
+                "Government & Corporate Training"
+              ]
+            }
+          ]
+        },
+        {
+          "section_name": "Our Commitment",
+          "type": "commitment_statement",
+          "heading": "Our Commitment",
+          "statement": "We are committed to delivering high-quality, transparent, and industry-relevant training programs that empower learners with practical skills. Our focus is on excellence in education while actively supporting national initiatives such as Digital India and Skill India , ensuring learners are prepared for real-world challenges."
+        },
+        {
+          "section_name": "Our Collaborations",
+          "type": "partner_collaborations",
+          "heading": "Our Collaborations",
+          "partners": [
+            {
+              "partner_name": "Ministry of Electronics and Information Technology (MeitY)",
+              "role": "Administrative Ministry / Government of India",
+              "logo_url": "https://echiphub.in/wp-content/uploads/2026/06/miety.png"
+            },
+            {
+              "partner_name": "National Institute of Electronics & Information Technology (NIELIT)",
+              "role": "Public Institutional Partner / Implementation Body",
+              "logo_url": "https://echiphub.in/wp-content/uploads/2026/06/NIELIT.png"
+            },
+            {
+              "partner_name": "SoCTeamup Semiconductors Pvt. Ltd.",
+              "role": "Industry Technology Partner",
+              "logo_url": "https://echiphub.in/wp-content/uploads/2026/02/SOC-300x106.png"
+            },
+            {
+              "partner_name": "Semi-Conductor Laboratory (SCL)",
+              "role": "Foundry / Semiconductor Ecosystem Partner",
+              "logo_url": "https://echiphub.in/wp-content/uploads/2026/07/scllogo1.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "name": "Contact Us",
+      "url": "https://echiphub.in/contact/",
+      "page_title": "Contact - EdTech",
+      "extracted_at": "2026-11-10 10:00:59",
+      "sections": [
+        {
+          "section_name": "Page Header",
+          "type": "hero",
+          "title": "Contact Us",
+          "subtitle": "Connect with Our EdTech & Semiconductor Training Experts"
+        },
+        {
+          "section_name": "Request Free Consultation",
+          "type": "inquiry_form",
+          "heading": "Request Free Consultation",
+          "fields": [
+            {
+              "field_name": "Your Name *",
+              "field_type": "text",
+              "is_required": true
+            },
+            {
+              "field_name": "Your Email *",
+              "field_type": "email",
+              "is_required": true
+            },
+            {
+              "field_name": "Your Message",
+              "field_type": "textarea",
+              "is_required": false
+            }
+          ],
+          "submit_button": "SUBMIT"
+        },
+        {
+          "section_name": "Get In Touch",
+          "type": "contact_info",
+          "heading": "Get In Touch",
+          "corporate_office": "NIELIT CORPORATE OFFICE",
+          "support_email": "support-edtech@nielit.ac.in",
+          "toll_free_number": "011-44446771"
+        }
+      ]
+    },
+    {
+      "id": "why-choose-us",
+      "name": "Why Choose Us",
+      "url": "https://echiphub.in/why-choose-us/",
+      "page_title": "Why Choose Us - EdTech",
+      "extracted_at": "2026-11-10 10:01:00",
+      "sections": [
+        {
+          "section_name": "Integrated Platform Highlights",
+          "type": "feature_cards_grid",
+          "heading": "Bringing Academia, Industry, and Open Tools Together",
+          "tagline": "We combine tools, learning, and support into one seamless experience",
+          "features": [
+            {
+              "title": "Pre-installed EDA Tool Environment",
+              "description": "No student left behind due to software installation issues."
+            },
+            {
+              "title": "Integrated Student Support System",
+              "description": "Raise tickets for tool access issues, lab bugs, or learning doubts."
+            },
+            {
+              "title": "Dedicated Mentor Escalation",
+              "description": "Domain-wise mentors available for RTL, DFT, Physical Design, etc."
+            },
+            {
+              "title": "Remote Labs, 24x7 Access",
+              "description": "Learn Verilog, debug synthesis issues and other advanced concepts at your own pace and time."
+            }
+          ]
+        },
+        {
+          "section_name": "What Sets Us Apart",
+          "type": "differentiator_list",
+          "heading": "We're not just another online learning platform",
+          "subheading": "We’re building a national capability in semiconductor education and design IP creation. Here’s what sets us apart:",
+          "differentiators": [
+            {
+              "title": "Open-Source Toolchain",
+              "description": "Hands-on with Yosys, OpenSTA, Magic, Verilator, OpenROAD"
+            },
+            {
+              "title": "Academia-Industry Synergy",
+              "description": "Designed with leading professors and silicon professionals"
+            },
+            {
+              "title": "Modular & Career-Aligned",
+              "description": "Each module builds towards full-stack chip design readiness"
+            },
+            {
+              "title": "Zero-Cost Tools, National-Scale Reach",
+              "description": "No licenses required, no vendor lock-in"
+            },
+            {
+              "title": "Mentor-Guided Community",
+              "description": "Learn with peers, industry mentors, and alumni network"
+            }
+          ]
+        },
+        {
+          "section_name": "Our Vision",
+          "type": "vision_statement",
+          "heading": "Our Vision",
+          "vision": "Our vision is to build India’s Silicon Skilling Stack, layer by layer.",
+          "cta_button": {
+            "label": "Start Your Journey",
+            "url": "#"
+          }
+        }
+      ]
+    },
+    {
+      "id": "registration",
+      "name": "SSO Registration",
+      "url": "https://sso.echiphub.in/realms/platform/login-actions/registration?client_id=wordpress-www&tab_id=QiZH9aBt6M4&client_data=eyJydSI6Imh0dHBzOi8vZWNoaXBodWIuaW4vd3AtYWRtaW4vYWRtaW4tYWpheC5waHA_YWN0aW9uPW9wZW5pZC1jb25uZWN0LWF1dGhvcml6ZSIsInJ0IjoiY29kZSIsInN0IjoiZmFkYTg1YWRiZmIyZjMzMmMzMjVhNDFmZDVhZGJjOTgifQ",
+      "page_title": "Sign in to platform - Registration",
+      "extracted_at": "2026-11-10 10:01:00",
+      "sections": [
+        {
+          "section_name": "SSO Registration Form",
+          "type": "auth_registration_form",
+          "platform": "eChipHub Keycloak SSO Platform",
+          "form_title": "Register",
+          "form_action": null,
+          "input_fields": [],
+          "actions": [
+            {
+              "label": "Register",
+              "type": "submit"
+            },
+            {
+              "label": "« Back to Login",
+              "type": "navigation_link"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "authenticate",
+      "name": "SSO Authenticate / Login",
+      "url": "https://sso.echiphub.in/realms/platform/login-actions/authenticate?client_id=wordpress-www&tab_id=QiZH9aBt6M4&client_data=eyJydSI6Imh0dHBzOi8vZWNoaXBodWIuaW4vd3AtYWRtaW4vYWRtaW4tYWpheC5waHA_YWN0aW9uPW9wZW5pZC1jb25uZWN0LWF1dGhvcml6ZSIsInJ0IjoiY29kZSIsInN0IjoiZmFkYTg1YWRiZmIyZjMzMmMzMjVhNDFmZDVhZGJjOTgifQ",
+      "page_title": "Sign in to platform - Authentication",
+      "extracted_at": "2026-11-10 10:01:00",
+      "sections": [
+        {
+          "section_name": "SSO Authentication Form",
+          "type": "auth_login_form",
+          "platform": "eChipHub Keycloak SSO Platform",
+          "form_title": "Sign in to your account",
+          "form_action": null,
+          "input_fields": [],
+          "actions": [
+            {
+              "label": "Sign In",
+              "type": "submit"
+            },
+            {
+              "label": "Register",
+              "type": "registration_link"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

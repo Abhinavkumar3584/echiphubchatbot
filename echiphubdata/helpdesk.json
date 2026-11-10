@@ -1,0 +1,170 @@
+{
+  "project": "eChipHub Master Web Scraping Pipeline",
+  "pipeline_name": "Helpdesk Support Pipeline",
+  "description": "Structured data extracted from eChipHub Helpdesk portal and ticket management system",
+  "exported_at": "2026-11-10 10:01:01",
+  "destination_file": "echiphubdata\\helpdesk.json",
+  "authenticated_user": "user-testing78@example.com",
+  "total_pages": 2,
+  "pages": [
+    {
+      "id": "helpdesk-my-tickets",
+      "name": "Helpdesk My Tickets",
+      "url": "https://helpdesk.echiphub.in/helpdesk/my-tickets",
+      "page_title": "Sign in to platform",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Helpdesk User Session",
+          "type": "user_session",
+          "portal_name": "Frappe Helpdesk (eChipHub Support)",
+          "authenticated_user_name": "Test 78",
+          "authenticated_user_email": "user-testing78@example.com",
+          "active_view": "Tickets"
+        },
+        {
+          "section_name": "Portal Navigation",
+          "type": "sidebar_navigation",
+          "heading": "Support Modules",
+          "items": [
+            {
+              "label": "Tickets",
+              "url": "/helpdesk/my-tickets",
+              "status": "active"
+            },
+            {
+              "label": "Knowledge Base",
+              "url": "/helpdesk/knowledge-base",
+              "status": "available"
+            }
+          ]
+        },
+        {
+          "section_name": "Ticket Search & Filter Controls",
+          "type": "filter_controls",
+          "heading": "Search & Filter Options",
+          "search_fields": [
+            {
+              "field": "ID",
+              "placeholder": "Search ticket ID"
+            },
+            {
+              "field": "Subject",
+              "placeholder": "Search ticket subject"
+            }
+          ],
+          "sorting": {
+            "default_sort": "Last Modified",
+            "sort_options": [
+              "Ascending",
+              "Descending",
+              "Add Sort",
+              "Clear Sort"
+            ]
+          },
+          "available_columns": [
+            "ID",
+            "Subject",
+            "Status",
+            "Priority",
+            "First response",
+            "Resolution",
+            "Team",
+            "Created"
+          ],
+          "column_management_actions": [
+            "Add Column",
+            "Reset to Default"
+          ]
+        },
+        {
+          "section_name": "Tickets List View",
+          "type": "tickets_list",
+          "heading": "My Submitted Tickets",
+          "total_tickets": 0,
+          "status_message": "No Tickets Found",
+          "actions": [
+            {
+              "label": "Create",
+              "action_url": "/helpdesk/my-tickets/new",
+              "description": "Create a new support ticket"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "helpdesk-new-ticket",
+      "name": "Helpdesk New Ticket",
+      "url": "https://helpdesk.echiphub.in/helpdesk/my-tickets/new",
+      "page_title": "Login",
+      "extracted_at": "2026-11-10 10:01:01",
+      "sections": [
+        {
+          "section_name": "Ticket Creation Header",
+          "type": "header_navigation",
+          "heading": "New Ticket",
+          "breadcrumb": "Tickets / New Ticket",
+          "portal_name": "Frappe Helpdesk (eChipHub Support)"
+        },
+        {
+          "section_name": "Support Ticket Form",
+          "type": "ticket_submission_form",
+          "heading": "Submit a Support Request",
+          "form_fields": [
+            {
+              "field_name": "Ticket Type",
+              "type": "dropdown_select",
+              "placeholder": "Select category",
+              "description": "Category or department for the ticket"
+            },
+            {
+              "field_name": "Priority",
+              "type": "dropdown_select",
+              "placeholder": "Select priority",
+              "description": "Urgency level of the issue (e.g. Low, Medium, High, Urgent)"
+            },
+            {
+              "field_name": "Mobile",
+              "type": "tel / text",
+              "placeholder": "Enter mobile number",
+              "description": "Contact phone number of the requester"
+            },
+            {
+              "field_name": "WhatsApp Number",
+              "type": "tel / text",
+              "placeholder": "Enter WhatsApp number (optional)",
+              "description": "WhatsApp contact for real-time updates (optional)"
+            },
+            {
+              "field_name": "Subject",
+              "type": "text",
+              "placeholder": "A short description",
+              "is_required": true,
+              "validation_message": "Please enter a subject to continue",
+              "description": "Brief summary of the issue or inquiry"
+            },
+            {
+              "field_name": "Attachments",
+              "type": "file_upload",
+              "description": "Upload supporting files or screenshots (e.g., error screens, log files)"
+            }
+          ],
+          "form_actions": [
+            {
+              "label": "Discard",
+              "type": "cancel",
+              "action_url": "/helpdesk/my-tickets",
+              "description": "Cancel draft and return to ticket list"
+            },
+            {
+              "label": "Submit",
+              "type": "submit",
+              "description": "Submit ticket to the eChipHub support team"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

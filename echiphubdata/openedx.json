@@ -1,0 +1,1103 @@
+{
+  "project": "eChipHub Master Web Scraping Pipeline",
+  "pipeline_name": "Open edX Learning Platform Pipeline",
+  "description": "Structured curriculum, active modules, labs, schedules, and authentication data extracted from eChipHub Open edX LMS learning environment",
+  "exported_at": "2026-11-10 10:01:04",
+  "destination_file": "echiphubdata\\openedx.json",
+  "authenticated_user": "user-testing78@example.com",
+  "total_pages": 3,
+  "pages": [
+    {
+      "id": "openedx-sso",
+      "name": "Open edX SSO Authentication Endpoint",
+      "url": "https://sso.echiphub.in/realms/platform/protocol/openid-connect/auth?client_id=openedx&redirect_uri=https://edx.echiphub.in/auth/complete/keycloak/&state=peZCNmHdKfsOWYK20fRaQ7HZMGt4ZBdp&response_type=code",
+      "page_title": "Sign in to platform",
+      "extracted_at": "2026-11-10 10:01:03",
+      "sections": [
+        {
+          "section_name": "Single Sign-On Service Identity",
+          "type": "identity_overview",
+          "portal_title": "Sign in to your account",
+          "realm": "platform",
+          "client_id": "openedx",
+          "target_service": "Open edX Learning Management System (LMS)",
+          "service_url": "https://edx.echiphub.in/",
+          "auth_protocol": "OpenID Connect (OIDC) / OAuth 2.0 Authorization Code Grant",
+          "header_branding": "platform"
+        },
+        {
+          "section_name": "Authentication Form & Credentials",
+          "type": "login_form",
+          "form_action": "https://sso.echiphub.in/realms/platform/login-actions/authenticate?session_code=XIEaiDM9r-44HqNhgiHI_Iqzi9amyp5oQ7ieU_XZr8g&execution=9dcab605-ab24-464d-a717-5a054541f470&client_id=openedx&tab_id=NkJDZ8hG5N4&client_data=eyJydSI6Imh0dHBzOi8vZWR4LmVjaGlwaHViLmluL2F1dGgvY29tcGxldGUva2V5Y2xvYWsvIiwicnQiOiJjb2RlIiwic3QiOiJwZVpDTm1IZEtmc09XWUsyMGZSYVE3SFpNR3Q0WkJkcCJ9",
+          "method": "POST",
+          "fields": [
+            {
+              "name": "username",
+              "type": "text",
+              "id": "username",
+              "value": ""
+            },
+            {
+              "name": "rememberMe",
+              "type": "checkbox",
+              "id": "rememberMe",
+              "value": ""
+            },
+            {
+              "name": "login",
+              "type": "submit",
+              "id": "kc-login",
+              "value": "Sign In"
+            }
+          ],
+          "submit_action": "Sign In"
+        },
+        {
+          "section_name": "OpenID Connect Authorization Parameters",
+          "type": "protocol_parameters",
+          "client_id": "openedx",
+          "response_type": "code",
+          "redirect_uri": "https://edx.echiphub.in/auth/complete/keycloak/",
+          "state": "peZCNmHdKfsOWYK20fRaQ7HZMGt4ZBdp",
+          "scope": "openid email profile"
+        },
+        {
+          "section_name": "Account Registration & Assistance Links",
+          "type": "action_links",
+          "links": [
+            {
+              "label": "Register",
+              "url": "/realms/platform/login-actions/registration?client_id=openedx&tab_id=NkJDZ8hG5N4&client_data=eyJydSI6Imh0dHBzOi8vZWR4LmVjaGlwaHViLmluL2F1dGgvY29tcGxldGUva2V5Y2xvYWsvIiwicnQiOiJjb2RlIiwic3QiOiJwZVpDTm1IZEtmc09XWUsyMGZSYVE3SFpNR3Q0WkJkcCJ9"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openedx-course-02",
+      "name": "ChipCraft: RTL, IP Integration, and SoC Signoff (RTL-BOOTCAMP-02)",
+      "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/home",
+      "page_title": "Course | ChipCraft: RTL, IP Integration, and SoC Signoff | Edtech",
+      "extracted_at": "2026-11-10 10:01:03",
+      "sections": [
+        {
+          "section_name": "Course Overview & Header",
+          "type": "course_header",
+          "course_title": "ChipCraft: RTL, IP Integration, and SoC Signoff",
+          "course_code": "NIELIT RTL-BOOTCAMP-02",
+          "course_id": "course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1",
+          "organization": "NIELIT",
+          "run": "2026_T1",
+          "breadcrumb": "Home › ChipCraft: RTL, IP Integration, and SoC Signoff",
+          "active_tabs": [
+            "Course",
+            "Progress",
+            "Dates",
+            "Live"
+          ]
+        },
+        {
+          "section_name": "Learning Progress & Resume",
+          "type": "resume_banner",
+          "status": "In Progress",
+          "action_text": "Resume course",
+          "action_url": "https://edx.echiphub.in/courses/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/jump_to/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@secure_pdf+block@securepdf_chipcraft_t1_3a57c86d2c2c"
+        },
+        {
+          "section_name": "Course Status & Important Dates",
+          "type": "course_schedule_status",
+          "is_archived": false,
+          "archive_notice": "",
+          "important_dates": [
+            "Course ends",
+            "After the course ends, the course content will be archived and no longer active."
+          ]
+        },
+        {
+          "section_name": "Course Curriculum & Outline",
+          "type": "course_curriculum",
+          "total_modules": 8,
+          "total_lessons": 131,
+          "total_labs": 78,
+          "modules": [
+            {
+              "module_title": "EXTRA: Installation of Open-Source EDA Tools",
+              "status": "Incomplete",
+              "items_count": 1,
+              "items": [
+                {
+                  "title": "Installation of Open-Source EDA Tools",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e15538d6f1974aeb9517d6ea3ff6d7ea"
+                }
+              ]
+            },
+            {
+              "module_title": "MODULE 01: RTL Design and IP Integration",
+              "status": "Incomplete",
+              "items_count": 33,
+              "items": [
+                {
+                  "title": "Introduction to Chip Design Flow",
+                  "type": "lecture_or_quiz",
+                  "status": "Completed",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@2b0cd89776cf43b2951566c3e38d8de9"
+                },
+                {
+                  "title": "1.1 Fundamentals of Verilog: syntax, modules, hierarchy, behavioral vs. structural modeling",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1a8f8adaaeb84dd7b0bcd85530f43314"
+                },
+                {
+                  "title": "1.2 Introduction to Design & Verification tool Verilator (Open source )",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@bb64a0b3cf1d4162a949f905f39894ca"
+                },
+                {
+                  "title": "Linux and VI Command Lab",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@26150a6ce38b422892e6b6a79ed2b843"
+                },
+                {
+                  "title": "LAB_1 _Implemetation of AND gate using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@c77c33c3260f417892d3659c0e6d553e"
+                },
+                {
+                  "title": "LAB_2_Implementation of 4X1 mux using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@5fca7edcf2ed4d2c8a6f65567bd3ead5"
+                },
+                {
+                  "title": "LAB_3_Implementation of Half Adder using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@ec7b86ffb7164c948996a4f1083e4761"
+                },
+                {
+                  "title": "LAB_4_Implementation of JK Flip flop using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@a70ce15881984005a2eaa4646e44937c"
+                },
+                {
+                  "title": "LAB_5_Implementation of UP Counter using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@bff2bb6f6a4948998b90212ce588d982"
+                },
+                {
+                  "title": "LAB_6_Implementation of DOWN Counter using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@751f9f07aebc4470a3d905e657fec234"
+                },
+                {
+                  "title": "LAB_7_Implementation of Ripple UP Counter using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@639b72213cfd42909e89a0a9fffc7f62"
+                },
+                {
+                  "title": "1.3 IP design methodology: specification → RTL → verification",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@577b20d45e524b799fe970c850e75b0f"
+                },
+                {
+                  "title": "LAB_8_Design and Verification of UART Receiver using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7ac74e696f9346ac997d1aa025767674"
+                },
+                {
+                  "title": "1.4 IP integration at subsystem level: signal interfacing, bus protocols",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@4182be64916d469b94feca0a3d7bed1e"
+                },
+                {
+                  "title": "LAB_9_Implementation of APB Bus Interface using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@6863e55ef8e94106a5c7fb1b3621ad1d"
+                },
+                {
+                  "title": "LAB_10_Design and Verification of APB _UART_Bridge using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@6fe98fcba0a04928bf6c63661dacf112"
+                },
+                {
+                  "title": "1.5 SoC-level considerations: clock domain, reset domain, and low-power strategies",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@4c5b6a197a634a98b9bd1e1d78cf5113"
+                },
+                {
+                  "title": "1.6 CDC (Clock Domain Crossing) and RDC (Reset Domain Crossing) handling",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@b359be0edabd440abb88b331d8da0d14"
+                },
+                {
+                  "title": "LAB_11_Implementation of Metastability without synchronization using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@dd83245d8d5b48ec8d627701a96f6e90"
+                },
+                {
+                  "title": "LAB_12_Fixing metastability using a 2 stage synchronizer",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@b08aa056435747a8826117b2dd0822c5"
+                },
+                {
+                  "title": "1.7 Introduction to SoC Clocking and Reset Architectures",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@c41bfe60ffaa48c39e1302be2f21a57f"
+                },
+                {
+                  "title": "LAB_13_Implementation of clock gating using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7bf4adf701b341569664e472ccdda770"
+                },
+                {
+                  "title": "LAB_14_Implementation of RESET Types using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@b19b9466f61b4e4c92081ef592259534"
+                },
+                {
+                  "title": "LAB_15_Designing simple IPs (UART, GPIO, Timer, etc.).",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e09777d7a8ce4c1fbe1544cadb531441"
+                },
+                {
+                  "title": "LAB_16_Integrating multiple IPs into a mini-SoC.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@67ff666984954d5887408eadabd6694b"
+                },
+                {
+                  "title": "LAB_17_Inserting clock/reset synchronization logic.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1c2ae82bf75540d89813dc07acf1ea24"
+                },
+                {
+                  "title": "LAB_18_Debugging SoC integration -Detecting a real bug",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@5d61933750734027b43b9362336e0614"
+                },
+                {
+                  "title": "LAB_19_Mini-SoC project using Github",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@65cf8e55abdf4b1f9cffd4a742684fb9"
+                },
+                {
+                  "title": "1.8 Synthesizable vs. non-synthesizable constructs",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@09fa6c8b2ec64db58bc73bc9260a8946"
+                },
+                {
+                  "title": "1.9 Introduction to Yosys",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@5d1e8161966144e4b6841c657c75cf3c"
+                },
+                {
+                  "title": "LAB_20_Exploring synth vs non-synth using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@730a3d3c718c4acc8ca7b325ad755553"
+                },
+                {
+                  "title": "LAB_21_UPF low power Techniques",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@877898b9c3594c14951243b57992a335"
+                },
+                {
+                  "title": "Module 01 Assessment (1 Question)  Homework",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@4d6c767322f549e690a6da2297b06051"
+                }
+              ]
+            },
+            {
+              "module_title": "MODULE 02: Advanced RTL Design and CDC/RDC Handling",
+              "status": "Incomplete",
+              "items_count": 20,
+              "items": [
+                {
+                  "title": "2.1 CDC/RDC Techniques and Synchronization methodologies",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@d5ade20b13d1470ba381c1923ea44535"
+                },
+                {
+                  "title": "LAB_22_Implementation of Multi Stage Synchronizer for Stable CDC using Verilator",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@b0af769dd3624c27ab887825ab8ca923"
+                },
+                {
+                  "title": "2.2 FIFO design for asynchronous Interfaces",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@366bb99b14594eb8ac7b27947c4ebba6"
+                },
+                {
+                  "title": "LAB_23_FIFO design for asynchronous interfaces.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@315a2bec9bfa4a2291b83af883be0446"
+                },
+                {
+                  "title": "2.3 Multi-clock domain architectures: clock multiplexers, clock dividers.",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@94a1ac8b722e4f5bb5c58599d235df4b"
+                },
+                {
+                  "title": "LAB_24_ Multi-clock domain architectures: clock multiplexers, clock dividers.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@943abd70d3ac4e79a833c1f6abdb3810"
+                },
+                {
+                  "title": "2.4 Design techniques for low power: clock gating, power gating introduction.",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@85c1aee753954b4596bd6a70a41f60e8"
+                },
+                {
+                  "title": "LAB_25_ Design techniques for low power: clock gating, power gating introduction.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@d0198a863c994755afc671653d7ad899"
+                },
+                {
+                  "title": "2.5 Understanding hierarchical design and IP reuse strategies.",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@19ac9bd9d9ce49489993ff1f37b4495b"
+                },
+                {
+                  "title": "LAB_26_ Understanding hierarchical design and IP reuse strategies.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@8ef1b09e84e14470acf35f60cc1e025d"
+                },
+                {
+                  "title": "2.6 Reset architecture design: global, local resets, glitch-free resets.",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@03963081d2aa43b0b3ac54c196b9f080"
+                },
+                {
+                  "title": "LAB_27_Global Reset vs Synchronized Reset",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@336eb356e74a4570897247112555991e"
+                },
+                {
+                  "title": "LAB_28_Building and verifying synchronizers and FIFOs.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@c3895d0786254df797a85dd6dc65b779"
+                },
+                {
+                  "title": "LAB_29_ Clock gating Implementation at RTL.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@aa0e597901b04a35b19d63fa2c0cb509"
+                },
+                {
+                  "title": "LAB_30_ Designing reset synchronization logic.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@099e717789d54af4964a136de6944b2e"
+                },
+                {
+                  "title": "LAB_31_ Low-power Verilog coding exercises.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@fd4d4c299310415481588a82dbfd667c"
+                },
+                {
+                  "title": "LAB_32_ Building a multi-clock domain subsystem.",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@ba5b7b6e495f4f17b71252ad3cefb369"
+                },
+                {
+                  "title": "LAB_33_ Introducing assertion for cdc checking",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@a697a5e1a15343ccbe98a8b50f4866e4"
+                },
+                {
+                  "title": "Module 02 Assessment (1 Question)  Homework",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@06409896d58942c3bda2ffad08ec0c53"
+                },
+                {
+                  "title": "Case Study",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e7a2fa766a584954869120ac3b947384"
+                }
+              ]
+            },
+            {
+              "module_title": "MODULE 03: RTL Synthesis and Static Timing Constraints",
+              "status": "Incomplete",
+              "items_count": 19,
+              "items": [
+                {
+                  "title": "3.1_RTL to Gate-level Netlist transformation",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@23ebbce0dc8341feadf1d727bcec3639"
+                },
+                {
+                  "title": "LAB_3.1.1_Demonstration of Basic Commands For Synthesis Using-Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1b0d468b505b4f749442fd0fe33e9c40"
+                },
+                {
+                  "title": "LAB_3.1.2_Demonstration of Design and Synthesis of 2:1 Mux using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@4db826179e4e4caf99d26ec78f3cb52f"
+                },
+                {
+                  "title": "3.2_Key synthesis concepts: parsing, elaboration, optimization phases",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@3d44a70dc8314a68b2cd062f8cd2db60"
+                },
+                {
+                  "title": "LAB_3.2.1_Demonstration of Design and Synthesis of Half Adder using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@23b231053fde41b7af5e3bfab63f7c56"
+                },
+                {
+                  "title": "LAB_3.2.2_Demonstration of Design and Synthesis of Full Adder using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@d01481ce9f924053bcde3c732a6736f0"
+                },
+                {
+                  "title": "LAB_3.2.3_Demonstration of Design and Synthesis of 8-bit shift register using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@bbb2dc0a40804905a385ad9e6afbbf65"
+                },
+                {
+                  "title": "3.3_Understanding setup time, hold time, clock skew in synthesis",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@8677645135b44320891f5f5f0287f7f9"
+                },
+                {
+                  "title": "3.4_Role of timing constraints (SDC) and technology libraries (.lib files)",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@ae83b5504ea5487f9f22c2672a8f6feb"
+                },
+                {
+                  "title": "3.5_Mapping Verilog constructs to digital components",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7b39a474149245c0abfa06a9002dbb60"
+                },
+                {
+                  "title": "3.6_Area, timing, power trade-offs during synthesis",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7598262158e141f2acc9b0be9530278d"
+                },
+                {
+                  "title": "LAB_3.7_Demonstration of Common Synthesis Error in Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@c38122019b664e18a32beccd6a3a0f9d"
+                },
+                {
+                  "title": "LAB_3.8.1_ Demonstration of Design and Synthesis of 4-Bit Counter Using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7fe9e1c3097e4c67a8d6776e6e358cc6"
+                },
+                {
+                  "title": "LAB_3.8.2_ Demonstration of Design and Synthesis of D-Flip Flop using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@dea7db7dc1504590b7547a25ce817d8e"
+                },
+                {
+                  "title": "LAB_3.10_ Demonstration of Various Reporting Commands During Synthesis Using OpenSource Tool -Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@2ca401af457c419bbf14cc35b8b1f611"
+                },
+                {
+                  "title": "LAB_3.11_ Demonstration of Impact of Coding Style on Synthesis Using Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@ae1e2af31a8a496c986b4a10e28c5b5a"
+                },
+                {
+                  "title": "LAB_3.12_ Demonstration of Log Files and Debugging Errors in Yosys",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@970b8e6b0fa4487188a8bf0625e74bdd"
+                },
+                {
+                  "title": "LAB_3.13_ Demonstration of Design and Synthesis of 16-bit ALU and Generation of Optimized Netlist",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@67491051d5374fe3a06048928312fc9d"
+                },
+                {
+                  "title": "Module 03 Assessment (1 Question)  Homework",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@c5380d6fc43146919116f94d29448a94"
+                }
+              ]
+            },
+            {
+              "module_title": "MODULE 04: Physical Awareness: Standard Cells, LEF/DEF, Timing and Parasitics",
+              "status": "Incomplete",
+              "items_count": 21,
+              "items": [
+                {
+                  "title": "4.1_What is a Standard Cell, Understanding .lib files in depth",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@41598c48a00a43ff99a2c4c4068bfef9"
+                },
+                {
+                  "title": "LAB_4.1.1_ Demonstration of Basic Commands Using OpenSTA",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@4e10f10a70a3408a8455cfd4d69f5bf7"
+                },
+                {
+                  "title": "LAB_4.1.2_ Demonstration of .lib Files",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@ea88290b212c46a3a35aa6e754f19f07"
+                },
+                {
+                  "title": "4.2_Physical abstracts: LEF (Library Exchange Format) overview",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@aa23a801d09d489f9f8f7ccbb60fc172"
+                },
+                {
+                  "title": "LAB_4.2_ Demonstration of .lef Files",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7705b08d19e048c4863c90a606c5f91d"
+                },
+                {
+                  "title": "4.3_Layout placement: DEF (Design Exchange Format) overview",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e236675cb6334d0890f3f706061d6a21"
+                },
+                {
+                  "title": "4.4_Introduction to parasitics: RC delay and wire capacitance",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@8c6287d79c6c4ce599e33317497edccf"
+                },
+                {
+                  "title": "4.5_Static Timing Analysis (STA) fundamentals",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@61e4be8d4985458684ced233d8f51255"
+                },
+                {
+                  "title": "LAB_4.5.1_ Demonstration of Timing Analysis of Mux using OpenSTA",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@2eaa59f020e44b29983be6738e8fc9d5"
+                },
+                {
+                  "title": "LAB_4.5.2_ Demonstration of Timing Analysis of Counter using OpenSTA",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@a2d965a1f6464eaab3619c1812e419bf"
+                },
+                {
+                  "title": "4.6_PVT (Process, Voltage, Temperature) corner analysis",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@040621d42a2c486699cef3886cf166e2"
+                },
+                {
+                  "title": "LAB_4.6_ Demonstration of Timing Analysis of D-flip flop using OpenSTA",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@cef62f47a8cf4f3d9d70df13880764a1"
+                },
+                {
+                  "title": "4.7_Introduction to physical signoff formats: SPEF (Standard Parasitic Exchange Format)",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@0f6347d083354fc2935385a40f139684"
+                },
+                {
+                  "title": "LAB_4.8_ Demonstration of Liberty File Structure – Pin Directions, Logic Function, and Timing Arcs",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@ac88af139d3d4d6abd43ce7553e513f7"
+                },
+                {
+                  "title": "LAB_4.9_ Demonstration of Analysing Cell Delay and Power Characteristics from a Liberty File",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@c52b0ce08962481a815beec84f7c4cce"
+                },
+                {
+                  "title": "LAB_4.10_ Demonstration of Introduction to OpenLane flow",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e4538015fe3549ba92913db250788594"
+                },
+                {
+                  "title": "LAB_4.12_Demonstration of Standard Parasitic Extracted Format file",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@807c619ecb8f4a34b0ada8b9878899fc"
+                },
+                {
+                  "title": "LAB_4.13.1_ Demonstration of Shift Register Using OpenSTA",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@955c5e36857d4203ae5158893587edd6"
+                },
+                {
+                  "title": "LAB_4.13.2_ Demonstration of Setup and Hold Timing Reports for GCD (Greatest Common Divisor) Using Opensta",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@736ddd55df3a4d6fb2b73672b3089bd0"
+                },
+                {
+                  "title": "LAB_4.13.3_ Demonstration of Timing Report in OpenSTA",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@85461aa0006341b4a11216b3c36e2be0"
+                },
+                {
+                  "title": "Module 04 Assessment (1 Question)  Homework",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@93b185f475ab4bb89de1d6c847795ce9"
+                }
+              ]
+            },
+            {
+              "module_title": "MODULE 05: RTL to GDSII: Synthesis to Full Physical Design",
+              "status": "Incomplete",
+              "items_count": 15,
+              "items": [
+                {
+                  "title": "5.1_End-to-end RTL to GDSII flow: Synthesis → Floorplan → Placement → CTS → Routing → GDSII",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@460d417c3b154d5ba329e72f0875cacd"
+                },
+                {
+                  "title": "LAB_5.1_Demonstration of complete flow of design from RTL to GDSII",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@960c34109cdb406282fa79f013ee56b5"
+                },
+                {
+                  "title": "5.2_Physical design stages: floorplanning, placement, CTS, routing, extraction, ECOs",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@0cb92b41757c4467ae0c11c7f2032dd8"
+                },
+                {
+                  "title": "LAB_5.2.1_Demonstration of config.json used in OpenLane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@3a18e22ca7304be6889a3f577314a12c"
+                },
+                {
+                  "title": "LAB_5.2.2_Demonstration of generated files in openlane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@a29a452d2de745ab9d55566cc3627ab6"
+                },
+                {
+                  "title": "5.3_Overview of Design Rule Checking (DRC) and Layout vs Schematic (LVS) checks",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@d1a1d6755b6f4420aafdf6de31b42393"
+                },
+                {
+                  "title": "5.4_Basics of IR drop and Electromigration (EM) awareness",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e5c940d1c21f403e84eec268b79db47c"
+                },
+                {
+                  "title": "5.5_Clock Tree Synthesis (CTS) concepts: H-tree, buffered trees",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@53a6f3f6eb2c4b1a8a9dbe7a91bd4000"
+                },
+                {
+                  "title": "5.6_Low-power considerations during physical design",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1a0ce025665e43b38cfa197ac0bb15fa"
+                },
+                {
+                  "title": "LAB_5.7_Demonstration of floorplan of SPM design using OpenLane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@3f00a62e7b8145e3a0ff9be93351524b"
+                },
+                {
+                  "title": "LAB_5.8_Demonstration of placement of SPM design using OpenLane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@01f984532993495a82b7be808aa49b4f"
+                },
+                {
+                  "title": "LAB_5.9_Clock tree synthesis of SPM design using OpenLane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@f6d22641935941b6835072ddaa10f6aa"
+                },
+                {
+                  "title": "LAB_5.10_ Demonstration of Routing of SPM design using OpenLane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@b2a1a2c96a684a4a990a6f4a433ab5a6"
+                },
+                {
+                  "title": "LAB_5.11_ Demonstration of DRC and LVS checks of SPM design using OpenLane",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1ae77ad000904508bdde2ad967021ee0"
+                },
+                {
+                  "title": "Module 05 Assessment (1 Question)  Homework",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@5e48b282d95149359e1d2bff767b90e2"
+                }
+              ]
+            },
+            {
+              "module_title": "MODULE 06: Design and Implementation of a RISC-V Based SoC Subsystem with AXI Interconnect for Embedded Applications",
+              "status": "Incomplete",
+              "items_count": 21,
+              "items": [
+                {
+                  "title": "Sub-module 1: Fundamentals of the RISC-V Instruction Set Architecture (ISA)",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@6db5dd9c4ed5497a805145f4a171d71c"
+                },
+                {
+                  "title": "LAB_Sub-module 1: Hands-on Exploration of the RISC-V Instruction Set Architecture (ISA)",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@90197ed561684679b0bc41ccb5ecbcfa"
+                },
+                {
+                  "title": "Sub-module 2: Introduction to the AXI4-Lite Communication Protocol",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@93ea9a6edd0544f1b37dd8b31e7cc08b"
+                },
+                {
+                  "title": "LAB_Sub-module 2: Practical Demonstration of AXI4-Lite Communication Protocol",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@a4bb5449c7664626b4985d895125c35d"
+                },
+                {
+                  "title": "Sub-module 3: Overview and Working Principles of UART Communication",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@21a0680675c548d5918e7cf88c6dae4b"
+                },
+                {
+                  "title": "LAB_Sub-module 3: UART Communication Interface Demonstration and Verification",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@f67d2c456a244db2943273d4706a01f5"
+                },
+                {
+                  "title": "Sub-module 4: Memory-Mapped Interfacing of RISC-V Processor with UART",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@87f10718f0284ef6b19ebede3db1375b"
+                },
+                {
+                  "title": "LAB_Sub-module 4: Practical Implementation of Memory-Mapped UART Interfacing with RISC-V",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@625b957685004be99cfcb2af17157469"
+                },
+                {
+                  "title": "Sub-module 5: Integration of RISC-V Processor with AXI Interconnect",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@cea5768fa32447119844b9a1ae6d4d2e"
+                },
+                {
+                  "title": "LAB_Sub-module 5: Experimental Integration of RISC-V Processor with AXI Interconnect",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@3359fbd2a7e54ce4846d0d28fd40ebb6"
+                },
+                {
+                  "title": "Sub-module 6: AXI4-Lite Based UART Peripheral Integration",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@0efc09d71dda476dac04e571ecb1fc9e"
+                },
+                {
+                  "title": "LAB_Sub-module 6: Practical Implementation of AXI4-Lite UART Peripheral Interface",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e29e7569b6864470b8ff298999b38997"
+                },
+                {
+                  "title": "Sub-module 7: Firmware Development and Implementation for Embedded Applications",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@8b1c54f6ff4841998c8bd2314076eb24"
+                },
+                {
+                  "title": "LAB_Sub-module 7: Firmware Development and Execution for Embedded SoC Applications",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e78ebc0bcd1249b18b45c0108cac9223"
+                },
+                {
+                  "title": "Sub-module 8: Complete SoC Subsystem Design and Integration",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@496f11c34889400384cb2facde9b6571"
+                },
+                {
+                  "title": "LAB_Sub-module 8: Full Integration and Functional Verification of the SoC Subsystem",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@41d022aaca2446bbb31fcf3f032fd961"
+                },
+                {
+                  "title": "Sub-module 9: Waveform Analysis and Verification Using Testbenches",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1bd5b35c2a9848b99ff74ffaf48dd411"
+                },
+                {
+                  "title": "LAB_Sub-module 9: Simulation and Waveform Verification Using Verilog Testbenches",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@1e7b3078fa2943e388bb12f0b8c016c9"
+                },
+                {
+                  "title": "Sub-module 10: RTL-to-GDSII ASIC Implementation Using OpenLane for the RISC-V SoC Subsystem",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@35198c767d744174bce2feb88d9b746f"
+                },
+                {
+                  "title": "LAB_Sub-module 10: Practical RTL-to-GDSII Physical Design Flow Using OpenLane for the RISC-V SoC Subsystem",
+                  "type": "lab",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@e40e7348459846109350fe851fa48485"
+                },
+                {
+                  "title": "Module 06 Assessment (1 Question)  Homework",
+                  "type": "lecture_or_quiz",
+                  "status": "Incomplete",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@6a52ae92b16f471abce2766dc3dcec4a"
+                }
+              ]
+            },
+            {
+              "module_title": "CERTIFICATION EXAM",
+              "status": "Completed",
+              "items_count": 1,
+              "items": [
+                {
+                  "title": "Feedback Form",
+                  "type": "lecture_or_quiz",
+                  "status": "Completed",
+                  "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1/block-v1:NIELIT+RTL-BOOTCAMP-02+2026_T1+type@sequential+block@7eef5b9b882d4ea290eaecb24c803abf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "section_name": "Course Tools & Resources",
+          "type": "course_resources",
+          "tools_available": [
+            "Bookmarks",
+            "Launch tour",
+            "Course Handouts"
+          ],
+          "helpdesk_support_url": "https://helpdesk.echiphub.in/"
+        },
+        {
+          "section_name": "Open edX Platform Footer",
+          "type": "platform_footer",
+          "platform": "Open edX (Paragon MFE Frontend)",
+          "copyright": "Copyrights ©2026. All Rights Reserved.",
+          "footer_links": [
+            {
+              "label": "HelpDesk",
+              "url": "https://helpdesk.echiphub.in/"
+            },
+            {
+              "label": "About Us",
+              "url": "https://edx.echiphub.in/about"
+            },
+            {
+              "label": "Blog",
+              "url": "https://edx.echiphub.in/blog"
+            },
+            {
+              "label": "Donate",
+              "url": "https://edx.echiphub.in/donate"
+            },
+            {
+              "label": "Terms of Service",
+              "url": "https://edx.echiphub.in/tos"
+            },
+            {
+              "label": "Privacy Policy",
+              "url": "https://edx.echiphub.in/privacy"
+            },
+            {
+              "label": "Contact Us",
+              "url": "https://edx.echiphub.in/contact"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "openedx-course-01",
+      "name": "Bootcamp: RTL, IP Integration, and SoC Signoff (RTL-BOOTCAMP-01)",
+      "url": "https://apps.edx.echiphub.in/learning/course/course-v1:NIELIT+RTL-BOOTCAMP-01+2026_T1/home",
+      "page_title": "Course | Bootcamp: RTL, IP Integration, and SoC Signoff | Edtech",
+      "extracted_at": "2026-11-10 10:01:04",
+      "sections": [
+        {
+          "section_name": "Course Overview & Header",
+          "type": "course_header",
+          "course_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+          "course_code": "NIELIT RTL-BOOTCAMP-01",
+          "course_id": "course-v1:NIELIT+RTL-BOOTCAMP-01+2026_T1",
+          "organization": "NIELIT",
+          "run": "2026_T1",
+          "breadcrumb": "Home › Bootcamp: RTL, IP Integration, and SoC Signoff",
+          "active_tabs": [
+            "Course",
+            "Progress",
+            "Dates",
+            "Live"
+          ]
+        },
+        {
+          "section_name": "Learning Progress & Resume",
+          "type": "resume_banner",
+          "status": "In Progress",
+          "action_text": "Resume course",
+          "action_url": "https://edx.echiphub.in/courses/course-v1:NIELIT+RTL-BOOTCAMP-01+2026_T1/jump_to/block-v1:NIELIT+RTL-BOOTCAMP-01+2026_T1+type@html+block@5a87330c3b8c4796aebb95218ce66a37"
+        },
+        {
+          "section_name": "Course Status & Important Dates",
+          "type": "course_schedule_status",
+          "is_archived": true,
+          "archive_notice": "Launch tour Skip to main content. Bootcamp: RTL, IP Integration, and SoC Signoff NIELIT RTL-BOOTCAMP-01 My Courses Discover Switch to Dark Mode HelpDesk user-testing78_example_com Home › Bootcamp: RTL, IP Integration, and SoC Signoff Course Progress Dates Live More... Bootcamp: RTL, IP Integration, and SoC Signoff Pick up where you left off Resume course Collapse all Course Tools Bookmarks Launch tour Important dates Fri, Jul 31, 2026 Course ends This course is archived, which means you can review course content but it is no longer active. View all course dates Course Handouts Powered by About Us Blog Donate Terms of Service Privacy Policy HelpDesk Contact Us Copyrights ©2026. All Rights Reserved.",
+          "important_dates": [
+            "Course ends"
+          ]
+        },
+        {
+          "section_name": "Course Tools & Resources",
+          "type": "course_resources",
+          "tools_available": [
+            "Bookmarks",
+            "Launch tour",
+            "Course Handouts"
+          ],
+          "helpdesk_support_url": "https://helpdesk.echiphub.in/"
+        },
+        {
+          "section_name": "Open edX Platform Footer",
+          "type": "platform_footer",
+          "platform": "Open edX (Paragon MFE Frontend)",
+          "copyright": "Copyrights ©2026. All Rights Reserved.",
+          "footer_links": [
+            {
+              "label": "HelpDesk",
+              "url": "https://helpdesk.echiphub.in/"
+            },
+            {
+              "label": "About Us",
+              "url": "https://edx.echiphub.in/about"
+            },
+            {
+              "label": "Blog",
+              "url": "https://edx.echiphub.in/blog"
+            },
+            {
+              "label": "Donate",
+              "url": "https://edx.echiphub.in/donate"
+            },
+            {
+              "label": "Terms of Service",
+              "url": "https://edx.echiphub.in/tos"
+            },
+            {
+              "label": "Privacy Policy",
+              "url": "https://edx.echiphub.in/privacy"
+            },
+            {
+              "label": "Contact Us",
+              "url": "https://edx.echiphub.in/contact"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

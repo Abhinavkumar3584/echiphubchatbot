@@ -1,7 +1,7 @@
 # Sends the chatbot from this laptop to the AWS server and restarts it.
-#   First time (code + knowledge database + AI models):   .\deploy\deploy.bat -Full
-#   After code changes (fast, code only):                 .\deploy\deploy.bat
-#   After you re-ran 1-extract / 2-load (new knowledge):  .\deploy\deploy.bat -Full
+#   First time (code + knowledge database + AI models):   .\bat_deploy\deploy.bat -Full
+#   After code changes (fast, code only):                 .\bat_deploy\deploy.bat
+#   After you re-ran 1-extract / 2-load (new knowledge):  .\bat_deploy\deploy.bat -Full
 param(
     [switch]$Full,
     [string]$SiteUrl = "http://13.235.238.82",
@@ -38,7 +38,7 @@ $SshOpts = @("-i", $SafeKey, "-o", "StrictHostKeyChecking=accept-new", "-o", "Se
 Step ("Packing the project" + $(if ($Full) { " (code + database + models, ~80 MB)" } else { " (code only)" }))
 $Pack = Join-Path $env:TEMP "chatbot-upload.tar.gz"
 if (Test-Path $Pack) { Remove-Item $Pack -Force }
-$items = @(Get-ChildItem -File -Filter *.py | ForEach-Object Name) + @("requirements.txt", ".env", "static", "deploy")
+$items = @(Get-ChildItem -File -Filter *.py | ForEach-Object Name) + @("requirements.txt", ".env", "static", "bat_deploy")
 if ($Full) { $items += @("data/qdrant", "data/models", "data/index_meta.json") | Where-Object { Test-Path $_ } }
 tar -czf $Pack --exclude "__pycache__" --exclude "*.pyc" --exclude ".lock" --exclude ".locks" --exclude "*.pem" @items
 if ($LASTEXITCODE -ne 0) { Fail "Packing failed. If the bot is running on this laptop (3-start.bat), close it and try again." }

@@ -1,0 +1,712 @@
+{
+  "project": "eChipHub Master Web Scraping Pipeline",
+  "pipeline_name": "Events & Workshops Indico Pipeline",
+  "description": "Structured data extracted from eChipHub NIELIT Indico Event Management platform including scheduled workshops, timeline buckets and global training statistics",
+  "exported_at": "2026-11-10 10:01:02",
+  "destination_file": "echiphubdata\\events.json",
+  "authenticated_user": "user-testing78@example.com",
+  "total_pages": 2,
+  "pages": [
+    {
+      "id": "events-upcoming",
+      "name": "Upcoming & Scheduled Workshops",
+      "url": "https://events.echiphub.in/?status=upcoming",
+      "page_title": "Workshops & Events - eChipHub NIELIT",
+      "extracted_at": "2026-11-10 10:01:02",
+      "sections": [
+        {
+          "section_name": "Workshops Directory & Tabs Filter",
+          "type": "tabs_filter",
+          "heading": "Workshops Directory",
+          "platform": "NIELIT Indico Event Management",
+          "tabs": [
+            "Upcoming Workshops",
+            "Live Workshops",
+            "Completed Workshops"
+          ]
+        },
+        {
+          "section_name": "Upcoming Workshops Schedule",
+          "type": "workshop_schedule_table",
+          "tab_name": "Upcoming Workshops",
+          "status": "Upcoming",
+          "heading": "Upcoming Workshops (Conducted by Partner Institutions)",
+          "columns": [
+            "Date",
+            "Workshop Title",
+            "Conducted By",
+            "Event URL"
+          ],
+          "total_workshops": 2,
+          "workshops": [
+            {
+              "dates": "30 Nov-04 Dec 2026",
+              "workshop_title": "Bootcamp:- RTL, IP, Integration and SoC Signoff",
+              "conducted_by": "NIELIT Ahmedabad",
+              "event_url": "https://events.echiphub.in/event/206/"
+            },
+            {
+              "dates": "16 Nov 2026-07 Dec 2027",
+              "workshop_title": "Chipcraft Course : “RTL, IP Integration and SoC Signoff”",
+              "conducted_by": "NIELIT Bhubaneswar",
+              "event_url": "https://events.echiphub.in/event/216/"
+            }
+          ]
+        },
+        {
+          "section_name": "Live Workshops Schedule",
+          "type": "workshop_schedule_table",
+          "tab_name": "Live Workshops",
+          "status": "Live",
+          "heading": "Live Workshops (Conducted by Partner Institutions)",
+          "columns": [
+            "Date",
+            "Workshop Title",
+            "Conducted By",
+            "Event URL"
+          ],
+          "total_workshops": 6,
+          "workshops": [
+            {
+              "dates": "04 Nov-25 Nov 2026",
+              "workshop_title": "Chipcraft-RTL,IP Integration and Soc Signoff (90 Hours)",
+              "conducted_by": "NIELIT Ranchi",
+              "event_url": "https://events.echiphub.in/event/217/"
+            },
+            {
+              "dates": "02 Nov-23 Nov 2026",
+              "workshop_title": "Chipcraft-RTL,IP Integration and Soc Signoff (90 Hours)",
+              "conducted_by": "NIELIT Ranchi",
+              "event_url": "https://events.echiphub.in/event/215/"
+            },
+            {
+              "dates": "28 Oct-13 Nov 2026",
+              "workshop_title": "Chipcraft-RTL, IP Integration and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/200/"
+            },
+            {
+              "dates": "26 Oct-11 Nov 2026",
+              "workshop_title": "Chipcraft-RTL, IP Integration and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/209/"
+            },
+            {
+              "dates": "14 Oct-11 Nov 2026",
+              "workshop_title": "Chipcraft: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/199/"
+            },
+            {
+              "dates": "08 Oct-20 Nov 2026",
+              "workshop_title": "Chipcraft-RTL, IP Integration and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Jammu",
+              "event_url": "https://events.echiphub.in/event/196/"
+            }
+          ]
+        },
+        {
+          "section_name": "Completed Workshops Schedule",
+          "type": "workshop_schedule_table",
+          "tab_name": "Completed Workshops",
+          "status": "Completed",
+          "heading": "Completed Workshops (Conducted by Partner Institutions)",
+          "columns": [
+            "Date",
+            "Workshop Title",
+            "Conducted By",
+            "Event URL"
+          ],
+          "total_workshops": 93,
+          "workshops": [
+            {
+              "dates": "02 Nov-06 Nov 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration,and Soc Signoff.",
+              "conducted_by": "NIELIT Ranchi",
+              "event_url": "https://events.echiphub.in/event/213/"
+            },
+            {
+              "dates": "13 Oct-17 Oct 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/197/"
+            },
+            {
+              "dates": "12 Oct-16 Oct 2026",
+              "workshop_title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/170/"
+            },
+            {
+              "dates": "12 Oct-05 Nov 2026",
+              "workshop_title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Patna",
+              "event_url": "https://events.echiphub.in/event/181/"
+            },
+            {
+              "dates": "08 Oct-29 Oct 2026",
+              "workshop_title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/192/"
+            },
+            {
+              "dates": "08 Oct-05 Nov 2026",
+              "workshop_title": "Chipcraft: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/191/"
+            },
+            {
+              "dates": "07 Oct-12 Oct 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, & SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/194/"
+            },
+            {
+              "dates": "07 Oct-13 Oct 2026",
+              "workshop_title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Hyderabad",
+              "event_url": "https://events.echiphub.in/event/195/"
+            },
+            {
+              "dates": "06 Oct-03 Nov 2026",
+              "workshop_title": "Chipcraft: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/188/"
+            },
+            {
+              "dates": "06 Oct-10 Oct 2026",
+              "workshop_title": "Faculty development training program on ChipCraft:- RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Patna",
+              "event_url": "https://events.echiphub.in/event/182/"
+            },
+            {
+              "dates": "05 Oct-09 Oct 2026",
+              "workshop_title": "BootCamp: RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Daman",
+              "event_url": "https://events.echiphub.in/event/189/"
+            },
+            {
+              "dates": "05 Oct-09 Oct 2026",
+              "workshop_title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Aurangabad",
+              "event_url": "https://events.echiphub.in/event/186/"
+            },
+            {
+              "dates": "05 Oct-09 Oct 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/185/"
+            },
+            {
+              "dates": "28 Sep-02 Oct 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Imphal",
+              "event_url": "https://events.echiphub.in/event/184/"
+            },
+            {
+              "dates": "28 Sep-09 Oct 2026",
+              "workshop_title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/180/"
+            },
+            {
+              "dates": "28 Sep-05 Oct 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/179/"
+            },
+            {
+              "dates": "28 Sep-02 Oct 2026",
+              "workshop_title": "Bootcamp:- RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Aurangabad",
+              "event_url": "https://events.echiphub.in/event/178/"
+            },
+            {
+              "dates": "28 Sep-02 Oct 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Ranchi",
+              "event_url": "https://events.echiphub.in/event/176/"
+            },
+            {
+              "dates": "22 Sep-26 Sep 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/160/"
+            },
+            {
+              "dates": "21 Sep-25 Sep 2026",
+              "workshop_title": "Faculty development training program on ChipCraft:- RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/168/"
+            },
+            {
+              "dates": "11 Sep-13 Sep 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/169/"
+            },
+            {
+              "dates": "07 Sep-11 Sep 2026",
+              "workshop_title": "Bootcamp RTL, IP integration and SoC Signoff",
+              "conducted_by": "NIELIT Lucknow",
+              "event_url": "https://events.echiphub.in/event/166/"
+            },
+            {
+              "dates": "07 Sep-11 Sep 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Bhubaneswar",
+              "event_url": "https://events.echiphub.in/event/162/"
+            },
+            {
+              "dates": "02 Sep-07 Sep 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Itanagar",
+              "event_url": "https://events.echiphub.in/event/164/"
+            },
+            {
+              "dates": "01 Sep-08 Sep 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Patna",
+              "event_url": "https://events.echiphub.in/event/165/"
+            },
+            {
+              "dates": "01 Sep-05 Sep 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Itanagar",
+              "event_url": "https://events.echiphub.in/event/163/"
+            },
+            {
+              "dates": "31 Aug-04 Sep 2026",
+              "workshop_title": "Bootcamp: “RTL, IP Integration and SoC Signoff”",
+              "conducted_by": "NIELIT Shillong",
+              "event_url": "https://events.echiphub.in/event/157/"
+            },
+            {
+              "dates": "24 Aug-18 Sep 2026",
+              "workshop_title": "ChipCraft:- RTL, IP Integration, and SoC Signoff (90 Hours)",
+              "conducted_by": "NIELIT Imphal",
+              "event_url": "https://events.echiphub.in/event/167/"
+            },
+            {
+              "dates": "24 Aug-04 Sep 2026",
+              "workshop_title": "Chipcraft Course: “RTL, IP Integration and SoC Signoff”",
+              "conducted_by": "NIELIT Kolkata",
+              "event_url": "https://events.echiphub.in/event/142/"
+            },
+            {
+              "dates": "24 Aug-14 Sep 2026",
+              "workshop_title": "ChipCraft: \"RTL, IP Integration, and SoC Signoff\"",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/159/"
+            },
+            {
+              "dates": "18 Aug-22 Aug 2026",
+              "workshop_title": "Bootcamp RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Hyderabad",
+              "event_url": "https://events.echiphub.in/event/156/"
+            },
+            {
+              "dates": "17 Aug-21 Aug 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Kolkata",
+              "event_url": "https://events.echiphub.in/event/131/"
+            },
+            {
+              "dates": "17 Aug-21 Aug 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/154/"
+            },
+            {
+              "dates": "17 Aug-21 Aug 2026",
+              "workshop_title": "BOOT CAMP: “RTL, IP Integration and SoC Signoff”",
+              "conducted_by": "NIELIT Chitradurga",
+              "event_url": "https://events.echiphub.in/event/152/"
+            },
+            {
+              "dates": "17 Aug-21 Aug 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Patna",
+              "event_url": "https://events.echiphub.in/event/155/"
+            },
+            {
+              "dates": "10 Aug-22 Aug 2026",
+              "workshop_title": "CEERI Analog Workshop",
+              "conducted_by": "None",
+              "event_url": "https://events.echiphub.in/event/153/"
+            },
+            {
+              "dates": "10 Aug-28 Aug 2026",
+              "workshop_title": "Chipcraft Course: “RTL, IP Integration and SoC Signoff”",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/150/"
+            },
+            {
+              "dates": "10 Aug-14 Aug 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/151/"
+            },
+            {
+              "dates": "10 Aug-14 Aug 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Aurangabad",
+              "event_url": "https://events.echiphub.in/event/148/"
+            },
+            {
+              "dates": "29 Jul-03 Aug 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Hyderabad",
+              "event_url": "https://events.echiphub.in/event/147/"
+            },
+            {
+              "dates": "27 Jul-14 Aug 2026",
+              "workshop_title": "Chipcraft Course: “RTL, IP Integration and SoC Signoff”",
+              "conducted_by": "NIELIT Chitradurga",
+              "event_url": "https://events.echiphub.in/event/143/"
+            },
+            {
+              "dates": "27 Jul-31 Jul 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Hyderabad",
+              "event_url": "https://events.echiphub.in/event/145/"
+            },
+            {
+              "dates": "27 Jul-31 Jul 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/146/"
+            },
+            {
+              "dates": "20 Jul-24 Jul 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Bhubaneswar",
+              "event_url": "https://events.echiphub.in/event/140/"
+            },
+            {
+              "dates": "13 Jul-17 Jul 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/141/"
+            },
+            {
+              "dates": "06 Jul-10 Jul 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Kolkata",
+              "event_url": "https://events.echiphub.in/event/125/"
+            },
+            {
+              "dates": "01 Jul-07 Jul 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Imphal",
+              "event_url": "https://events.echiphub.in/event/138/"
+            },
+            {
+              "dates": "29 Jun-03 Jul 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/139/"
+            },
+            {
+              "dates": "22 Jun-26 Jun 2026",
+              "workshop_title": "Bootcamp on RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Guwahati",
+              "event_url": "https://events.echiphub.in/event/135/"
+            },
+            {
+              "dates": "22 Jun-26 Jun 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Kolkata",
+              "event_url": "https://events.echiphub.in/event/129/"
+            },
+            {
+              "dates": "22 Jun-26 Jun 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/136/"
+            },
+            {
+              "dates": "22 Jun-27 Jun 2026",
+              "workshop_title": "Bootcamp on RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Shillong",
+              "event_url": "https://events.echiphub.in/event/128/"
+            },
+            {
+              "dates": "15 Jun-19 Jun 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Imphal",
+              "event_url": "https://events.echiphub.in/event/133/"
+            },
+            {
+              "dates": "10 Jun-10 Jul 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Agartala",
+              "event_url": "https://events.echiphub.in/event/132/"
+            },
+            {
+              "dates": "08 Jun-12 Jun 2026",
+              "workshop_title": "Bootcamp on RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Imphal",
+              "event_url": "https://events.echiphub.in/event/130/"
+            },
+            {
+              "dates": "05 Jun-31 Jul 2026",
+              "workshop_title": "eChipHub Internship Program (Summer 2026) | 8 Weeks",
+              "conducted_by": "None",
+              "event_url": "https://events.echiphub.in/event/127/"
+            },
+            {
+              "dates": "25 May-29 May 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/126/"
+            },
+            {
+              "dates": "05 May-09 May 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/110/"
+            },
+            {
+              "dates": "05 May-09 May 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/100/"
+            },
+            {
+              "dates": "23 Feb-27 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Kurukshetra",
+              "event_url": "https://events.echiphub.in/event/99/"
+            },
+            {
+              "dates": "23 Feb-27 Feb 2026",
+              "workshop_title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Shillong",
+              "event_url": "https://events.echiphub.in/event/86/"
+            },
+            {
+              "dates": "17 Feb-24 Feb 2026",
+              "workshop_title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Hyderabad",
+              "event_url": "https://events.echiphub.in/event/98/"
+            },
+            {
+              "dates": "17 Feb-24 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC signoff",
+              "conducted_by": "NIELIT Lucknow",
+              "event_url": "https://events.echiphub.in/event/85/"
+            },
+            {
+              "dates": "16 Feb-20 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Kurukshetra",
+              "event_url": "https://events.echiphub.in/event/75/"
+            },
+            {
+              "dates": "16 Feb-21 Feb 2026",
+              "workshop_title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Aurangabad",
+              "event_url": "https://events.echiphub.in/event/96/"
+            },
+            {
+              "dates": "16 Feb-20 Feb 2026",
+              "workshop_title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Noida",
+              "event_url": "https://events.echiphub.in/event/95/"
+            },
+            {
+              "dates": "16 Feb-20 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/97/"
+            },
+            {
+              "dates": "16 Feb-20 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Kurukshetra",
+              "event_url": "https://events.echiphub.in/event/55/"
+            },
+            {
+              "dates": "11 Feb-15 Feb 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Daman",
+              "event_url": "https://events.echiphub.in/event/94/"
+            },
+            {
+              "dates": "10 Feb-14 Feb 2026",
+              "workshop_title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Agartala",
+              "event_url": "https://events.echiphub.in/event/93/"
+            },
+            {
+              "dates": "10 Feb-14 Feb 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/77/"
+            },
+            {
+              "dates": "09 Feb-13 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Patna",
+              "event_url": "https://events.echiphub.in/event/83/"
+            },
+            {
+              "dates": "09 Feb-13 Feb 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Guwahati",
+              "event_url": "https://events.echiphub.in/event/89/"
+            },
+            {
+              "dates": "09 Feb-13 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chitradurga",
+              "event_url": "https://events.echiphub.in/event/82/"
+            },
+            {
+              "dates": "06 Feb-10 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/92/"
+            },
+            {
+              "dates": "05 Feb-09 Feb 2026",
+              "workshop_title": "Bootcamp: RTL,IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Daman",
+              "event_url": "https://events.echiphub.in/event/81/"
+            },
+            {
+              "dates": "05 Feb-09 Feb 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Aurangabad",
+              "event_url": "https://events.echiphub.in/event/73/"
+            },
+            {
+              "dates": "04 Feb-10 Feb 2026",
+              "workshop_title": "Bootcamp RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Jammu",
+              "event_url": "https://events.echiphub.in/event/80/"
+            },
+            {
+              "dates": "04 Feb-08 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/84/"
+            },
+            {
+              "dates": "04 Feb-08 Feb 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Calicut",
+              "event_url": "https://events.echiphub.in/event/53/"
+            },
+            {
+              "dates": "03 Feb-07 Feb 2026",
+              "workshop_title": "Bootcamp: RLT, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/78/"
+            },
+            {
+              "dates": "02 Feb-06 Feb 2026",
+              "workshop_title": "Bootcamp:RTL IP Integration and SOC Signoff",
+              "conducted_by": "NIELIT Ranchi",
+              "event_url": "https://events.echiphub.in/event/63/"
+            },
+            {
+              "dates": "02 Feb-06 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/79/"
+            },
+            {
+              "dates": "02 Feb-06 Feb 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Chitradurga",
+              "event_url": "https://events.echiphub.in/event/67/"
+            },
+            {
+              "dates": "02 Feb-06 Feb 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Guwahati",
+              "event_url": "https://events.echiphub.in/event/66/"
+            },
+            {
+              "dates": "02 Feb-06 Feb 2026",
+              "workshop_title": "Bootcamp : RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Shillong",
+              "event_url": "https://events.echiphub.in/event/61/"
+            },
+            {
+              "dates": "28 Jan-01 Feb 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Lucknow",
+              "event_url": "https://events.echiphub.in/event/76/"
+            },
+            {
+              "dates": "27 Jan-31 Jan 2026",
+              "workshop_title": "Bootcamp: RTL , IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Kolkata",
+              "event_url": "https://events.echiphub.in/event/68/"
+            },
+            {
+              "dates": "27 Jan-31 Jan 2026",
+              "workshop_title": "Bootcamp:RTL IP Integration and SOC Signoff",
+              "conducted_by": "NIELIT Balasore",
+              "event_url": "https://events.echiphub.in/event/74/"
+            },
+            {
+              "dates": "27 Jan-31 Jan 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration and SoC signoff",
+              "conducted_by": "NIELIT Chennai",
+              "event_url": "https://events.echiphub.in/event/71/"
+            },
+            {
+              "dates": "22 Jan-29 Jan 2026",
+              "workshop_title": "BootCamp: RTL, IP Integration and SoC Signoff",
+              "conducted_by": "NIELIT Daman",
+              "event_url": "https://events.echiphub.in/event/69/"
+            },
+            {
+              "dates": "19 Jan-23 Jan 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "NIELIT Tirupati",
+              "event_url": "https://events.echiphub.in/event/64/"
+            },
+            {
+              "dates": "09 Jan-15 Jan 2026",
+              "workshop_title": "Bootcamp: RTL, IP Integration, and SoC Signoff",
+              "conducted_by": "None",
+              "event_url": "https://events.echiphub.in/event/35/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "events-statistics",
+      "name": "Events Platform Statistics",
+      "url": "https://events.echiphub.in/category/0/statistics",
+      "page_title": "Global Statistics - eChipHub NIELIT Events",
+      "extracted_at": "2026-11-10 10:01:02",
+      "sections": [
+        {
+          "section_name": "Global Platform Event Metrics",
+          "type": "global_statistics",
+          "heading": "Global statistics",
+          "metrics": {
+            "total_events": 101,
+            "total_contributions": 47,
+            "total_attachments": 28,
+            "registered_users": "8,274"
+          },
+          "monitored_years": [
+            2024,
+            2025,
+            2026,
+            2027
+          ],
+          "primary_category": "Workshops & Technical Training"
+        }
+      ]
+    }
+  ]
+}
