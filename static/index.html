@@ -4,19 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eChipHub Assistant – Statistics & Status</title>
+  <title>eChipHub Assistant</title>
   <style>
     :root {
-      --die: #0E5C46;
-      --die-2: #0A4636;
-      --pad: #C9A227;
       --ink: #18231F;
       --muted: #56655F;
       --paper: #F7FAF8;
       --card: #FFFFFF;
       --line: #D5E0DB;
-      --success: #059669;
-      --success-bg: rgba(5, 150, 105, 0.12);
+      --green: #0E5C46;
+      --ok: #059669;
+      --bad: #A33A2B;
       color-scheme: light dark;
     }
 
@@ -27,9 +25,9 @@
         --paper: #0B1412;
         --card: #13201C;
         --line: #22352F;
-        --die: #10B981;
-        --success: #34D399;
-        --success-bg: rgba(52, 211, 153, 0.15);
+        --green: #7FD1B3;
+        --ok: #34D399;
+        --bad: #E08A7C;
       }
     }
 
@@ -41,384 +39,213 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font: 15px/1.5 "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      font: 15px/1.55 "Segoe UI", system-ui, Roboto, Arial, sans-serif;
     }
 
     main {
-      max-width: 960px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 48px 24px 100px;
-      width: 100%;
-    }
-
-    .header {
-      margin-bottom: 32px;
-    }
-
-    .bar {
-      width: 64px;
-      height: 6px;
-      background: repeating-linear-gradient(90deg, var(--pad) 0 8px, transparent 8px 14px);
-      margin-bottom: 18px;
-    }
-
-    .title-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-      margin-bottom: 8px;
+      padding: 56px 24px 80px;
     }
 
     h1 {
       font-size: 26px;
-      font-weight: 700;
-      line-height: 1.25;
-      margin: 0;
-      letter-spacing: -0.01em;
+      margin: 0 0 8px;
     }
 
-    .subtitle {
+    h2 {
+      font-size: 17px;
+      margin: 36px 0 12px;
+    }
+
+    p {
       color: var(--muted);
-      margin: 0;
-      font-size: 14.5px;
-      max-width: 64ch;
+      margin: 0 0 18px;
+      max-width: 70ch;
     }
 
-    .badge-live {
+    .status {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      padding: 4px 12px;
+      gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
       border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      background: var(--success-bg);
-      color: var(--success);
-      border: 1px solid rgba(5, 150, 105, 0.2);
+      font-size: 13px;
     }
 
     .dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #10B981;
-      box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.25);
-      animation: pulse 2s infinite ease-in-out;
+      background: var(--muted);
+      flex-shrink: 0;
     }
 
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.2); opacity: 0.65; }
+    .ok .dot {
+      background: var(--ok);
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    @media (max-width: 860px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 540px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    .bad .dot {
+      background: var(--bad);
     }
 
     .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 14px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+      padding: 18px 22px;
+      margin-top: 24px;
+      max-width: 360px;
     }
 
-    .card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(14, 92, 70, 0.4);
-      box-shadow: 0 10px 24px rgba(14, 92, 70, 0.07);
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .card:hover {
-        border-color: rgba(52, 211, 153, 0.4);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
-      }
-    }
-
-    .card-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-    }
-
-    .card-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: rgba(14, 92, 70, 0.08);
-      color: var(--die);
-      display: grid;
-      place-items: center;
-      flex-shrink: 0;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .card-icon {
-        background: rgba(16, 185, 129, 0.14);
-        color: #34D399;
-      }
-    }
-
-    .card-status {
+    .label {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      font-size: 11.5px;
-      font-weight: 600;
-      padding: 2px 8px;
-      border-radius: 12px;
-      background: var(--success-bg);
-      color: var(--success);
-    }
-
-    .card-label {
+      gap: 6px;
       font-size: 12px;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: .05em;
       color: var(--muted);
-      margin-bottom: 4px;
     }
 
-    .card-value {
-      font-size: 24px;
+    .label .dot {
+      background: var(--ok);
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      50% {
+        opacity: .35;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .label .dot {
+        animation: none;
+      }
+    }
+
+    .value {
+      font-size: 44px;
       font-weight: 700;
-      color: var(--ink);
       line-height: 1.2;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      margin: 6px 0 2px;
+      color: var(--green);
+      font-variant-numeric: tabular-nums;
     }
 
-    .card-sub {
-      font-size: 12px;
+    .sub {
+      font-size: 12.5px;
       color: var(--muted);
-      margin-top: 4px;
-      display: flex;
-      align-items: center;
-      gap: 6px;
     }
 
-    .footer-note {
-      margin-top: 36px;
-      padding: 14px 18px;
+    table {
+      width: 100%;
+      border-collapse: collapse;
       background: var(--card);
-      border: 1px dashed var(--line);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .footer-note b {
-      color: var(--ink);
-    }
-
-    .refresh-btn {
-      background: transparent;
       border: 1px solid var(--line);
-      color: var(--ink);
-      border-radius: 8px;
-      padding: 5px 12px;
-      font-size: 12px;
-      font-weight: 600;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: background 0.15s, border-color 0.15s;
+      border-radius: 14px;
+      overflow: hidden;
     }
 
-    .refresh-btn:hover {
-      background: var(--paper);
-      border-color: var(--die);
+    th,
+    td {
+      text-align: left;
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 14px;
+    }
+
+    tr:last-child th,
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    th {
+      width: 190px;
+      color: var(--muted);
+      font-weight: 600;
     }
   </style>
 </head>
 
 <body>
   <main>
-    <div class="header">
-      <div class="bar"></div>
-      <div class="title-row">
-        <h1>eChipHub Assistant – Operations & Statistics</h1>
-        <div class="badge-live">
-          <span class="dot"></span>
-          <span>All Systems Operational</span>
-        </div>
-      </div>
-      <p class="subtitle">Live telemetry, vector database synchronization, AI inference status, and user engagement metrics.</p>
+    <h1>eChipHub Assistant</h1>
+    <p>Test page for the website chat assistant. Click the chat icon at the bottom right to ask about eChipHub courses,
+      workshops, labs, the PDK, events and the community.</p>
+    <span class="status" id="status"><span class="dot"></span><span id="status-text">Checking…</span></span>
+
+    <div class="card">
+      <div class="label"><span class="dot"></span>Chatbot open now</div>
+      <div class="value" id="open">–</div>
+      <div class="sub">Visitors who have the chat window open right now, on any site with the assistant</div>
     </div>
 
-    <div class="grid">
-      <!-- Card 1: Chatbot Service -->
-      <div class="card">
-        <div class="card-top">
-          <div class="card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
-          </div>
-          <span class="card-status" id="status-service"><span class="dot" style="width:6px;height:6px;"></span> Running</span>
-        </div>
-        <div>
-          <div class="card-label">Chatbot Engine</div>
-          <div class="card-value" id="val-service">Online</div>
-          <div class="card-sub">FastAPI ASGI Server · Port 8000</div>
-        </div>
-      </div>
-
-      <!-- Card 2: Vector DB -->
-      <div class="card">
-        <div class="card-top">
-          <div class="card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          </div>
-          <span class="card-status" id="status-vectordb"><span class="dot" style="width:6px;height:6px;"></span> Healthy</span>
-        </div>
-        <div>
-          <div class="card-label">Vector Database (Qdrant)</div>
-          <div class="card-value"><span id="val-chunks">85</span> Chunks</div>
-          <div class="card-sub">Clean hierarchical knowledge chunks indexed</div>
-        </div>
-      </div>
-
-      <!-- Card 3: LLM Model -->
-      <div class="card">
-        <div class="card-top">
-          <div class="card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-          </div>
-          <span class="card-status" id="status-llm"><span class="dot" style="width:6px;height:6px;"></span> Connected</span>
-        </div>
-        <div>
-          <div class="card-label">LLM Reasoning Engine</div>
-          <div class="card-value" id="val-model">gpt-oss-20b</div>
-          <div class="card-sub">Groq Cloud Inference · 1500 Tokens Max</div>
-        </div>
-      </div>
-
-      <!-- Card 4: Semantic Search -->
-      <div class="card">
-        <div class="card-top">
-          <div class="card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <span class="card-status" id="status-embed"><span class="dot" style="width:6px;height:6px;"></span> Operational</span>
-        </div>
-        <div>
-          <div class="card-label">Semantic Embeddings</div>
-          <div class="card-value" id="val-embed">bge-small-en</div>
-          <div class="card-sub">384-Dim Dense Vector Cosine Matching</div>
-        </div>
-      </div>
-
-      <!-- Card 5: Total Chats -->
-      <div class="card">
-        <div class="card-top">
-          <div class="card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
-          </div>
-          <span class="card-status" id="status-chats"><span class="dot" style="width:6px;height:6px;"></span> Active</span>
-        </div>
-        <div>
-          <div class="card-label">Total Chats Handled</div>
-          <div class="card-value"><span id="val-chats">--</span> Conversations</div>
-          <div class="card-sub">Logged questions processed across sessions</div>
-        </div>
-      </div>
-
-      <!-- Card 6: Active Users -->
-      <div class="card">
-        <div class="card-top">
-          <div class="card-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <span class="card-status" id="status-users"><span class="dot" style="width:6px;height:6px;"></span> Tracked</span>
-        </div>
-        <div>
-          <div class="card-label">Total Active Users</div>
-          <div class="card-value"><span id="val-users">--</span> Visitors</div>
-          <div class="card-sub">Unique visitor sessions recorded</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-note">
-      <div>
-        <span><b>Live Assistant:</b> Click the green chip icon at the bottom-right corner of this page to interact with the chatbot.</span>
-      </div>
-      <button type="button" class="refresh-btn" onclick="fetchStats()">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-1.19"/></svg>
-        Refresh Stats
-      </button>
-    </div>
+    <h2>Project details</h2>
+    <table>
+      <tr>
+        <th>Language model</th>
+        <td id="d-model">Amazon Nova Lite on Amazon Bedrock</td>
+      </tr>
+      <tr>
+        <th>Knowledge base</th>
+        <td id="d-kb">Text from the 7 eChipHub websites</td>
+      </tr>
+      <tr>
+        <th>Search</th>
+        <td id="d-search">Hybrid search: meaning (BGE-small) + exact words (BM25) in a local Qdrant database</td>
+      </tr>
+      <tr>
+        <th>Guardrails</th>
+        <td>Blocks prompt injection, abuse and harmful requests; self-harm helpline; masks phone, e-mail, Aadhaar, PAN
+          and card numbers; only eChipHub/NIELIT links in answers</td>
+      </tr>
+      <tr>
+        <th>Backend</th>
+        <td>Python, FastAPI and uvicorn behind Nginx (HTTPS)</td>
+      </tr>
+      <tr>
+        <th>Chat widget</th>
+        <td>One script line on any website (JavaScript, Shadow DOM); live status and word-by-word answers</td>
+      </tr>
+      <tr>
+        <th>Hosting</th>
+        <td>AWS EC2, Ubuntu 24.04, Mumbai region</td>
+      </tr>
+      <tr>
+        <th>Data collection</th>
+        <td>Playwright scraper and ingest script, run from the laptop when website content changes</td>
+      </tr>
+      <tr>
+        <th>Privacy</th>
+        <td>No chats, answers or logs are stored. The open-chat count uses a random id per browser tab, kept in memory
+          only.</td>
+      </tr>
+    </table>
   </main>
-
   <script>
-    function fetchStats() {
-      fetch("/api/stats")
-        .then(function(res) {
-          if (!res.ok) throw new Error("Fallback to health");
-          return res.json();
-        })
-        .then(function(data) {
-          if (data.chunks !== undefined) document.getElementById("val-chunks").textContent = data.chunks;
-          if (data.llm_model) {
-            var m = data.llm_model.replace("openai/", "").replace("meta-llama/", "");
-            document.getElementById("val-model").textContent = m;
-          }
-          if (data.embeddings) {
-            var e = data.embeddings.replace("BAAI/", "");
-            document.getElementById("val-embed").textContent = e;
-          }
-          if (data.total_chats !== undefined) document.getElementById("val-chats").textContent = data.total_chats;
-          if (data.active_users !== undefined) document.getElementById("val-users").textContent = data.active_users;
-          if (data.service_status) document.getElementById("val-service").textContent = data.service_status;
-        })
-        .catch(function() {
-          // Fallback to /health if /api/stats is unavailable
-          fetch("/health")
-            .then(function(r) { return r.json(); })
-            .then(function(h) {
-              if (h.chunks !== undefined) document.getElementById("val-chunks").textContent = h.chunks;
-              if (h.model) document.getElementById("val-model").textContent = h.model.replace("openai/", "");
-              if (h.embeddings) document.getElementById("val-embed").textContent = h.embeddings.replace("BAAI/", "");
-            });
-        });
+    function health() {
+      fetch("/health").then(function (r) { return r.json(); }).then(function (h) {
+        document.getElementById("status").className = "status " + (h.ok ? "ok" : "bad");
+        document.getElementById("status-text").textContent = h.ok ? "Ready" : "Not ready: " + h.detail;
+        if (h.model) document.getElementById("d-model").textContent = "Amazon Bedrock · " + h.model;
+        if (h.chunks) document.getElementById("d-kb").textContent = h.chunks + " pieces of text from the 7 eChipHub websites";
+        if (h.embeddings) document.getElementById("d-search").textContent =
+          "Hybrid search: meaning (" + h.embeddings.replace("BAAI/", "") + ") + exact words (BM25) in a local Qdrant database";
+      }).catch(function () { document.getElementById("status-text").textContent = "Server not reachable"; });
     }
-
-    fetchStats();
-    // Auto refresh every 10 seconds
-    setInterval(fetchStats, 10000);
+    function count() {
+      fetch("/api/active", { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (c) {
+        document.getElementById("open").textContent = c.chat_open;
+      }).catch(function () { });
+    }
+    health(); count();
+    setInterval(count, 5000);
+    setInterval(health, 60000);
   </script>
   <script src="/static/widget.js" defer></script>
 </body>

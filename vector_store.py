@@ -1,13 +1,9 @@
-"""Qdrant vector database.
+"""Qdrant vector database, stored as local files in data/qdrant (no separate server).
 
-QDRANT_URL empty -> Qdrant runs locally inside this program and stores files in data/qdrant.
-QDRANT_URL set   -> connects to an external Qdrant server.
-Each piece of text is stored with two vectors: "dense" (meaning, BGE) and "bm25" (exact words).
+Each piece of text has two vectors: "dense" (meaning, BGE) and "bm25" (exact words).
 Search runs both and merges the two result lists (Reciprocal Rank Fusion).
+Local mode allows one program at a time: stop the chatbot before running ingest.py.
 """
-import os
-import shutil
-import tempfile
 import uuid
 
 import numpy as np
@@ -26,28 +22,13 @@ class LockedError(RuntimeError):
 def client():
     global _client
     if _client is None:
-        if config.QDRANT_URL:
-            _client = QdrantClient(url=config.QDRANT_URL, api_key=config.QDRANT_API_KEY or None, timeout=30)
-        else:
-            qpath = config.QDRANT_PATH
-            # On serverless (Vercel / AWS Lambda), the deployment directory is read-only.
-            if os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"):
-                tmp_qpath = os.path.join(tempfile.gettempdir(), "echiphub_qdrant")
-                if not os.path.exists(tmp_qpath) and os.path.exists(qpath):
-                    try:
-                        shutil.copytree(qpath, tmp_qpath, dirs_exist_ok=True, ignore=shutil.ignore_patterns("*.lock"))
-                    except Exception:
-                        pass
-                if os.path.exists(tmp_qpath):
-                    qpath = tmp_qpath
-            try:
-                _client = QdrantClient(path=qpath)
-            except Exception as e:                       # local mode: only one program at a time
-                if "already accessed" in str(e) or "lock" in str(e).lower():
-                    raise LockedError(
-                        "The local Qdrant database is in use by another program (probably the running chatbot).\n"
-                        "Stop the chatbot first, or use a Qdrant server (set QDRANT_URL, see README).") from e
-                raise
+        try:
+            _client = QdrantClient(path=config.QDRANT_PATH)
+        except Exception as e:
+            if "already accessed" in str(e) or "lock" in str(e).lower():
+                raise LockedError("The local Qdrant database is in use by another program "
+                                  "(probably the running chatbot). Stop the chatbot first.") from e
+            raise
     return _client
 
 
@@ -74,23 +55,16 @@ def create(dim, recreate=False):
             config.COLLECTION,
             vectors_config={DENSE: models.VectorParams(size=dim, distance=models.Distance.COSINE)},
             sparse_vectors_config={SPARSE: models.SparseVectorParams(modifier=models.Modifier.IDF)})
-        if config.QDRANT_URL:                           # payload index (server mode) for fast delete-by-page
-            c.create_payload_index(config.COLLECTION, "url", models.PayloadSchemaType.KEYWORD)
 
 
 def dense_size():
-    info = client().get_collection(config.COLLECTION)
-    v = info.config.params.vectors
+    v = client().get_collection(config.COLLECTION).config.params.vectors
     return v[DENSE].size if isinstance(v, dict) else v.size
-
-
-def point_id(url, i):
-    return str(uuid.uuid5(uuid.NAMESPACE_URL, f"{url}#{i}"))
 
 
 def upsert(chunks, dense, sparse):
     pts = [models.PointStruct(
-        id=point_id(ch["url"], ch["chunk"]),
+        id=str(uuid.uuid5(uuid.NAMESPACE_URL, f"{ch['url']}#{ch['chunk']}")),
         vector={DENSE: dense[i].tolist(), SPARSE: models.SparseVector(indices=sparse[i][0], values=sparse[i][1])},
         payload=ch) for i, ch in enumerate(chunks)]
     for i in range(0, len(pts), 128):
@@ -119,7 +93,7 @@ def count():
 
 
 def search(qdense, qsparse, limit, candidates):
-    """Hybrid search. Returns [(payload, fused_rank_score, dense_similarity)] best first."""
+    """Hybrid search. Returns [(payload, fused_rank_score, dense_similarity)], best first."""
     res = client().query_points(
         config.COLLECTION,
         prefetch=[models.Prefetch(query=qdense.tolist(), using=DENSE, limit=candidates),

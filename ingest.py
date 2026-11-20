@@ -4,7 +4,7 @@
     python ingest.py --rebuild  start the database from zero (needed after changing EMBED_MODEL or data source)
     python ingest.py --dry      only show what would happen
 
-Input:  echiphub/*.json   (written by:  python scraper_master.py)
+Input:  echiphubdata/*.json   (written by:  python scraper_master.py)
 Each page is cut into pieces of about CHUNK_WORDS words along its headings. Each piece starts with
 "Page title > Heading > Sub-heading" so the bot knows where the text comes from.
 """
@@ -16,6 +16,21 @@ import config
 BOILERPLATE = {
     "skip to content", "skip to main content", "go to the indico home page",
     "toggle navigation", "close menu", "open menu"
+}
+
+# Section types that only repeat menus, filters, visitor statistics or reviews. They add the same
+# "Home Courses All Courses (Catalog) My Courses ..." text to the index and push real answers out of the top results.
+SKIP_SECTION_TYPES = {
+    "navigation", "analytics_tables", "testimonials", "categories_filter", "header_and_filters",
+    "auth_registration_form", "auth_login_form",
+    # the scraper's own login session: personal status, e-mail, tokens - never knowledge for visitors
+    "user_session", "resume_banner", "login_form", "protocol_parameters",
+}
+
+# fields that describe the scraper's test account, not the website
+PRIVATE_KEYS = {
+    "authenticated_user", "authenticated_user_name", "authenticated_user_email", "authenticated_email",
+    "spawn_endpoint", "state", "session_code", "client_data", "tab_id", "user_email",
 }
 
 URL_KEYS = {
@@ -32,6 +47,8 @@ def clean_text(s):
     s = re.sub(r"https?://\S+", "", s)
     s = re.sub(r"\[\s*([^\]]*?)\s*\]\([^)]*\)", r"\1", s)
     s = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", s)
+    s = re.sub(r"\S*@example\.com|\S*_example_com", "", s)          # the scraper's test account
+    s = re.sub(r"Pick up where you left off|Resume course", "", s)       # its personal progress banner
     return re.sub(r"[ \t]+", " ", s).strip()
 
 
@@ -90,7 +107,7 @@ def format_val_no_url(v, depth=0):
             if isinstance(item, dict):
                 parts = []
                 for k, val in item.items():
-                    if k.lower() in URL_KEYS or k.lower().endswith(("_url", "_uri", "_action")):
+                    if k.lower() in URL_KEYS or k.lower() in PRIVATE_KEYS or k.lower().endswith(("_url", "_uri", "_action")):
                         continue
                     fmt = format_val_no_url(val, depth + 1)
                     if fmt:
@@ -124,6 +141,13 @@ def sections_flat(sections, path=()):
             continue
 
         stype = s.get("type", "")
+        if stype in SKIP_SECTION_TYPES:
+            continue
+        if stype == "footer":                      # keep only the postal address, not the repeated link lists
+            addr = clean_text(s.get("address", ""))
+            if addr:
+                out.append((path + ("Address",), f"Address: {addr}"))
+            continue
         h = (s.get("heading") or s.get("section_name") or s.get("title") or "").strip()
         if h in ("Overview / Header Info", "(introduction)"):
             h = ""
@@ -150,7 +174,7 @@ def sections_flat(sections, path=()):
             for i, m in enumerate(s["modules"]):
                 m_title = m.get("module_title") or f"Module {i+1}"
                 m_status = m.get("status", "")
-                m_lines = [f"Module: {m_title}" + (f" (Status: {m_status})" if m_status else "")]
+                m_lines = [f"Module: {m_title}"]                     # personal progress status is left out
 
                 items = m.get("items", [])
                 if items:
@@ -160,8 +184,7 @@ def sections_flat(sections, path=()):
                         it_type = it.get("type", "lesson")
                         it_stat = it.get("status", "")
                         badge = "[Lab]" if "lab" in it_type.lower() else "[Lecture]"
-                        stat_str = f" - {it_stat}" if it_stat else ""
-                        m_lines.append(f"- {badge} {it_title}{stat_str}")
+                        m_lines.append(f"- {badge} {it_title}")
                 out.append((sec_path + (m_title,), "\n".join(m_lines)))
             continue
 
@@ -195,6 +218,15 @@ def sections_flat(sections, path=()):
                     if w_centre: parts.append(f"Centre: {w_centre}")
                     if w_dates: parts.append(f"Dates: {w_dates}")
                     if w_stat: parts.append(f"Status: {w_stat}")
+                    # how to register (kept as words; the link itself carries login tokens)
+                    w_reg = str(w.get("registration_link") or w.get("register_url") or "")
+                    w_btn = clean_text(w.get("action_label", "")) or ("Register" if w_reg else "")
+                    if w_btn and w_stat.lower() != "completed":
+                        host = urlparse(w_reg).netloc if w_reg.startswith("http") else ""
+                        reg = f"'{w_btn}' button" + (f", registration on {host}" if host else "")
+                        if "login" in w_reg.lower() or "keycloak" in w_reg.lower():
+                            reg += " (sign in with an eChipHub account first)"
+                        parts.append(f"How to register: {reg}")
                     ws_lines.append("- " + " | ".join(parts))
                 elif isinstance(w, str):
                     ws_lines.append(f"- {clean_text(w)}")
@@ -204,18 +236,28 @@ def sections_flat(sections, path=()):
 
         # 4. Courses lists (Foundation / Specialized)
         if stype in ("course_cards", "upcoming_course_cards") and "courses" in s:
-            c_lines = []
+            c_lines, enrol_links = [], []
             for c in s["courses"]:
                 c_title = clean_text(c.get("title") or c.get("course_title", ""))
                 c_desc = clean_text(c.get("description", ""))
                 c_level = clean_text(c.get("level", ""))
                 c_code = clean_text(c.get("code") or c.get("course_code", ""))
+                c_status = clean_text(c.get("status", ""))
                 parts = [c_title]
                 if c_code: parts.append(f"Code: {c_code}")
                 if c_level: parts.append(f"Level: {c_level}")
+                if c_status: parts.append(f"Status: {c_status}")
                 line = " - ".join(parts)
                 if c_desc: line += f"\n  Description: {c_desc}"
+                c_enrol = str(c.get("enroll_link") or c.get("enroll_url") or c.get("enrol_link") or "")
+                if c_enrol:
+                    enrol_links.append(c_enrol)
                 c_lines.append(line)
+            if enrol_links:                     # how to enrol, as words (the links carry login tokens)
+                how = "How to enrol in these courses: open the course from the All Courses page and use its enrol link"
+                if any("login" in u.lower() for u in enrol_links):
+                    how += "; it asks you to sign in to eChipHub first and then opens the course page"
+                c_lines.append(how + ".")
             if c_lines:
                 out.append((sec_path, "\n\n".join(c_lines)))
             continue
@@ -297,7 +339,8 @@ def sections_flat(sections, path=()):
             "headline", "statement", "vision", "text", "children", "items"
         }
         for k, v in s.items():
-            if k in skip_keys or k.lower() in URL_KEYS or k.lower().endswith(("_url", "_uri", "_action")):
+            if k in skip_keys or k.lower() in URL_KEYS or k.lower() in PRIVATE_KEYS \
+                    or k.lower().endswith(("_url", "_uri", "_action")):
                 continue
             if v is None or v == "" or v == [] or v == {}:
                 continue

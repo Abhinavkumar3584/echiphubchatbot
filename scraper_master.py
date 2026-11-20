@@ -79,8 +79,16 @@ def get_html_cache_path(filename: str) -> str:
     return filename or ""
 
 # Authentication Credentials (Used for Labs, Helpdesk, PDK, Community, Events, Open edX)
-LABS_EMAIL = "user-testing78@example.com"
-LABS_PASSWORD = "Password@123"
+# Test-account login for the sign-in-only sites: kept in .env, never in the code
+try:
+    from dotenv import load_dotenv
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+except ImportError:
+    pass
+LABS_EMAIL = os.environ.get("SCRAPER_EMAIL", "")
+LABS_PASSWORD = os.environ.get("SCRAPER_PASSWORD", "")
+if not (LABS_EMAIL and LABS_PASSWORD):
+    print("[!] SCRAPER_EMAIL / SCRAPER_PASSWORD not set in .env: sign-in-only pages (labs, helpdesk, PDK, courses) cannot be scraped.", flush=True)
 
 
 # ==============================================================================

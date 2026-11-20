@@ -1,9 +1,8 @@
-.venv/
 .env
-*.pem
-data/logs/
-data/qdrant/.lock
-data/models/.locks/
-output/
+.env.*
+!.env.example
+.venv/
 __pycache__/
-*.pyc
+data/
+echiphubdata/
+*.pem

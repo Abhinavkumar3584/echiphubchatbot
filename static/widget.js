@@ -78,8 +78,8 @@
   /* Launcher button: natural logo display without circular wrapper */
   .chip {
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 84px;
+    height: 84px;
     border: 0;
     border-radius: 0;
     background: transparent;
@@ -185,9 +185,6 @@
   }
   .fb { display: flex; gap: 6px; margin-top: 6px; align-items: center; }
   .fb-me { justify-content: flex-end; margin-top: 4px; }
-  .fb button[data-v] { border: 1px solid var(--line); background: var(--paper); color: var(--muted); border-radius: 6px;
-                       padding: 2px 8px; font-size: 12px; }
-  .fb button[data-v][aria-pressed="true"] { border-color: var(--die); color: var(--die); }
   button.copy-btn, .copy-btn {
     border: none !important; background: transparent !important; box-shadow: none !important;
     outline: none !important; border-radius: 0 !important; padding: 0 !important; margin: 0;
@@ -214,6 +211,23 @@
   .typing { display: inline-flex; align-items: center; justify-content: center; padding: 2px 0; }
   .spinner { width: 20px; height: 20px; color: var(--muted); animation: spin .8s steps(8, start) infinite; display: block; }
   @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* One-line live status while the answer is prepared (each step replaces the previous one) */
+  .status { display: flex; align-items: center; gap: 9px; min-width: 272px; height: 22px; font-size: 13.5px; }
+  .status .spinner { width: 16px; height: 16px; color: var(--die); flex-shrink: 0; }
+  .st-win { position: relative; flex: 1; height: 22px; overflow: hidden; }
+  .st-line { position: absolute; left: 0; top: 0; line-height: 22px; white-space: nowrap; font-weight: 500;
+             background: linear-gradient(90deg, var(--muted) 0%, var(--ink) 45%, var(--muted) 90%);
+             background-size: 220% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+             animation: lineIn .32s cubic-bezier(.2,.8,.2,1) both, shimmer 1.6s linear infinite; }
+  .st-line.out { animation: lineOut .26s ease-in both; }
+  .status.leave { animation: fadeAway .2s ease-in both; }
+  @keyframes lineIn { from { opacity: 0; transform: translateY(70%); } to { opacity: 1; transform: none; } }
+  @keyframes lineOut { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateY(-70%); } }
+  @keyframes shimmer { from { background-position: 120% 0; } to { background-position: -100% 0; } }
+  @keyframes fadeAway { to { opacity: 0; } }
+  @media (prefers-color-scheme: dark) { .status .spinner { color: #7FD1B3; } }
+  @media (prefers-reduced-motion: reduce) { .st-line, .st-line.out, .status.leave { animation: none; } }
 
   .intro { color: var(--muted); }
   .sugg { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
@@ -266,6 +280,7 @@
     .open.wrap { inset: 0; right: 0; bottom: 0; }
     .panel { width: 100vw; height: 100dvh; border-radius: 0; border: 0; }
     .bubble-banner { max-width: calc(100vw - 44px); font-size: 14px; padding: 11px 14px; }
+    .chip { width: 72px; height: 72px; }
   }`;
 
   var ICON_CHAT = '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>';
@@ -298,7 +313,7 @@
     '</button>' +
     '<div class="bubble-text">Looking for more info? I&#39;m happy to help!</div>' +
     '</div>' +
-    '<button class="chip" type="button" aria-label="Open ' + esc(TITLE) + '"><img src="' + esc(API + '/static/chaticon.png') + '" alt="Chat" width="62" height="62" /></button>' +
+    '<button class="chip" type="button" aria-label="Open ' + esc(TITLE) + '"><img src="' + esc(API + '/static/chaticon.png') + '" alt="Chat" width="84" height="84" /></button>' +
     '<section class="panel" role="dialog" aria-label="' + esc(TITLE) + '">' +
     '<header><div class="t"><b>' + esc(TITLE) + '</b></div>' +
     '<button type="button" class="new" aria-label="Start a new chat" title="New chat">' + ICON_NEW + '</button>' +
@@ -314,8 +329,8 @@
   var state = load(), busy = false;
 
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
-  function load() { try { return JSON.parse(sessionStorage.getItem(STORE)) || { open: false, msgs: [] }; } catch (e) { return { open: false, msgs: [] }; } }
-  function save() { try { state.msgs = state.msgs.slice(-30); sessionStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { } }
+  function load() { try { sessionStorage.removeItem(STORE); } catch (e) { } return { open: false, msgs: [] }; }
+  function save() { state.msgs = state.msgs.slice(-30); }
 
   /* small, safe markdown: escapes everything first, then allows tables, links, bold, italics, code, headings and lists */
   function md(text, sources) {
@@ -496,8 +511,7 @@
   }
 
   function paintBot(el, m) {
-    var rawText = String(m.content || "");
-    var cleanContent = rawText.split(/<follow_ups>/i)[0].trim();
+    var cleanContent = String(m.content || "").trim();
     var html = m.error ? '<p class="err">' + esc(m.content) + "</p>" : md(cleanContent, m.sources);
     if (m.sources && m.sources.length) {
       var isSrcOpen = !!m.sourcesOpen;
@@ -513,27 +527,8 @@
         '</div>' +
         '</div>';
     }
-    if (m.follow_ups && m.follow_ups.length && !m.error) {
-      html += '<div class="follow-ups">' +
-        '<div class="follow-ups-title">' +
-          '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
-          '<span>Suggested questions</span>' +
-        '</div>' +
-        '<div class="chips-list">' +
-          m.follow_ups.map(function (q) {
-            return '<button type="button" class="chip-btn" title="' + esc(q) + '">' + esc(q) + '</button>';
-          }).join("") +
-        '</div>' +
-      '</div>';
-    }
     if (m.content) {
-      html += '<div class="fb">' +
-        '<button type="button" class="copy-btn" title="Copy" aria-label="Copy">' + ICON_COPY + '</button>';
-      if (m.id && !m.error) {
-        html += '<button type="button" data-v="1" aria-pressed="' + (m.fb === 1) + '">Helpful</button>' +
-          '<button type="button" data-v="0" aria-pressed="' + (m.fb === 0) + '">Not helpful</button>';
-      }
-      html += '</div>';
+      html += '<div class="fb"><button type="button" class="copy-btn" title="Copy" aria-label="Copy">' + ICON_COPY + '</button></div>';
     }
     el.innerHTML = html;
     var copyBtn = el.querySelector(".copy-btn");
@@ -552,24 +547,6 @@
         }
       });
     }
-    el.querySelectorAll(".chip-btn").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        var question = btn.textContent.trim();
-        if (question && !busy) {
-          el.querySelectorAll(".chip-btn").forEach(function (b) { b.classList.add("used"); b.disabled = true; });
-          ask(question);
-        }
-      });
-    });
-    el.querySelectorAll(".fb button[data-v]").forEach(function (b) {
-      b.addEventListener("click", function () {
-        m.fb = +b.getAttribute("data-v"); save(); paintBot(el, m);
-        fetch(API + "/api/feedback", {
-          method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ id: m.id, helpful: m.fb === 1 })
-        }).catch(function () { });
-      });
-    });
   }
 
   function intro() {
@@ -577,13 +554,13 @@
     el.className = "msg bot";
     el.innerHTML = '<p>Hello! I answer questions using the eChipHub websites: courses, workshops and bootcamps, labs, the PDK, events and the community.</p>' +
       '<div class="follow-ups" style="border-top:none; margin-top:8px; padding-top:0;">' +
-        '<div class="follow-ups-title">' +
-          '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
-          '<span>Suggested questions</span>' +
-        '</div>' +
-        '<div class="chips-list">' +
-          SUGGESTIONS.map(function (s) { return '<button type="button" class="chip-btn" title="' + esc(s) + '">' + esc(s) + '</button>'; }).join("") +
-        '</div>' +
+      '<div class="follow-ups-title">' +
+      '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' +
+      '<span>Suggested questions</span>' +
+      '</div>' +
+      '<div class="chips-list">' +
+      SUGGESTIONS.map(function (s) { return '<button type="button" class="chip-btn" title="' + esc(s) + '">' + esc(s) + '</button>'; }).join("") +
+      '</div>' +
       '</div>';
     el.querySelectorAll(".chip-btn").forEach(function (b) {
       b.addEventListener("click", function () {
@@ -605,10 +582,86 @@
   }
 
   function setOpen(v) {
+    var was = state.open;
     state.open = v; save();
+    if (was !== v || v) ping(v);
     wrap.classList.toggle("open", v);
     if (v) { render(); setTimeout(function () { input.focus(); }, 50); }
     else root.querySelector(".chip").focus();
+  }
+
+  /* ---- one-line live status, then the answer word by word (all in memory, never stored) ---- */
+  var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var STEP_MS = REDUCED ? 0 : 550;          /* each status step stays visible at least this long */
+  var WORD_MS = REDUCED ? 0 : 28;           /* pace of the word-by-word answer */
+
+  function statusStart(el) {
+    el.innerHTML = '<div class="status" role="status">' + ICON_SPINNER + '<span class="st-win"></span></div>';
+    return {
+      box: el.querySelector(".status"), win: el.querySelector(".st-win"), queue: [], last: 0, timer: null,
+      shown: "", waiters: []
+    };
+  }
+  function statusPush(s, text) {
+    if (!s || !text || text === s.shown || s.queue.indexOf(text) !== -1) return;
+    s.queue.push(text);
+    statusPump(s);
+  }
+  function statusPump(s) {
+    if (s.timer) return;
+    if (!s.queue.length) {
+      var wait = Math.max(0, s.last + STEP_MS - Date.now());
+      s.timer = setTimeout(function () {
+        s.timer = null;
+        if (!s.queue.length) { var w = s.waiters; s.waiters = []; w.forEach(function (f) { f(); }); }
+        else statusPump(s);
+      }, wait);
+      return;
+    }
+    s.timer = setTimeout(function () {
+      s.timer = null;
+      var old = s.win.querySelector(".st-line:not(.out)");
+      if (old) { old.classList.add("out"); setTimeout(function () { old.remove(); }, 260); }
+      var line = document.createElement("span");
+      line.className = "st-line"; line.textContent = s.shown = s.queue.shift();
+      s.win.appendChild(line); s.last = Date.now();
+      statusPump(s);
+    }, Math.max(0, s.last + STEP_MS - Date.now()));
+  }
+  function statusDone(s) {                   /* resolves once every queued step has been shown */
+    return new Promise(function (resolve) {
+      if (!s.queue.length && !s.timer && Date.now() - s.last >= STEP_MS) resolve();
+      else { s.waiters.push(resolve); statusPump(s); }
+    });
+  }
+
+  function writer(el, bot) {
+    return { el: el, bot: bot, pending: "", ready: false, running: false, finished: false, done: null };
+  }
+  function writerPush(t, text) { t.pending += text; writerRun(t); }
+  function writerRun(t) {
+    if (t.running || !t.ready) return;
+    t.running = true;
+    (function tick() {
+      if (!t.pending) {
+        t.running = false;
+        if (t.finished && t.done) t.done();
+        return;
+      }
+      var words = t.pending.match(/\s*\S+\s*/g) || [t.pending];
+      var n = REDUCED ? words.length : Math.max(1, Math.ceil(words.length / 40));   /* catch up if far behind */
+      var take = words.slice(0, n).join("");
+      t.pending = t.pending.slice(take.length);
+      t.bot.content += take;
+      paintBot(t.el, t.bot); scroll();
+      setTimeout(tick, WORD_MS);
+    })();
+  }
+  function writerFinish(t) {
+    t.finished = true;
+    return new Promise(function (resolve) {
+      if (!t.pending && !t.running) resolve(); else { t.done = resolve; writerRun(t); }
+    });
   }
 
   function errorText(status, detail) {
@@ -627,11 +680,22 @@
     if (!state.msgs.length) log.innerHTML = "";
     var mine = { role: "user", content: text };
     state.msgs.push(mine); bubble(mine);
-    var bot = { role: "assistant", content: "", sources: [], follow_ups: [] };
+    var bot = { role: "assistant", content: "", sources: [] };
     var el = document.createElement("div");
     el.className = "msg bot";
-    el.innerHTML = '<span class="typing" aria-label="Writing an answer">' + ICON_SPINNER + '</span>';
     log.appendChild(el); scroll();
+    var st = statusStart(el), out = writer(el, bot), started = false, sources = [];
+    statusPush(st, "Understanding your question");
+
+    function startWriting() {                /* status line leaves, the answer starts */
+      if (started) return;
+      started = true;
+      statusDone(st).then(function () {
+        st.box.classList.add("leave");
+        setTimeout(function () { out.ready = true; writerRun(out); }, REDUCED ? 0 : 180);
+      });
+    }
+
     try {
       var res = await fetch(API + "/api/chat/stream", {
         method: "POST", headers: { "Content-Type": "application/json" },
@@ -651,20 +715,20 @@
           var ev = (block.match(/^event: (.*)$/m) || [])[1], data = (block.match(/^data: (.*)$/m) || [])[1];
           if (!ev || !data) return;
           data = JSON.parse(data);
-          if (ev === "token") { bot.content += data.t; paintBot(el, bot); scroll(); }
-          else if (ev === "done") {
-            bot.id = data.id;
-            bot.sources = data.sources || [];
-            bot.follow_ups = data.follow_ups || [];
-          }
-          else if (ev === "error") { bot.error = !bot.content; if (!bot.content) bot.content = data.message; }
+          if (ev === "status") statusPush(st, data.text);
+          else if (ev === "token") { writerPush(out, data.t); startWriting(); }
+          else if (ev === "done") { bot.id = data.id; sources = data.sources || []; }
+          else if (ev === "error" && !bot.content && !out.pending) { bot.error = true; out.pending = data.message; startWriting(); }
         });
       }
-      if (!bot.content) throw { status: 500 };
+      if (!bot.content && !out.pending) throw { status: 500 };
+      startWriting();
+      await writerFinish(out);
+      bot.sources = sources;                 /* sources appear once the answer is complete */
     } catch (e) {
+      out.pending = ""; out.finished = true;
       bot.error = true; bot.content = errorText(e && e.status !== undefined ? e.status : 0, e && e.detail);
     }
-    bot.content = bot.content.split(/<follow_ups>/i)[0].trim();
     paintBot(el, bot); state.msgs.push(bot); save(); scroll();
     busy = false; sendBtn.disabled = false; input.focus();
   }
@@ -703,6 +767,29 @@
   input.addEventListener("keydown", function (e) { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); } });
   input.addEventListener("input", function () { input.style.height = "auto"; input.style.height = Math.min(input.scrollHeight, 110) + "px"; });
   wrap.addEventListener("keydown", function (e) { if (e.key === "Escape" && state.open) setOpen(false); });
+
+  /* ---- open-chat count: a random id for this tab, kept only in this page's memory (never stored) ---- */
+  var TAB_ID = (function () {
+    var a = new Uint8Array(12);
+    try { window.crypto.getRandomValues(a); } catch (e) { for (var i = 0; i < a.length; i++) a[i] = Math.random() * 256; }
+    return Array.prototype.map.call(a, function (b) { return ("0" + b.toString(16)).slice(-2); }).join("");
+  })();
+  function ping(open) {
+    if (!TAB_ID) return;
+    try {
+      fetch(API + "/api/presence", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: TAB_ID, open: open }), keepalive: true
+      }).catch(function () { });
+    } catch (e) { }
+  }
+  setInterval(function () {                  /* while the chat is open and on screen */
+    if (state.open && document.visibilityState === "visible") ping(true);
+  }, 30000);
+  document.addEventListener("visibilitychange", function () {
+    if (state.open) ping(document.visibilityState === "visible");
+  });
+  window.addEventListener("pagehide", function () { if (state.open) ping(false); });
 
   if (state.open || START_OPEN) setOpen(true);
 })();
